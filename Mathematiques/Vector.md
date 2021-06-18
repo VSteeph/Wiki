@@ -49,5 +49,5 @@ Axe Z (Profondeur, applicate) est en bleu
 
 La plupart des Game Engine sont gauchers contrairement aux mathématiques :
 
-![Schema_Gaucher](https://i.imgur.com/P6DlM3V.png)
+![Schema_Gaucher](/img/Math/LeftHandedAxis.png)
 
