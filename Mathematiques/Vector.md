@@ -61,7 +61,15 @@ Les additions sont commutative (cela signifie qu'on peut inverser l'ordre des é
 
 ### La longueur d'un vecteur
 
-La magnitude d'un vecteur se calcule simplement. Pour cela, on utilise le théorème de Pythagore
+La magnitude d'un vecteur se calcule simplement. Pour cela, on utilise le théorème de Pythagore. Il est facile de créer un triangle rectangle avec l'abscisse et l'ordonéne. Le vecteur correspond à l'hypothénuse de ce triangle : 
+
+<img src="/img/Math/Pythagore.png " width="100" height="140">
+
+Exemple avec le vecteur(4,5) :
+=> Sqr(4² + 4²) => sqr(16+9) => Sqr(25) => une longueur de 5
+
+Le principe reste identique peu importe le nombre de dimension, c'est à dire qu'un vecteur3(2,3,4) aura comme longueur :
+Sqr(2² +3² + 4²) (envion 5.3)
 
 ### Unit Vecteur (Normlalized)
 
