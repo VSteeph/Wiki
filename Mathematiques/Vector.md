@@ -18,7 +18,7 @@ Dans certains cas, quand on veut manipuler une direction par exemple, on peut pa
 car cela n'aura aucun impact sur la direction.
 
 
-### Longueur / Distance
+### Longueur ou Magnitude & La distance
 
 La longueur ou Magnitude est la valeur absolu du vecteur. Elle ne peut pas être négatif contrairement à la signed distance.
 
@@ -51,3 +51,30 @@ La plupart des Game Engine sont gauchers contrairement aux mathématiques :
 
 ![Schema_Gaucher](/img/Math/LeftHandedAxis.png)
 
+Un moyen simple de se representer un vecteur est de s'imaginer une fleche allant de l'origine (0,0) au point donné (x,y). Le vecteur peut donc signifier beaucoup de chose comme : 
+* la distance
+* Les coordonnées
+* La direction
+* Le mouvement
+
+Les additions sont commutative (cela signifie qu'on peut inverser l'ordre des éléments) mais pad les soustractions, ni les divisons. Les multiplications peuvent l'être sauf dans le cas de matrices et de quaternion.
+
+### La longueur d'un vecteur
+
+La magnitude d'un vecteur se calcule simplement. Pour cela, on utilise le théorème de Pythagore
+
+### Unit Vecteur (Normlalized)
+
+Les directions sont toujours des units vecteurs avec une longueur de 1. L'ensemble des possibles peut être signifier par un cercle avec un rayon de 1.
+
+Transformer un vecteur à un vecteur avec une longueur de 1 est le processus de normalisation. On garde la direction mais pas le scale. Cela permet de manipuler plus facilement une direction pour lui donner une vitesse précise
+
+### Displacement
+
+C'est le vecteur qui permet d'aller de A à B.
+
+
+
+
+# Sources :  
+https://www.youtube.com/channel/UC7M-Wz4zK8oikt6ATcoTwBA
