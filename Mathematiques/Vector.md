@@ -103,7 +103,48 @@ Pour obtenir le vecteur pour aller de A vers B, il faut faire B - A
 
 Pour obtenir le vecteur pour aller de B vers A, il faut faire A - B
 
+### Dot Product
 
+Il y a plusieurs façons de multiplier les vecteurs:
+* Dot Product
+* Cross Product
+* Component Wise
+
+#### Component Wise
+C'est pour scale un vecteur, on multiplie chaquun des components par le composant correspondant :
+
+(a,b) \* (c,d) = (a \* c, b \*d)
+
+#### Dot product
+on peut appeller ça une projection Scalaire. C'est l'idée de projeter un vecteur sur le second. C'est representé par le fait de tracer une droite (angle droit) entre le point A et la droite de la direction de A. Le résultat est la longueur (signed distance car ça peut négatif) entre l'origine et le point.
+
+<img src="/img/Math/Dot_Product.png " width="250" height="150">
+
+Pour fonctionner, il faut qu'au moins une valeur soit normalisé et potentiellement les 2. Lorsque les 2 sont normalisés, plus le Dot product tend vers 1, plus les vecteurs pointent dans la même direction et plus il tend vers -1 plus ils sont oppoés, tandis qu'à 0, ils sont perpendiculaire.
+
+<img src="/img/Math/Dot_Product2.png " width="250" height="150">
+
+La formula est la même que celle pour calculer le SqrMagnitude :
+dot(a,b) = (a.x * b.x + a.y * b.y)
+
+Ce processus de projection permet aussi de transformer un vecteur sur un autre vecteur et donc un autre espace.
+
+Le fait d'avoir un des 2 vecteurs non normalisés a certaines utiltiés aussi, exemple :
+
+Une balle rebondit sur une surface et on veut savoir le volume du son d’impact. Plus la balle va vite, plus on veut que le son soit fort, et on veut aussi prendre en compte l’angle de l’impact.
+On prend donc la normale pour avoir la direction de la surface et on fait le dot product du vecteur de la balle. On veut donc uniquement avoir la normal de normaliser pour pouvoir garder la vélocité du vecteur de la balle pour avoir une valeur plus importante.
+
+
+## Spaces
+
+Par défaut, on considère qu'on est dans une espace Orhographique, c'est  àdire que les axes X & Y sont perpendiculaires.
+
+L'espace est le référentiel que chaque vecteur répresente. Par défaut, c'est l'origine du monde (0,0) mais un vecteur peut etre dans le referentiel d'un autre, c'est le concept de Parent-Enfants ou de World Space / Local Space.
+
+Un espace est souvent représenté par les “Bases vector” (Vecteur de base) qui sont souvent normalisés et représentent les axes (équivalent de forward, right, up).
+
+Selon le milieu on utilisera différent espace de base. Par exemple, un environnement 3D aura le World Space tandis qu'un Shader utilisera plutôt le Clip Space avec différentes couches :
+Model Space => View Space => Projection Space => (Clip Space)
 
 
 # Sources :  
