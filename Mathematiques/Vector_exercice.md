@@ -69,7 +69,33 @@ Il faut créer les fonctions qui permettent de convertir un point en localSpace 
 transform.InverseTransformPoint (Local Space)
 transform.TransformPoint (World Space)
 
+Partie 2 :
+
+Convertir un point en local Space ou en World Space. C'est à dire qu'on conserve les valeurs du Vecteur et on le trace dans un autre réferentiel
+Vecteur(2,1) n'est pas tracé au même endroit quand il est en local Space ou en world Space
+
 **Solutions:**
+
+Pour InverseTransformPoint, c'est à dire passer obtenir le Local Space à partir du World Space, il suffit de :
+* Ajouter le Vecteur de référence au vecteur actuel
+* Tourner le Vecteur de la rotation du vecteur actuel
+
+Et il suffit de faire la logique opposé dans l'autre cas. Dans le cas de scale, ne pas oublier de multiplier/diviser par la scale.
+
+Partie 2 :
+
+Tracer en local :
+
+On calcule dans un premier temps l'offset du vecteur qui est en multipliant chaque élément par l'axe correspondant, c'est à dire :
+* x => x * transform.right
+* y => y * transform.up
+* z => z * transform.Forward
+
+Ensuite, on ajoute le vecteur de référence à l'offset.
+
+Tracer en World:
+
+On effectue le même processus en enlevant le vecteur de référence dans lequel il se trouve
 
 
 
