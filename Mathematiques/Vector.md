@@ -59,7 +59,7 @@ Un moyen simple de se representer un vecteur est de s'imaginer une fleche allant
 
 Les additions sont commutative (cela signifie qu'on peut inverser l'ordre des éléments) mais pad les soustractions, ni les divisons. Les multiplications peuvent l'être sauf dans le cas de matrices et de quaternion.
 
-### La longueur d'un vecteur
+### Cacluler La longueur d'un vecteur
 
 La magnitude d'un vecteur se calcule simplement. Pour cela, on utilise le théorème de Pythagore. Il est facile de créer un triangle rectangle avec l'abscisse et l'ordonéne. Le vecteur correspond à l'hypothénuse de ce triangle : 
 
@@ -73,15 +73,35 @@ Le principe reste identique peu importe le nombre de dimension, c'est à dire qu
 
 Sqr(2² +3² + 4²) (envion 5.3)
 
-### Unit Vecteur (Normlalized)
+### Calculer la distance entre 2 vecteurs (Displacement entre 2 vecteurs)
+
+Pour calculer le vecteur entre 2 vecteurs, il suffit de soustraire un vecteur au second :
+
+VecteurA - VecteurB OU VecteurB VecteurA puis on calcule la longueur de ce vecteur comme vu ci-dessus.
+
+Lorsqu'on veut comparer la distance entre 2 éléments, on peut garder l'élément au carré pour gagner en performance. C'est à dire faire le SqrMagnitude comme ceci:
+
+Magnitude = X² + y²`
+
+### Unit Vecteur (Normalized)
 
 Les directions sont toujours des units vecteurs avec une longueur de 1. L'ensemble des possibles peut être signifier par un cercle avec un rayon de 1.
 
 Transformer un vecteur à un vecteur avec une longueur de 1 est le processus de normalisation. On garde la direction mais pas le scale. Cela permet de manipuler plus facilement une direction pour lui donner une vitesse précise
 
-### Displacement
+Pour normaliser un vecteur, il suffit de le diviser par sa magnitude comme ceci:
 
-C'est le vecteur qui permet d'aller de A à B.
+Vecteur(x,y)/magnitude => (x/magnitude, y/magnitude), il est donc logique qu'on ne peut pas normaliser un vecteur qui a une longueur de 0 ou alors on retourne 0 sur tous les axes.
+
+On peut aussi normaliser un vecteur étapes par étapes plutôt que d'utiliser les fonctions de la librairie pour récupérer la longueur et donc limiter le nombre de calcul/
+
+### Displacement & Direction
+
+C'est le vecteur qui permet d'aller de A à B. Il est donc différent de B vers A. Il s'obtient comme pour la distance, mais il y a un ordre précis selon le sens dans lequel on veut aller. Les éléments sont dans le sens inverse de le phrase, c'est à dire :
+
+Pour obtenir le vecteur pour aller de A vers B, il faut faire B - A
+
+Pour obtenir le vecteur pour aller de B vers A, il faut faire A - B
 
 
 
