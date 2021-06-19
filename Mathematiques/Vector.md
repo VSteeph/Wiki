@@ -146,6 +146,11 @@ Un espace est souvent représenté par les “Bases vector” (Vecteur de base) 
 Selon le milieu on utilisera différent espace de base. Par exemple, un environnement 3D aura le World Space tandis qu'un Shader utilisera plutôt le Clip Space avec différentes couches :
 Model Space => View Space => Projection Space => (Clip Space)
 
+### Relativité des vecteurs
+
+Un vecteur est relatif à son espace et à lui même. C'est à dire que si on veut ajouter ou enlever un vecteur à un autre, il faut le faire depuis celui la. C'est à dire.
+
+Vecteur A + Vecteur B pour ajouter B au vecteur A ou encore transform.position+ transform.forward pour avoir la direction dans laquelle pointe un élément
 
 # Sources :  
 https://www.youtube.com/channel/UC7M-Wz4zK8oikt6ATcoTwBA
