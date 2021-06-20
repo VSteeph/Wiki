@@ -2,15 +2,23 @@
 
 ## Forces 
 
-### Jump
+### [Jump](https://www.real-world-physics-problems.com/physics-of-jumping.html)
 
 **Initial velocity requise :** Sqr(Gravity \* 2 _* Desiredheight) // 2 peut etre négatif lorsque la gravité est négatif
+
+
+### [Projectile Motion](https://www.real-world-physics-problems.com/projectile-motion.html) (Peut servir pour un saut horizontal) 
+
+**Horizontal Velocity**: Initialvelocity * Cos(Angle)
+
+**Horizontal Velocity**: InitialVelocity * Sin(Angle)
 
 ---
 
 ### [Gravité](https://en.wikipedia.org/wiki/Equations_for_a_falling_body)
 
 **Gravité :**  9,806 65 m/s^2  // m/s^2  correspond à l’accélération, c’est à dire le nombre de m/s gagné par s 
+
 **Vitesse de chute overTime :**  Force de gravité * temps
 
 ---
