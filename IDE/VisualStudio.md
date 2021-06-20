@@ -1,4 +1,4 @@
-# Tips
+# [Tips](https://github.com/kendrahavens/ProductivityFeatures)
 
 ## Navigation
 
@@ -11,29 +11,59 @@
 
 ## KeyBinds
 
-**Auto Indenter** Ctrl K + ctrl D (pour le document) // ctrl K + ctrl F (pour la selection)
+### Code Management
 
 **Manual Indentation** Tab pour avancer  / Shift Tab pour reculer
 
-**BookMark / Unbookmark :** Ctrl + K x2
+**Auto Indenter** Ctrl K + ctrl D (pour le document) // ctrl K + ctrl F (pour la selection)
 
-**Show Bookmark** Ctrl W + Ctrl B => (Ctrl W est pour window)
+**Clean up code** Cltrl K Ctrl E
 
-**Onglet Jiggle** Ctrl Tab ou Ctrl + shift tab pour changer d'onglet ou alors ctrl + 6 next tab // ctrl + shift tab + - pour previous tab
+**Expand/collapse un element**: Ctrl + M x2
+
+**Comment/decomment** Ctrl  + shift + /
+
+### Tab
+
+**Jiggle tab** Ctrl + tab
 
 **Close tab** Ctrl +F4 ou alt + w + L pour fermer tous les onglets
 
-**Navigate tab** Ctrl + permet d'ouvrir le navigate et édcrire le nom du fichier/méthode/variable (Tab key puis fleche pour se déplacer et entrer pour valider)
 
-**Full Screen** Shift + alt + enter (Entre et sort)
+### Organisation
+
+**BookMark / Unbookmark :** Ctrl + K x2
+
+**Go to Solution Explorer Search** Ctrl + $ 
  
-**Expand/collapse un element**: Ctrl + M x2
+**Clipboard History** Clip Shift V
 
-**Helper** alt + enter
+**Options** Right Click OU alt + ù (pas les mêmes résultats)
 
-**Suggest Name** Ctrl + Space
+**Highlight File dans Explorer** Ctrl + ) + S (c'est les 2 fleches dans solution explorer qui permet de se placer sur le fichier en question)
+
+
+### Producitvity
+
+**Easy File Access** Ctrl + , pour menu de fichier (r permet d'avoir les derniers fichiers par exemple)
+
+**Helper** alt + enter ou Ctrl + , (Contexte souvent pratique)
+
+**Suggest Name** Ctrl + Space (intellisense)
+
+**Last Edit Code** Ctrl + shift + backspace
+
+**Multiple line edit** Ctrl + alt + click
+
+**Multiple edit similar word** shift alt . OU Shift + alt + $ pour TOUS les occurences
+
+**Search Bar** Ctrl + Q et taper les mots clés (ça amrche avec les commandes GIT !!)
 
 ## [Code Snippet](https://docs.microsoft.com/en-us/visualstudio/ide/visual-csharp-code-snippets?view=vs-2019)
+
+**Open Snippet Menu** Ctrl K + Ctrl X
+
+**Open Surround With Snippet** Ctrl K + Ctrl S (pour entourer de snippet genre IF
 
 **Constructor** ctor
 
