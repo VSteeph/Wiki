@@ -13,6 +13,14 @@
 
 **Horizontal Velocity**: InitialVelocity * Sin(Angle)
 
+[More](https://gamedev.stackexchange.com/questions/134323/how-to-calculate-vector-of-projectile-initial-velocity) VO = initial velocity // Po = Inital Position // pt = target Position
+
+**Time To reach**: t = -Vo.y - Sqr(V
+
+**initial velocity x** (Ptx - pox) / t
+
+**Initial velocity z
+
 ---
 
 ### [Gravité](https://en.wikipedia.org/wiki/Equations_for_a_falling_body)
