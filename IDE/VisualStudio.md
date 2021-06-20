@@ -79,4 +79,8 @@
 
 **loop** for (increment) ou forr (decrement) // while ou do  // foreach
 
-**List**
+## Features
+
+On peut filtrer les recherches en F12 pour seuleemnt les Write par exemple
+
+On peut ajouter des éléments au code Clean up (Ctrl K Ctrl E) comme rempalcer var par full type (C'est le pinceau en bas du fichier, pas de visual studio)
