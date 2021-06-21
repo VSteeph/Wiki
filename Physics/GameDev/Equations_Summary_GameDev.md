@@ -27,7 +27,7 @@
 
 **Gravité :**  9,806 65 m/s^2  // m/s^2  correspond à l’accélération, c’est à dire le nombre de m/s gagné par s 
 
-**Vitesse de chute overTime :**  Force de gravité * temps
+**Vitesse de chute overTime :**  Force de gravité * temps donc chute += force de gravité * deltaTime
 
 ---
 
