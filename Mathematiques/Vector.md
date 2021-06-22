@@ -134,6 +134,13 @@ Le fait d'avoir un des 2 vecteurs non normalisés a certaines utiltiés aussi, e
 Une balle rebondit sur une surface et on veut savoir le volume du son d’impact. Plus la balle va vite, plus on veut que le son soit fort, et on veut aussi prendre en compte l’angle de l’impact.
 On prend donc la normale pour avoir la direction de la surface et on fait le dot product du vecteur de la balle. On veut donc uniquement avoir la normal de normaliser pour pouvoir garder la vélocité du vecteur de la balle pour avoir une valeur plus importante.
 
+#### Cross Product
+
+Cross(VecteurA, VecteurB) retourne un vecteur perpendiculaire aux 2 fournis (sauf si les 2 sont dans la même direction). Par exemple, si on donne transform.forward & transform.up, cela va donner transform.right.
+
+Par exemple, cela peut permettre d'obtenir la droite ou la gauche de la normal d'un objet et le forward du joueur. Si on veut une direction, il faut normaliser les 2 vecteurs (sauf si les 2 vecteurs fournis sont parfaitements perpendiculaires)
+
+L'ordre impacte la direction du résultat.
 
 ## Spaces
 
