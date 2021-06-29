@@ -68,3 +68,14 @@ Par exemple, trouver un numéro dans un annuaire. Avancer page par page permet d
 
 La logique la plus efficace de faire est que la plupart des gens est d'ouvrir au mileu et regarder si l'index de la lettre et recommencer avec la moitié valide jusqu'à trouver le numéro, ce qui est rapide ET fiable.
 
+### Evaluation de la compelxité (Big O)
+
+Si on reprend ces 3 algorithmes, et qu'on etablit une courbe du temsp de resolution par rapport à la taille du problème.
+
+L'exemple A prendra O(n) qui est autant d'étapes qu'il y a d'éléments, c'est un format linéaire (courbe = ax)
+
+L'exemple B prendra O(n/2) c'est à dire 2 fois moins d'éléments car on divise par 2 la taille du problème, format linéaire ausssi
+
+L'exemple C prendra O(log²(n)), c'est une courbe logarithmique car plus il y a d'éléments, plus les premières étapes traitent beaucoup d'éléments
+
+https://i.imgur.com/d6fG2on.png
