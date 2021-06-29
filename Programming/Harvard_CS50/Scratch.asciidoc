@@ -1,0 +1,70 @@
+# Lecture 0 : Scratch
+
+
+## Computer Science
+
+Computer Science peut être traduit par la résolution de problème et encore plus simplepment par :
+
+Input => Process => Output
+
+Le process est la façon de résoudre le problème pour transformer l'input en output.
+
+La première étape est de traduire l'input, normaliser en quelque chose de compréhensible/standardiser. Par exemple, on utilise les chiffres pour pouvoir compter et faire des mathématiques.
+
+Un ordinateur est beaucoup plus simple qu'un ordinateur même s'ils sont rapides et puissants. Ils sont fait par des humains et donc dans ce domaine de raisonnement. Un ordinateur est en base 2 et utilise un système binaire, binary digits (bits) qui marche exactement des chiffres, on ajoute plus d'inputs pour faire des nombres plus importants
+
+Cela vient du fait que l'ordinateur a comme input, non pas des chiffres, mais l'electricité qui est soit On soit Off. On peut donc representer l'information. Par exemple, une lumière est soit allumée soit éteinte (1 ou 0), donc le seul input de l'ordinateur est l'electricité (on ajoute, ou on laisse partir de l'electricité), ce qui nous donne des 0 et des 1.
+
+### Comment compter au dessus de 1? (Principe du binaire)
+
+On peut ajouter plus d'input (exemple passer de 1 à 3 lumières), ce qui permet te compter jusqu'à 7 (0 compris) si on ne se limite pas qu'au fait si le courant est la ou non mais aussi le pattern de la présence du courant. Pour compter, on part de 0 car c'est le state par défaut.
+
+Dans un ordinateur, on n'utilise plus d'ampoules mais des mini composants appelés transistor et il y en a des millions dans un ordinateur. 
+
+Chaque chiffre peut être representé par un exposant, c'est à dire en base 10 :
+123 correspond à
+3 sur la base 10^0 => 1
+2 sur la base 10^1 => 10
+1 sur la base 10^2 => 100
+
+Chaque nouveau chiffre correspond à une puissance
+
+Cela correspond à la même chose pour un ordinateur mais avec une base 2 :
+2^0 => 1
+2^1 => 2
+2^2 => 4
+
+C'est juste le même système avec une base différente. On peut donc compter avec 3 lumières jusqu'à 7 pour un total de 8 valeurs différentes.
+
+### Traduire d'autres formats de données
+
+#### Texte
+Pour avoir d'autres données que des chiffres, il suffit de convertir ces valeurs dans un autre format, c'est à dire associer les chiffres à des caractères avec un format standardisé. C'est ainsi que le A majuscule est 65 (01000001). ce format est https://asciichart.com/[ASCII]
+
+
+Ensuite, en fonction du programme qui est utilisé, la même valeur peut représenter un chiffre ou une lettre selon le contexte. Les ordinateurs utilisent le format 8bits pour un caractère. Avant on utilisait 7 bits car la place était limité dans le temps. Ce format de 8bits correspond à 1 byte et donc 64bits correspond à 8 bytes. 
+
+8bits (1 byte) correspond donc à 256 caractères, ce qui est un peu limité pour le format international. ASCII est au format américain, mais cela peut manquer d'élément comme les accents, les caractères asiatiques, arabes, et plus récemment les émojis.
+
+Nous sommes passés de ASCII à Unicode qui supportent toutes les langues mondiales et des emojis. Les formats ont évolués de 8 bit à 16 bits et 32 bits.
+
+#### Visual Color
+
+Pour les couleurs, on utilise le même principe avec des systèmes comme le RGB qui a 3 valeurs allant de 0 0 255 pour chacun de ces channels Rouge, Vert, Bleu qui utilise un channel de 24 bits pour allumer les pixels. Le principe de pixelation peut s'observer quand une image est trop zoom ou manque de qualité, on peut voir les pixels. Chaque pixel utilise 24bits (3 bytes) et s'il y a des millions de pixels, c'est pour ça que les fichiers sont si lourds et peuvent être exprimés en kylobytes (kb) ou megabytes (mb = millions) ou gigabytes (gb = milliards).
+
+Si le flux de bits est statique, c'est une photo mais s'il est constant, cela donne uen vidéo qui est une séquence d'image à un certain débit.
+
+### Sonorité
+
+Encore une fois, c'est le même principe un chiffre permet de representer les notes et les sonorités tandis qu'un autre represente la durée.
+
+Les différents formats sonores/vidéos/musiques sont les standards qui representent certaines choses différements. Par exemple, les JPG et les PNG ont pas la même façon de traduire un input et c'est pour ça qu'il y a 2 formats.
+
+## Algorithm (Process du début de Schéma)
+
+Ce sont des instructions (étapes par étapes) sans aucune ambiguité et précis car un ordinateur est rigide et ne peut pas lire entre les lignes. Il ne faut pas qu'il pusise mal interpreter.
+
+Par exemple, trouver un numéro dans un annuaire. Avancer page par page permet d'être sur que l'ordinateur le trouve à 100%. Ce processus est très lent tandis qu'avancer 2 pages par 2 pages  n'est pas fiable mais est 2 fois plus rapide.
+
+La logique la plus efficace de faire est que la plupart des gens est d'ouvrir au mileu et regarder si l'index de la lettre et recommencer avec la moitié valide jusqu'à trouver le numéro, ce qui est rapide ET fiable.
+
