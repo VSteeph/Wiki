@@ -5,7 +5,7 @@
 
 Computer Science peut être traduit par la résolution de problème et encore plus simplepment par :
 
-Input => Process => Output
+image::https://cs50.harvard.edu/x/2021/notes/0/input_output.png[input_output]
 
 Le process est la façon de résoudre le problème pour transformer l'input en output.
 
@@ -78,7 +78,7 @@ L'exemple B prendra O(n/2) c'est à dire 2 fois moins d'éléments car on divise
 
 L'exemple C prendra O(log²(n)), c'est une courbe logarithmique (base 2) car plus il y a d'éléments, plus les premières étapes traitent beaucoup d'éléments
 
-image::https://i.imgur.com/d6fG2on.png[Big_O]
+image::https://cs50.harvard.edu/x/2021/notes/0/running_time.png[Big_O]
 
 Dans cet exemple, la courbe représente le temps d'execution.
 
