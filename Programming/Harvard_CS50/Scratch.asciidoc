@@ -76,6 +76,23 @@ L'exemple A prendra O(n) qui est autant d'étapes qu'il y a d'éléments, c'est 
 
 L'exemple B prendra O(n/2) c'est à dire 2 fois moins d'éléments car on divise par 2 la taille du problème, format linéaire ausssi
 
-L'exemple C prendra O(log²(n)), c'est une courbe logarithmique car plus il y a d'éléments, plus les premières étapes traitent beaucoup d'éléments
+L'exemple C prendra O(log²(n)), c'est une courbe logarithmique (base 2) car plus il y a d'éléments, plus les premières étapes traitent beaucoup d'éléments
 
 image::https://i.imgur.com/d6fG2on.png[Big_O]
+
+Dans cet exemple, la courbe représente le temps d'execution.
+
+
+### Pseudo Code
+L'idée est de prendre la logique et d'écrire un algorithme précis et correct en prenant en compte toutes les possibilités même dans les cas qui ne sont pas la. Par exemple, dans ce cas, prendre en compte que le fait que la personne peut ne pas être dans cette situation.
+
+Il y a plusieurs types :
+* Actions (Code cela correspond à une fonction)
+* Conditions/branches (If statement)
+* Boolean expression (c'est une question qui est répondu par Oui/non ou Vrai/faux ou 0/1)
+* loop (permet de re-executer la même partie)
+
+
+## Scratch
+
+
