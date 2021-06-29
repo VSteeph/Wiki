@@ -78,4 +78,4 @@ L'exemple B prendra O(n/2) c'est à dire 2 fois moins d'éléments car on divise
 
 L'exemple C prendra O(log²(n)), c'est une courbe logarithmique car plus il y a d'éléments, plus les premières étapes traitent beaucoup d'éléments
 
-https://i.imgur.com/d6fG2on.png
+image::https://i.imgur.com/d6fG2on.png[Big_O]
