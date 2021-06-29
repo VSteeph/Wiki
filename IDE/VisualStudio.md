@@ -84,3 +84,7 @@
 On peut filtrer les recherches en F12 pour seuleemnt les Write par exemple
 
 On peut ajouter des éléments au code Clean up (Ctrl K Ctrl E) comme rempalcer var par full type (C'est le pinceau en bas du fichier, pas de visual studio)
+
+## Debuggign
+
+On peut utiliser Watch pour suivre une ou des variables / Immediate Windows pour executer du code et on peut aussi mettre des breakspoints. Pour ajouter uen condition à un breakpoint, il suffit de faire clic droit + conditions et écrire la conditions
