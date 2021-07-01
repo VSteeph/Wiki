@@ -55,6 +55,33 @@ Développer est un exercice de réflexion et ces patterns ont pour but de se pos
 
 Créer un contexte est une opération couteuse (Création de connection, vérifie la db, etc) qui est raisonnable mais qui faut faire pour chaque opération en DB, donc c'est intéressant de créer un singleton car il n'y en aura qu'un seul par app.
 
+Exemple d'implementation ; 
+
 ```C#
+// appel
 SingletonClass singleton = SingletonClass.instance;
+
+// class
+public calss SingletonClass
+{
+    private bool _disposed;
+    private static volatile SingletonClass _instance;
+    private static readonly object _synclock = new Object();
+    
+    public static SingletonClass Instance
+    {
+        if(_instance != null)
+          return _instance;
+          // sécurité pour le multi thread
+        lock(_synclock)
+        {
+          // check ou cas ou l'instance a été fait dans un autre thread
+          if(_instance == null)
+          {
+              _instance = new SingletonClass();
+          }
+          return _instance;
+        }
+    }
+}
 ```
