@@ -85,3 +85,77 @@ public calss SingletonClass
     }
 }
 ```
+
+### Simple Factory
+
+On veut créer une Pizza Factory qui a plusieurs types de pizza. On peut avoir des if pour chaque type de pizza mais ça fait beaucoup de repetition, mais on peut encapsuler ça dans une Simple Factory (Simple car très simple). Le but est d'avoir UN endroit pour créer quelque chose (Single resposnability, la factory crée les éléments et c'est tout, ça les utilise pas).
+
+Exemple :
+```C#
+// Appel avec IPizza qui correspond au Liskov substitution
+IPizza pizza = PizzaFactory.CreatePizza(PizzaType.Cheese);
+
+//SImple Factory
+public static IPizza CreatePizza(PizzaType type)
+{
+
+// C'est mieux de pas hardcoder comme ça mais plutôt de passer par une table pour avoir une factory dynamique
+    switch(type)
+    {
+           case PizzaType.Cheese:
+                return new CheesePizza();
+           case PizzaType.Sausage:
+                return new SausagePizza();
+           case PizzaType.Vege:
+                return new VegePizza();
+           default:
+                return null;
+    }
+}
+```
+
+
+### Abstract Factory & The Factory Method 
+
+2 qui marchent ensemble et comment ces patterns fonctionnenent ensemble, toujours avec l'exemple des pizza
+
+```c#
+//appel
+public void ShouldReturnThinCrustPizzaFromNyStore() 
+{
+    IPizzaStore store = new NewYorkPizzaStore();
+    var pizza = store.OrderLocalizedPizza(PizzaType.vege);
+    Assert.AreEqual(DoughType.Thin, pizza.Dough);
+    Assert.AreEqual("Red", pizza.SauceType);
+    Assert.AreEqual("Spicy", pizza.Seasoings);
+}
+
+public void ShouldReturnThinCrustPizzaFromChicagoStore() 
+{
+    IPizzaStore store = new ChicacoPizzaStore();
+    var pizza = store.OrderLocalizedPizza(PizzaType.vege);
+    Assert.AreEqual(DoughType.DeepDish, pizza.Dough);
+    Assert.AreEqual("TomatoBasil", pizza.SauceType);
+    Assert.AreEqual("Mild", pizza.Seasoings);
+}
+
+// Implementation 1
+public abstract class PizzaStore : IPizzaStore
+{
+    protected PizzaStore() : this (new BaseIngredients()) {}
+    
+    // Command Pizza peut importe ce que c'est on contrôle l'ordre
+    public IPizza OrderLocalizedPizza(PizzaType type)
+    {
+        IPizza pizza = new CreateLocalizedPizza(type);
+        pizza.Bake();
+        pizza.Cut();
+        pizza.box();
+        return pizza;
+    }
+}
+```
+
+
+
+### Adapter
