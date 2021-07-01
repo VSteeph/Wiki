@@ -1,3 +1,60 @@
 # https://www.youtube.com/watch?v=agkWYPUcLpg[SOLID Design Pattern]
 
+Principes à essayer des suivre en codant ou en clean up (pas forcément nécessaire)
 
+## SOLID
+
+### Single Responsability Principle
+
+Faire une chose et la faire bien. Une méthode doit faire une chose et limiter les éléments. L'objectif est d'avoir beaucoup de petites méthodes et beaucoup de classes mais qui ont une utilité. Cela permet d'éviter d'avoir des dependances, des relations ou même impactés d'autres éléments sans le vouloir. Une chose fait une chose. Le nombre de fichier n'a plus trop d'importances avec les nouveaux IDE
+
+### Open-Closed Principle
+
+Open for extension, Closed for Modification.
+
+C'est l'idée d'etendre une classe plutôt que de la modifier. S'il y a du code qui marche, autant ajouter une autre classe plutôt que de risquer de casser un code qui marche.
+
+### Liskov Substitution Principle
+
+Programmer avec un Interface pour ne pas avoir à tout changer lors d'un changement de comportement. Exemple, un site qui utilise un service de paiement qu'il faut changer. C'est beaucoup plus simple de changer avec un Interface et modifier l'implémentation de l'interface plutôt que tout le code.
+
+## Interface segregation Principle
+
+Fine grained interface pour ce qui est en cours. C'est à dire toujours en prendre le contexte pour limiter les options et faciliter l'utilisations
+
+### Dependency Inversation principle
+
+Cela depend d'abstractions et pas d'implementations. Exemple, faire quelque chose puis l'utiliser dans une méthode, c'est se compliquer et se bloquer (Exemple du moteur et voiture). C'est à dire qu'on a des concepts liés à une inteface et on injecte une dependance qu'on relie à cet interface et le code ne change pas.
+
+## Autres principes
+
+### Don't repeat yourself
+
+Eviter d'avoir plusieurs fois le même code, si une chose est écrit une fois, c'est possible d'en faire une fonction. Si c'est écrit 2 fois, ça doit etre une fonction et si c'est écrit 3, c'est un problème.
+
+
+### Boy Scout Principle (Rendre un endroit plus propre que quand on l'a trouvé)
+
+Gros projet avec énormément de méthodes, beaucoup de paramètres et une grosse dete technique qui demanderait de faire ré-écrire beaucoup de chose. Cela aura un retour sur investissement mais pas suffisant pour justifier la perte de temps.
+
+L'idée c'est qu'à chaque fois qu'on doit modifier ce code, c'est essayer de rendre le code un peu plus propre (par étape), extraire des méthodes, ajouter des units test
+
+### Sepearations of concerns
+
+Très proche de Single Responsability, le code fait ce qu'il doit faire. Exemple, MVC chaque élément a sa tache et ce qu'il doit faire.
+
+### Design Pattern Dogme
+
+Les design pattern sonnt très utiles pour pouvoir coder solidement mais ils ne sont pas absolus et ne sont pas la seule solution (ex : MArteau et clou analogie).  Ils sont la pour aider le développeur à réflechir à ce qu'il fait.
+
+Développer est un exercice de réflexion et ces patterns ont pour but de se poser pour réflechir au problème.
+
+## Patterns
+
+### Singleton
+
+Créer un contexte est une opération couteuse (Création de connection, vérifie la db, etc) qui est raisonnable mais qui faut faire pour chaque opération en DB, donc c'est intéressant de créer un singleton car il n'y en aura qu'un seul par app.
+
+```C#
+SingletonClass singleton = SingletonClass.instance;
+```
