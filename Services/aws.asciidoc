@@ -45,7 +45,7 @@
 * TimeStream : Time based queries et analytics
 * Quantum Ledger DB : Pour les sets de blockchain pour la crypto
 
-##Analyse
+## Analyse
 * Redshift: Datawarehouse permet d'analyser des databases ensembles (strucutres)
 * LakeFormation : Grosse base de donnée non structuré
 * Kinesis: pour analyser des data en temps réel
