@@ -1,0 +1,13 @@
+# note
+
+Singleton vs static
+* Similaire mais différence (bien documentée)
+* static pas garantie que ça soit thread safe donc on peut avoir plusieurs instances 
+* donc important d'avoir qu'une instance (compter nombre de visiteur), risque d'avoir multi thread, ou autre => Singleton
+* Db context, important et lourd mais pas bien singleton (pcq y a un tracking qui peuvent se mélanger donc pas bien singleton
+* dur de voir les memory leak / probleme de thread donc façon de faire voir les façons recommandé par msdn
+
+
+Need volatile qui permet de s'assurer que l'instance soit fini avant d'ettre accéder (thread safe)
+
+Good practice de mettre Idisposable permet de dispose une ressources pour que le garbage collector agisse le plus tôt possible (surtout pour les gros éléments, ce que permet de faire Disposable avec Dispose)
