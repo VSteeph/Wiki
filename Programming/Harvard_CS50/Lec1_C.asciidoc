@@ -6,6 +6,7 @@
 * Design (Well designed code, efficient, no repetition, ...)
 * Style (Aesthetics with correct rules such as Case Rule, readibility, etc)
 
+Utiliser : https://ide.cs50.io/
 
 [source,C]
 ----
