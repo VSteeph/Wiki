@@ -95,4 +95,4 @@ Il y a plusieurs types :
 
 ## Scratch
 
-
+L'idée est de comprendre que chaque étape est de transformer un input en output (le nombre de fois nécessaire jusqu'à finir l'élément) aka image du début
