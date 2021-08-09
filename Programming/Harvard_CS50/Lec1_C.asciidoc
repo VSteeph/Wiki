@@ -6,7 +6,14 @@
 * Design (Well designed code, efficient, no repetition, ...)
 * Style (Aesthetics with correct rules such as Case Rule, readibility, etc)
 
-Utiliser : https://ide.cs50.io/
+## Introduction
+
+Utiliser : https://ide.cs50.io/ 
+(IDE Integrated development environment)
+
+Typique d'un IDE avec une zone pour coder et une zone de terminal pour executer les programes et les commades.
+
+Partie Code : 
 
 [source,C]
 ----
@@ -17,3 +24,43 @@ int main(void)
   printf("hello world");
 }
 ----
+
+Partie terminal
+
+On execute un programme avec une commande, on passe à un CLI (Comande Line Interface) depuis un GUI (Graphical User Interface).
+
+Tout d'abord, il faut compiler le code source (en C déjà) en Binaire, cela peut être fait avec un compiler (Logiciel, integré à un terminal, W/E)
+
+dans CS50, c'est 
+
+make FileName ou make ./FileName (pour l'endroit exact)
+
+et pour executer le programe, il suffit d'appeller l'endroit du fichier :
+
+./FileName
+
+Le fichier doit etre recompiler à chaque changement ,évidemment.
+
+## Vocabulaire:
+
+### Fonctions
+Une fonction est un mini-programme (un action ou un verbe) qui permet de faire quelque chose.
+
+Une fonction peut aussi prendre des inputs qu'on appelle ça Arguments (et parfois paramètres)
+ex : printf qui est pour print Formatted en C.
+
+Une fonction a plusieurs formes :
+- SideEffect (Effet comme texte/audion c'est visuel, on voit qu'elle a été effectué)
+- Return values (Retourne une valeur mais n'a pas d'effet visible)
+
+### Librairies
+Un ensemble de code déjà écrit qui permet d'avoir accès à plusieurs fonctions avec un but précis. Pour utiliser en librairie en C, il faut ajouter le fichier et l'inclure avec #include le header du fichier
+
+### String
+c'est du texte (array de caractere)
+
+## fonctions en C
+
+### printf (Print Format Code)
+Elle permet d'ajouter des placeholder pour des variables comme des strings (%s)
+printf("hello %s", name);
