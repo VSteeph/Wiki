@@ -41,6 +41,11 @@ et pour executer le programe, il suffit d'appeller l'endroit du fichier :
 
 Le fichier doit etre recompiler à chaque changement ,évidemment.
 
+Il y a d'autres commandes pour aider sur le 3 points de measure du code comme :
+* help50 FileName pour aider à trouver les erreurs
+* style50 FileName pour améliorer le code
+* check50 permet de vérifier la "correctness" du code
+
 ## Vocabulaire:
 
 ### Fonctions
@@ -59,8 +64,17 @@ Un ensemble de code déjà écrit qui permet d'avoir accès à plusieurs fonctio
 ### String
 c'est du texte (array de caractere)
 
+### Header Files
+Cela represente un fichier qui existe et qui permet d'accèder aux fonctions disponibles dans ce fichier.
+
 ## fonctions en C
 
 ### printf (Print Format Code)
 Elle permet d'ajouter des placeholder pour des variables comme des strings (%s)
 printf("hello %s", name);
+
+## Error
+Cela en genéral donne le programme ou est l'erreur et l'endroit aka hello.c:3:5: (programme hello ligne 3, caractere/columne 5 donc c'est la ligne en premier)
+
+## Comment
+Donner le but du code dans les commmentaires et pas forcement un pseudo code de ce qui est écrit plus bas
