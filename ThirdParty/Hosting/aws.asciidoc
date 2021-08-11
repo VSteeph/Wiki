@@ -1,0 +1,70 @@
+# Amazon Web Services
+
+## Computing
+* RobotMaker: Test & Simulation de robot
+* IOT Core: Gère et envoie/Reçoit des données pour les IOTs
+* Ground Station: Permet de faire une connection avec des satellites
+* Bracket: Interaction avec un Quantum Computer
+* Elastic Compute Cloud (EC2): Créer un ordi virtual avec une puissance libre pour pouvoir faire des calculs (Cout à la seconde)
+
+## Hosting
+* Load Balancing: Permet de redistribuer le traffic automatiquement sur un site
+* Cloud Watch : Permet de récupérer les logs/metrics de chaque instance (Hebergement site)
+* Auto Scaling: Permet de générer d'autres instances pour s'adapter au traffic d'un site (Possible de relier à CLoud Watch pour se baser sur les métrics)
+* Elastric Beanstalk: Simplfier EC2 pour héberger rapidement une plateforme type (framework) et avoir l'auto Scaling automatique (Paas = Plateform as a service)
+* LightSail : Permet de créer un site en quelques clicks sans avoir trop de contrôle sur l'implémentation du framework (Genre un Drupal rapide, Static Server)
+
+##Faaas
+* Lambda : Faas (Function as a service), upload un code et définit les events qui font que le code s'executent (Ex Request) et on paye à la request plutôt qu'au temps   
+* Serverless Repo : Prebuild function qu'on peut mettre en ligne très rapidement
+* Outposts : permet d'upload ses aws API sur ses propres serveurs 
+* Snow: Mini Data center qui fonctionne sans internet + conditions extremes (genre antartique)
+
+## Container
+* Container Registery:  Enregistre l'image d'un container
+* Container service: Permet des recupérer et executer ces containers 
+* Kubernetes Services : Plus de controle pour les containers
+* Fargate: Attribution de ressources automatiques pour les containers
+* App runner : déployer un container sur AWS et gére tout le reste en background (scaling, etc)
+
+## Stockage
+* Simple Storage Service (S3) : Stock tous les types de données
+* Glacier : permet d'archiver les fichiers peu utilisés
+* Block Storage: STock les fichiers qui ont besoin d'etre tres souvent utilisé (intensive data processing mais besoin manual management)
+* Elastic File system : Block storage avec tout le management automatique
+
+## Database
+* Simple DB: NoSQL DB, simple
+* Dynamo DB: Documented DB tres facile à scale, facile à lire, peu cher mais pas tres bien pour modeler la data (join, etc)
+* Document DB: Not mangoDB mais pareil
+* Elastic Search:  Tres rapide pour chercher des éléments
+* RDS : Relation data base services avec plein d'options (Backup, Patching, Scale,...)
+* Aurora :  Version MySQL CUstom d'Amazon mais avec meilleurs performances avec facile scaling (moins cher)
+* Neptune : Graph Database,  Meilleur façon de faire beaucoup de relations
+* Elastic Cache: Fully managed version of Redis
+* TimeStream : Time based queries et analytics
+* Quantum Ledger DB : Pour les sets de blockchain pour la crypto
+
+## Analyse
+* Redshift: Datawarehouse permet d'analyser des databases ensembles (strucutres)
+* LakeFormation : Grosse base de donnée non structuré
+* Kinesis: pour analyser des data en temps réel
+* Map Reduce : Service pour opérer sur des données masives efficacement (parallele distributed alogirhtm)
+* MSK: AUtomated service pour kafka
+* Glue : Service simplifié pour charger/Extraire et analyse ses données, connection automatique avec d'autres services de stockage AWS
+
+## Machine Learning
+* Data Exchange : Acheter/aboner pour avoir des données de sources externes
+* Sagemaker: Connecter  à de données type Data Exchange pour pouvoir commencer à créer des Machine Learning Models
+* Rekognition: Classifier et analyser des images
+* Lex : Pour pouvoir analyser le texte (Alexa basé dessus)
+* Deep Racer : Permet de conduire des voitures avec son IA
+
+## Developper essential
+* IAM : Sécurité pour AWS
+* Cognito : tools pour permettre aux utilisateurs de se connecter avec plein de façons diférentes et gére les users sessions
+* SImple NOtification Services : Push up notification pour les utilisateurs
+* SImple Email Services : envoie les emails aux users
+* CLoud formation : Templates basé sur notre infratrucures pour gérer les services
+* AMplify : permet d'interagir avec ses services
+* Budgets : permet de gérere ses coûts

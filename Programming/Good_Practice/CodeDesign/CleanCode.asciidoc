@@ -1,0 +1,25 @@
+https://www.youtube.com/watch?v=7EmboKQH8lM
+
+## Fonctions
+
+### Mise en page
+* Fonction doit être croute (<20 lignes = Top // <100 lignes = Mandatory)
+* Plus on descend dans la fonction, plus on peut augmenter les détails
+* L'indentation est limité à 1 ou 2 échelle (techniquement)
+
+### Caractéristiques
+* Une fonction doit faire une seule chose (C'est le cas quand on ne peut pas extraire une fonction de la fonction)
+* Si une fonction peut avoir plus fonctions extraites de cette classe et que ces fonctions partagent des variables, c'est une classe, pas une fonction
+* Nombre d'arguments doit etre limité au plus (3-4 est une limite car cela devient compliqué apres et plus dur de lire, s'il y a trop d'arguments car ils sont liés, cela devrait surement être un objet)
+* Si duplicat = Fonction (Duplicate ou un peu duplliqué)
+
+### Abstractions
+* Le niveau d'abstraction d'une fonction doit etre un niveau en dessous du nom de la fonction (pas completement différent
+* Le niveau d'abstraction d'une fonction doit etre similaire sur l'ensemble de son contenu
+
+### Specificité
+* Rarement passé des booleans dans une fonction, s'il y a 2 comportements autant faire 2 fonctions (et si c'est un boolean qui est passé d'une fonction à l'autre, faire les 2 comportements quand c'est nécessaire lors du if statement). ça peut aussi avoir une utilité mais dans le cas de logique, cela nuit à la lisibilité.
+* Limiter les cas de switch (Cas extrement spécifique, interface plus important) principe d'open-closed (open extension, close for modification) et cela ajoute beaucoup de travail
+* No Side Effect- Un Side Effect est le fait de changer l'état du Systeme. Si une fonction fait que le systeme change d'état, elle a un side effect comme File.Open ou New (car elle attribue de la mémoire pour un élément, le systeme change d'état). C'est pour cela que ces fonctions vont par paire (Open & CLose / New & Free/Delete). C'est pour cela qu'on a crée le Garbage Collector.
+* Une fonction avec un return ne doit pas avoir de side effect, une fonction avec un void en a, donc les return = safe à use et ça permet de savoir ce qu'est.
+* Si une fonction a un try/Catch, c'est la fonction => Try { Do } Catch et potentiellement un finally et c'est la fonction do qui va retourner l'exception, simple et facile, on sort la gestion d'erreur de la logique de la fonction (Fonctionement + Gestion erreur = 2 choses) (Pas de nested try /catch)
