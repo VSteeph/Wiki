@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=7EmboKQH8lM
 ### Mise en page
 * Fonction doit être croute (<20 lignes = Top // <100 lignes = Mandatory)
 * Plus on descend dans la fonction, plus on peut augmenter les détails
+* L'indentation est limité à 1 ou 2 échelle (techniquement)
 
 ### Caractéristiques
 * Une fonction doit faire une seule chose (C'est le cas quand on ne peut pas extraire une fonction de la fonction)
