@@ -8,6 +8,7 @@ https://www.youtube.com/watch?v=7EmboKQH8lM
 
 ### Caractéristiques
 * Une fonction doit faire une seule chose (C'est le cas quand on ne peut pas extraire une fonction de la fonction)
+* Si une fonction peut avoir plus fonctions extraites de cette classe et que ces fonctions partagent des variables, c'est une classe, pas une fonction
 
 ### Abstractions
 * Le niveau d'abstraction d'une fonction doit etre un niveau en dessous du nom de la fonction (pas completement différent
