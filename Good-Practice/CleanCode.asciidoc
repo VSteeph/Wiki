@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=7EmboKQH8lM
+
+Le niveau d'abstraction d'une fonction doit etre equivalent à toutes les lignes qui est un niveau en dessous du nom de la fonction.
