@@ -1,3 +1,10 @@
 https://www.youtube.com/watch?v=7EmboKQH8lM
 
-Le niveau d'abstraction d'une fonction doit etre equivalent à toutes les lignes qui est un niveau en dessous du nom de la fonction.
+## Fonctions
+
+### Mise en page
+* Fonction doit être croute (<20 lignes = Top // <100 lignes = Mandatory)
+
+### Abstractions
+* Le niveau d'abstraction d'une fonction doit etre un niveau en dessous du nom de la fonction (pas completement différent
+* Le niveau d'abstraction d'une fonction doit etre similaire sur l'ensemble de son contenu
