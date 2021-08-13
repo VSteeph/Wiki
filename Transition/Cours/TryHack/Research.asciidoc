@@ -47,10 +47,20 @@ Cela permet de limiter le type de Crawl qui accède au sites (Google, MSN, Firef
 
 Exemple: 
 
-image:::https://i.imgur.com/audlFn8.png[robots.txt]
+image::https://i.imgur.com/audlFn8.png[robots.txt]
 
 Si on veut qu'un seul crawler on peut faire quelqe chose comme user-agent : Googlebot
 
 On peut aussi utiliser des regex pour faciliter comme tous les ficheirs en .ini 
 
 image::https://i.imgur.com/mzDqFVY.png[regex_robot.txt]
+
+#### Sitemaps
+C'est la carte d'un site qui permet d'aider les crawlers à trouver les routes pour le coontenu et cela correspond à la structure d'un site ex (visuel):
+
+image::https://i.imgur.com/L5WqJU4.png[sitemap]
+
+Blue rectangle => Nested contents
+Green Rectangle => Pages
+
+Un Sitemap a une structure en xml donc c'est un format xml (pas un graph) et cela permet de faciliter le job car il n'a pas besoin de le faire donc ça accelere son travail et l'évite de tout faire manuelelment (Comparaison à utiliser une liste de mots à trouve dans un texte au lieu de taper des mots au pif pour voir s'ils sont dans le texte)
