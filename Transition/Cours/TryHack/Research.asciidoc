@@ -1,1 +1,18 @@
 # Reseraching
+
+## Methodology
+
+1. Commencer par rechercher le processus de création. Par exemple, pour récupérer du texte dans une image, on peut regarder comment cacher du texte dans une image.
+2. Choisir les liens qui collent le plus et lire le contenu (favoriser les sites avec la meiller reputation comme null-bytes en secu)
+3. Choisir les termes qui collent le mieux à la recherche à partir de la premiere recherche (Ex : terme Steganography ressort quand on cherche pur cacher du texte)
+4. Chercher ce que l'on veut faire à partir des termes précis ex : "Extract file from jpeg Steganography"
+5. google les termes inconnus pour bien comprendre et avancer (moins on connait, plus c'est redondant mais bon)
+
+## Vulnerability Searching
+
+Il y a des sites de regroupement des vulnérabilités :
+* ExploitDB - Exploit qu'on peut directement télécharger et prêt à use
+* NVD (Tracks of CVE => Common Vulnerability and Exposures, avec pour le format CVE-YEAR-IDNumberà
+* CVE Mitre
+
+NVD et ExploitDB marche ensemble car avec le CVE de l'exploit DB, on peut récupérer toutes les informations sur ce sujet pour pouvoir sep rotéger.
