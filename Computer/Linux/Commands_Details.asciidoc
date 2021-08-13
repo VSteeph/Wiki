@@ -1,0 +1,14 @@
+# Commands
+
+## Find
+
+La syntaxe correspond à Find où quoi
+
+* - name : ajoute le nom du fichier => find -name passwords.txt 
+** -name est aussi manipulable avec des regex comme : find -name *.txt /M find file* // fine 1* // find *exploits*
+* iname qui est comme name mais case insensitive
+* Emplacement cela se met au début (rien pour le Working Directory, et / pour l'ensemble du systeme  (recursif)
+* -type pour le type de fichier f pour les files et d pour les directories
+* -user permet de filtrer les fichiers par l'owner du fichier
+
+Exemple :
