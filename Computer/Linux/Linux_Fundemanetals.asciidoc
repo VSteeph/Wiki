@@ -27,15 +27,6 @@ Linux est un OS basé sur Unix (princiapelement basé sur les commandes lines) i
 * grep => cherche le contenu d'un fichier pour certaines values => grep "{words}" {filepath}
 
 
-
-## Commandes en détails
-
-### Find
-
-* - name : ajoute le nom du fichier => find -name passwords.txt 
-** -name est aussi manipulable avec des regex comme : find -name *.txt
-
-
 ## Operators
 
 * & permet d'execute des commandes en background par exemple quand on copie un gros fichier et qu'on veut faire autre chose (ex : Cat access.log &)
