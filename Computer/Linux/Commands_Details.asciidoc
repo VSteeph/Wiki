@@ -10,5 +10,21 @@ La syntaxe correspond à Find où quoi
 * Emplacement cela se met au début (rien pour le Working Directory, et / pour l'ensemble du systeme  (recursif)
 * -type pour le type de fichier f pour les files et d pour les directories
 * -user permet de filtrer les fichiers par l'owner du fichier
+* - size permet de filtrer les fichiers selon leur taille (n => taille exact, +n supérieur à n & -n inférieur à n) avec c pour bytes, k kylobytes et m miB
+* -perm est pour les permissions (ex 644 avec - pour le minimum)
+
+### Les Recherches Time-Related
+Un peu plus complexe car il y a plusieurs mmots clé "min" (minutes) et "time" (jours) avec les prefixes a,m,c (access, modified or statut changed). Par exemple -amin +30 retourne les fichiers qui ont été accedé il y a plus de 30mn alors que -mtime -7 signifie les fichiers modifié il y a moins de 7jours.
+
+-mtime 0 (signifie dans les dernieres 24h)
+
 
 Exemple :
+
+* find / -type f -name *.xml  =============>(Tous les fichiers XML du systeme)
+* find -type f /home -iname user.txt ======> Tous les fichiers du dossier home qui ont pour nom user.txt (case insentiive)
+* find -type d -name *exploits* ===========> Tous les dossiers qui ont le mot exploits
+* find -type f -user kittycat =============> Tous les fichiers par l'user kittycat
+* find / -type f -size 150c ===============> Tous les fichiers qui font 150bytes
+* find / -type f -size -150k ==============> Tous les fichiers qui font moins de 150kilobytes
+* find /home -type f -name *.txt -size -2k > Tous les fichiers dans le dossier home de moins de 2kib avec l'extension .txt
