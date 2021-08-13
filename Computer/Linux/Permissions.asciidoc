@@ -1,0 +1,31 @@
+# Permissions
+
+Les permissions dans Linux sont de 3 types (rwx):
+
+* Read
+* Write
+* Execute
+
+Permissions Numeric code:
+
+* 0 = No Permission
+* 1 = Execute
+* 2 = Write
+* 4 = Read
+
+Toutes les variables :
+
+* 0 = ---
+* 1 = --x
+* 2 = -w-
+* 3 = -wx
+* 4 = r-
+* 5 = r-x
+* 6 = rw-
+* 7 = rwx
+
+Les permissions sont composés de 3 chiffres:
+* Premier chiffre correspond à l'user (U)
+* Deuxieme chiffre correspond au Groupe de l'user (G)
+* Troisieme chiffre correspond à tous les users (A)
+* Des fois il y a aussi O (Other)
