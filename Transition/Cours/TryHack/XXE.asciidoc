@@ -1,1 +1,84 @@
 # XML External Entity (XXE)
+
+## Les types d'attaques
+
+LES XXE attaques sont des vulnérabilités qui abusent des parsers XML et cela permet d'interagir avec le systeme backend ou externe de l'application.
+
+Il y a 2 types de XXE attaques :
+
+* In-band (IB-XXE) : c'est le cas quand on a une réponse immédiate du XXE payload
+* Out of band (OOB-XXE): il n'y a pas de réponse immédiate du serveur et c'est redirigé vers un autre fichier/serveur.
+
+## XML présentation
+
+C'est un langage markup (eXtensible Markup Language) qui définit plusieurs regles pour encoder les documents dans un format lisible pour les homme comme pour les machines. cela permet donc de stocker & transporter des données
+
+### Pourquoi utiliser le XML
+
+1. C'est plateforme independant et langage dep rogrammation independant. C'est donc utilisable n'importe ou.
+2. La valeur des données peut etre changer à n'importe quel moment sans changer la présentation des données
+3. XML supporte la validation avec les schémas et Document Type Definition (DTD) pour limiter les erreurs
+4. Le fait qu'il soit independant facilite son échange et son partage
+
+### Syntax
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+----
+
+C'est le XML prolog qui donne la version du XML et l'encoding utilisé dans le document. C'est pas obligatoire mais fortement conseillé.
+
+Comme pour le JSON, il y a un élément root qui est obligatoire pour rendre le document valide
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<mail>
+   <to>falcon</to>
+   <from>feast</from>
+   <subject>About XXE</subject>
+   <text>Teach about XXE</text>
+</mail>
+----
+
+Dans l'exemple, le mail est l'élément root avec les parametres to/from/subject/text. Ces parametres sont ouverts et fermés en balise avec leur nom <to> </to>. Il est important de prendre en compte que le XML est case senstive. Les parametres peuvent prendre des attributs comme en HTML :
+
+[source,xml]
+----
+<text category = "message">You need to learn about XXE</text>
+----
+
+Ces parametres sont appelés des éléments.
+
+## Document Type Definition (DTD)
+
+Le DTD définit la structure et les éléments légaux ainsi que leur attributs d'un document XML. C'est un fichier supplémentare (ex: note.dtd) : 
+
+[source,dtd]
+----
+<!DOCTYPE note [ <!ELEMENT note (to,from,heading,body)>
+<!ELEMENT to (#PCDATA)> <!ELEMENT from (#PCDATA)> <!ELEMENT heading (#PCDATA)> <!ELEMENT body (#PCDATA)> ]>
+----
+
+Elements: 
+
+* !DOCTYPE détermine que l'élément root doit être nommé "note"
+* !ELEMENT note doit contenir les éléments (to, from, heading, body)
+* <!ELEMENT to définit que l'élement to doit etre de type #PCData (Parsed Caracter Dat qui bloque certains caracteres, opposé à CDATA - character data- qui est unparse et le permet). Par défaut, tout est en PCDATA
+* tous les autres éléments sont aussi en PCDATA d'apres ce DTD
+
+
+Ce fichier nous permet de valider les informations d'un document XML comme celui la :
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "note.dtd">
+<note>
+    <to>falcon</to>
+    <from>feast</from>
+    <heading>hacking</heading>
+    <body>XXE attack</body>
+</note>
+----
