@@ -11,6 +11,7 @@
 ## Vulnerability Searching
 
 Il y a des sites de regroupement des vulnérabilités :
+
 * ExploitDB - Exploit qu'on peut directement télécharger et prêt à use
 * NVD (Tracks of CVE => Common Vulnerability and Exposures, avec pour le format CVE-YEAR-IDNumber
 * CVE Mitre
@@ -22,6 +23,7 @@ NVD et ExploitDB marche ensemble car avec le CVE de l'exploit DB, on peut récup
 ### Crawler
 
 Google utilise des Crawler/Spiders pour parcourcir internet et indexer (Repertorier) son contenu en les liant à des mots clés. Les crawlers parcourt le contenu de plusieurs façons :
+
 * En visitant les URL et les informations de son contenu sont renvoyés vers le moteur de recherche
 * En suivant les URLS dans le contenu trouvés dans des URL visités comme un virus, il va s'étendre sur toutes les URLS trouvés pour les scanner
 
@@ -31,6 +33,7 @@ image::https://i.imgur.com/4nrDDa0.png[crawler_schema]
 Le crawler va sur le site, récupere le contenu et en fait un dictionnary avec des mots clés/images et les référence dane le search engine. Si le site contient une URL vers un site, il ira sur ce site et effectuera le même processus et ainsi de suite pour alimenter le dictionnaire et lier des sites avec des mots clés.
 
 Pour choisir la hiérarchie, on se base sur certains critères (SEO) qui donne un Score comme :
+
 * Responsiveness
 * facilité du Crawling (avec des sitemaps, Robots.txt qui permet de limiter les pages indexés et mieux controller le réferencement etc)
 * Le type de Keywords et le nombre de site compétitif
@@ -40,6 +43,7 @@ Des sites renseignent sur ces informations comme : https://web.dev/
 
 #### Robots.txt
 Cela permet de limiter le type de Crawl qui accède au sites (Google, MSN, Firefox, etc) et les fichiers (Pages/directories) qui sont autorisés ou non à crawl (souvent les éléments qui ne sont pas autorisés sont des bons points d'entrées à pentest) :
+
 * User-agent : Type de Crawler
 * Allow : Page autorisée (Non obligatoire)
 * Disallow : Page interdite pour le crawler (Non obligatoire, si y a que une page, toutes les autres seront donc autorisées)
@@ -69,12 +73,16 @@ Un Sitemap a une structure en xml donc c'est un format xml (pas un graph) et cel
 ### Dorking (Advanced Searching)
 
 Google a plein d'élements pour faciliter les recherches comme :
+
 * opérations mathématiques (directement dans la barre de recherche)
 * Quotation mark pour limiter à tout ce qui y a EXACTEMEENT entre les guillements : "seulement si y a chacun de ses mots"
 * site, on peut utiliser le nom d'un site avant une recherche pour avoir les résulat que de ce site : site:bbc.co.uk qchq news
 
 Liste des termes  (cumuables ex :site:bbc.co.uk filetype:pdf") :
+
 * site:{name} {serach} pour chercher sur un site uniquement
 * filetype:{type} {serach} pour récupérer uniqument des fichiers de ce type
 * cache{url} version cache de google d'une URL specifique
 * intitle:{phrase} cette phrase doit etre dans le titre de la page
+
+liste des googles dork : https://gbhackers.com/latest-google-dorks-list/
