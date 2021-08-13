@@ -30,4 +30,27 @@ image::https://i.imgur.com/4nrDDa0.png[crawler_schema]
 
 Le crawler va sur le site, récupere le contenu et en fait un dictionnary avec des mots clés/images et les référence dane le search engine. Si le site contient une URL vers un site, il ira sur ce site et effectuera le même processus et ainsi de suite pour alimenter le dictionnaire et lier des sites avec des mots clés.
 
-Pour choisir la hiérarchie
+Pour choisir la hiérarchie, on se base sur certains critères (SEO) qui donne un Score comme :
+* Responsiveness
+* facilité du Crawling (avec des sitemaps, Robots.txt qui permet de limiter les pages indexés et mieux controller le réferencement etc)
+* Le type de Keywords et le nombre de site compétitif
+* Service d'avertisement
+
+Des sites renseignent sur ces informations comme : https://web.dev/
+
+#### Robots.txt
+Cela permet de limiter le type de Crawl qui accède au sites (Google, MSN, Firefox, etc) et les fichiers (Pages/directories) qui sont autorisés ou non à crawl (souvent les éléments qui ne sont pas autorisés sont des bons points d'entrées à pentest) :
+* User-agent : Type de Crawler
+* Allow : Page autorisée (Non obligatoire)
+* Disallow : Page interdite pour le crawler (Non obligatoire, si y a que une page, toutes les autres seront donc autorisées)
+* Sitemap (Provide a reference to where the sitemap is located)
+
+Exemple: 
+
+image:::https://i.imgur.com/audlFn8.png[robots.txt]
+
+Si on veut qu'un seul crawler on peut faire quelqe chose comme user-agent : Googlebot
+
+On peut aussi utiliser des regex pour faciliter comme tous les ficheirs en .ini 
+
+image::https://i.imgur.com/mzDqFVY.png[regex_robot.txt]
