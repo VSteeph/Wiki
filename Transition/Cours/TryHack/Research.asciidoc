@@ -84,5 +84,11 @@ Liste des termes  (cumuables ex :site:bbc.co.uk filetype:pdf") :
 * filetype:{type} {serach} pour récupérer uniqument des fichiers de ce type
 * cache{url} version cache de google d'une URL specifique
 * intitle:{phrase} cette phrase doit etre dans le titre de la page
+* inurl:{phrase} pareil que intitle mais pour l'URL
+* intext:{words} pareil mais pour le texte
+* Asterisk(*) permet de mettre un blank exemple : How to * a website (How to design/create/reference/hack/publish/Host/...)
+* Negation(-) permet d'enlever des termes exemples débrilateur -wow pour avoir les obejts de wow
+* Concatenate (+) permet de combiner des termes
+* OR (|) pour avoir un mot Ou l'autre
 
 liste des googles dork : https://gbhackers.com/latest-google-dorks-list/
