@@ -1,1 +1,39 @@
 # Linux
+Linux est un OS basé sur Unix (princiapelement basé sur les commandes lines) il ya plusieurs distributions. Il est utilsié à beaucoup d'endroit (android, serveur, etc) et il est aussi en général plus léger que ses équivalents. Linux est un terme général pour l'ensemble des OS utilisant Unix. Certaines distributions sont uniquement en commandes lignes et n'ont pas de desktop (GUI - Graphical User Interface)
+
+## Commandes :
+
+### Information
+
+* whoami => donne le nom de l'utilisateur connecté
+
+### Commmandes actions:
+
+* echo => Display text
+
+### File Access
+
+* ls => listing - Liste des éléments dans le dossier - Cela peut être cummulé avec le chemin d'un dossier sans avoir à rentrer dedans
+* cd => change directory
+* pwd => Print working directory (chemin)
+* Find => cherche un fichier
+
+#### File Manipulation
+
+* cat => Concatenate (Display le contenu d'un fichier)
+* grep =>
+
+
+
+## Commandes en détails
+
+### Find
+
+* - name : ajoute le nom du fichier => find -name passwords.txt 
+** -name est aussi manipulable avec des regex comme : find -name *.txt
+
+
+
+## Raccourcis
+
+* Ctrl + L => Clear le contenu de la commande
