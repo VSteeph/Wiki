@@ -11,7 +11,7 @@ La syntaxe correspond à Find où quoi
 * -type pour le type de fichier f pour les files et d pour les directories
 * -user permet de filtrer les fichiers par l'owner du fichier
 * - size permet de filtrer les fichiers selon leur taille (n => taille exact, +n supérieur à n & -n inférieur à n) avec c pour bytes, k kylobytes et m miB
-* -perm est pour les permissions (ex 644 avec - pour le minimum)
+* -perm est pour les permissions (ex 644 avec - pour le minimum, / pour avoir ce seul type de permission et on peut aussi faire des regles comme o=w pour other = write)
 
 ### Les Recherches Time-Related
 Un peu plus complexe car il y a plusieurs mmots clé "min" (minutes) et "time" (jours) avec les prefixes a,m,c (access, modified or statut changed). Par exemple -amin +30 retourne les fichiers qui ont été accedé il y a plus de 30mn alors que -mtime -7 signifie les fichiers modifié il y a moins de 7jours.
@@ -28,3 +28,14 @@ Exemple :
 * find / -type f -size 150c ===============> Tous les fichiers qui font 150bytes
 * find / -type f -size -150k ==============> Tous les fichiers qui font moins de 150kilobytes
 * find /home -type f -name *.txt -size -2k > Tous les fichiers dans le dossier home de moins de 2kib avec l'extension .txt
+* find / -type f -perm -644 ===============> tous les fichiers rw pour l'owner et r pour tout le monde (Exact permission)
+* find / -type f -perm /444 ===============> Tous les fichiers qui sont Uniquement readable par tout le monde
+* find / -type f -perm o=w -name *.sh =====> Tous les fichiers où le groupe "others" peut ecrire (peu importe les autres permissions) et de type sh
+* find /usr/bin -type f -user root -perm u=s => Tous les fichiers dans /usr/bin par root aec la permission SUID (au moins)
+* find / -type f -name *.png -atime 10 ====> Tous les fichiers d'extensions .png qui n'ont pas été accéder dans les 10 derniers jours (-10 aurait été l'inverse)
+* find /usr/bin -type f -mmin -120 ========> Tous les fichiers dans/usr/bin qui ont été modifié dans les 2 dernieres heures (120mn)
+
+
+Il est possible de rediriger le contenu de find avec ">" pour enregistrer la recherche et on peut aussi enlever toutes les erreurs pour faciliter la lecture avec 2> /dev/null
+
+Enfin, on peut utiliser -exec comme -exec whoami (apparament c'est utile)
