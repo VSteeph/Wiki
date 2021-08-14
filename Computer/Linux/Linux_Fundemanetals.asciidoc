@@ -8,9 +8,10 @@ Linux est un OS basé sur Unix (princiapelement basé sur les commandes lines) i
 La plupart des commandes ont soit un man soit un --help pour apprendre à s'en servir
 
 
-### Information
+### User
 
 * whoami => donne le nom de l'utilisateur connecté
+* su permet de changer d'utilisateur (substitue user)
 
 ### Commmandes actions:
 
@@ -22,17 +23,17 @@ La plupart des commandes ont soit un man soit un --help pour apprendre à s'en s
 * cd => change directory
 * pwd => Print working directory (chemin)
 * Find => cherche un fichier
-* touch => Create file
-* mkdir => Create a flder
-* cp => Copy a file/folder
-* mv => Move a file/folder (si le fichier/dossier existe pas, il sera crée (ou renommé) et si le fichier existe déjà, il supprimera l'ancien pour celui qui est copié)
-* rm => remove a file/folder besoin de -R si c'est un dossier (pour recursive)
-file => determine si c'est un fichier ou non et son tpye (il y a pas toujours l'extension)
+* file => determine si c'est un fichier ou non et son tpye (il y a pas toujours l'extension)
 
 #### File Manipulation
 
 * cat => Concatenate (Display le contenu d'un fichier)
 * grep => cherche le contenu d'un fichier pour certaines values => grep "{words}" {filepath}
+* touch => Create file
+* mkdir => Create a flder
+* cp => Copy a file/folder
+* mv => Move a file/folder (si le fichier/dossier existe pas, il sera crée (ou renommé) et si le fichier existe déjà, il supprimera l'ancien pour celui qui est copié)
+* rm => remove a file/folder besoin de -R si c'est un dossier (pour recursive)
 
 
 ## Operators
@@ -45,3 +46,13 @@ file => determine si c'est un fichier ou non et son tpye (il y a pas toujours l'
 ## Raccourcis
 
 * Ctrl + L => Clear le contenu de la commande
+
+## Common Directories
+
+* /etc (most important root directories) pour etcetera, c'est un endroit pour les fichiers systemes qui sont utilisés par l'OS avec des fichiers importants :
+** Sudoers : liste des utilisateurs& groupes qui peuvent run sudo et les commandes en tant que root
+** passwd & shadow qui permet de savoir comment le systeme enregistre & stocke les mot de passe (passwd peut etre lu par tout le monde mais pas shadow! Tres important)
+* /var (pour variable) est le dossier qui contient les informations qi sont souvent accédés par des services/applications sur le systeme comme les logfiles
+* /root est le home pour le root system user (rien de spécial, c'est les documents et tout en gros c'est un /home directory)
+* /tmp est un directory unique (pour temporary), il est volatile pour les données qui ont besoin d'etre accédés une fois ou 2 fois. C'est similaire à de la mémoire et donc à chaque fois qu'on redemarre l'ordinateur, le contenu est vidé (C'est pratique pour stocker des trucs en pentesting)
+
