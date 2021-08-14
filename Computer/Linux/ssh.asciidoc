@@ -1,0 +1,21 @@
+# SSH
+
+SSH => Secured Shell, c'est un moyen de se connecter et interagir à distance avec une machine Linux
+
+## Fonctionneemnt
+
+SSH est un protocole de façon encrypté. L'input (humain) est crypté puis envoyer sur internet et enfin, elle est decrypté par la machine d'arriver :
+
+image::https://assets.tryhackme.com/additional/linux-fundamentals/part2/ssh1.png[ssh_schema]
+
+## Connexion
+
+Commande : ssh (man ssh)
+
+### Credentials
+
+ssh {login}@{ipadress} 
+
+paramètres optionels:
+
+* -p pour le port
