@@ -1,0 +1,24 @@
+# Text Editors
+
+## NANO
+
+nano est un trext editor qui s'utilise de cette manière : nano {filename} qui va ouvrir le fichier. On se déplace avec les fleches directionnelles et entrée pour aller à la ligne.
+
+### Features :
+
+la touche ^correspond à ctrl
+
+* Search for Text (ctrl + w)
+* Copy/paste (Ctrl + u)
+* Jump to a line normal ctrl + _
+* Finding what line number you are on (ctrl + W
+* Quitter : Ctrl + X (avec y ou n pour confirmer ou non les changements
+
+
+## VIM
+
+Vim est un text editor beaucoup plus avancé, il y a des avantages comme :
+
+* Csustomisabilité (Shortcut)
+* Syntax Highlighting (code)
+* VIM marche partout
