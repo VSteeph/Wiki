@@ -11,6 +11,28 @@ wget https://typicalWebSite/file.txt
 
 ### Package manager
 
+Pour mettre à disposition un logiciel, on met à disposition avec un apt repository. Quand ils sont validé,s tlm peut les récupérer. Il y a plusieurs fichiers qui permettent de gérer tout ça dans le dossier /etc/apt$  et ce qui permet d'ajouter d'autres sources et gérer les autorisations/config ,etc.
+
+On peut ajouter des repositories avec add-apt repository (root user)
+
+Il y a d'autres solutions que apt comme dpkg (debianpackage) mais l'avantage de apt c'est que les software sont aussi check pour update. L'avantage de ce genre de solution est que l'intégrité des logiciels sont garantis par la GPG (Gnu Privacy Guard) keys, ces clés permettent de dire que le logiciel est bien ce que l'on télécharge, un genre d'empreinte digital qui s'assure que tout est OK.
+
+#### Manage repositories
+
+En général, on utilise l'apt command pour installer des logiciels. Apt permet d'installer/remove/Update/etc ces logiciels
+
+#### Etape pour récupérer un projet (exemple sublime text)
+
+1. Télécharger la GPG clé du logiciel (WGET) : wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+2. Utiliser apt-key pour trust la clé (C'est integré dans la commande avant, besoin de root pour valider ça), c'est une public clé (donc impossible encoder)
+3. Ajouter Sublime Text repo à la liste des sources APT (C'est bien d'avoir un fichier pour chaque 3rd party repo)
+3.1 Créer un fichier sublime-text.list dans /etc/apt/sources.list.d
+3.2 Modifier le contenu avec le lien comme ceci deb https://download.sublimetext/com/ apt/stable/ (c'est bien de mettre un commentaire pour savoir pourquoi c'est la)
+3.3 Apres avoir ajouter, on fait apt-update pour reconnaitre la nouvelle entrée
+3.4 Une fois que tout a été mis à jour, on fait apt install sublime-text pour installer le logiciel
+4. Le process est facilement inversable
+4.1 On supprime le fichier puis apt remove sublime-text
+
 ### Upload File
 Les machiens Ubunbut ont poar défaut python3, qui a un module HTTPServer (léger et facile à utiliser) qui permet de transformer le PC en un web server pour mettreà  disposition des fichiers qui peuvent etre télécharger par un autre ordi avec des commandes comme wget ou curl.
 
@@ -117,3 +139,10 @@ L'asterisque correspont à CHAQUE itération en gros (Tous les jours, tous les m
 Le fichier crontab liste et décrit TOUS les cronjobs du programme. Chaque ligne (comme celle vu précedente) est indiquée et marquée sur le fichier, cela correspond à un CRONJOB. On peut modifier ce fichier pour changer/ajouter/enlever des cronjobs avec un editeur de texte et la commande :
 
 crontab -e
+
+## Logs
+
+Les logs sont dans /var/log directory. Cela contient les logs poru toutes les applications et services executés sur le system. Le process qui s'occupe des logs est "Rotating". C'est tres utile pour suivre les performances/sécurités.
+
+Les logs sont souvents divisés en 2 types de logs : Error.log pour le logiciel et acces.log pour la sécurité. Il y a différents logs avec différentes permissions, donc pour les lire, c'est intéressant de regarder les permissions (si y ena beaucoup) plutôt que de tout tester .
+
