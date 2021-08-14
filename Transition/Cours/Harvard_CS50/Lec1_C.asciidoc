@@ -73,8 +73,30 @@ Cela represente un fichier qui existe et qui permet d'accèder aux fonctions dis
 Elle permet d'ajouter des placeholder pour des variables comme des strings (%s)
 printf("hello %s", name);
 
+Il y a d'autres formats codes (assez intuitif) comme :
+
+* %c pour les character
+* %f pour les float (on ajoute le nombre de digit avec.X exemple : %.10f ou %.3f
+* %i pour les int
+* %li pour les long
+* %s pour les strings
+
+
+
 ## Error
 Cela en genéral donne le programme ou est l'erreur et l'endroit aka hello.c:3:5: (programme hello ligne 3, caractere/columne 5 donc c'est la ligne en premier)
 
 ## Comment
 Donner le but du code dans les commmentaires et pas forcement un pseudo code de ce qui est écrit plus bas
+
+## DataType
+Il y a plein de type de données en C (bool, int, etc) et chacune de ces types de données a un nombre de bit bien défini). Par exemple :
+
+* int => 32 bits (donc 4294967295 valurs (/2 pour avoir négatif & positif)
+* long => 64 bits (2^64)-1)
+
+### Imprécisions
+
+Les ordinateurs ont une limite de bits et donc il y a une certaine imprécision pour ce qui est des float. Cela represente les chiffres le plus proche qu'on veut. Par exemple un float de 0.1 est tres proche de 0.1 mais la variable surement égal à 0.10000000000025262626262 au lieu de 0.1 exactement car il reste des éléments dans la méoire.
+
+C'est aussi ce qui peut provoquer des overflow avec les carry qui disparaissent
