@@ -25,6 +25,8 @@ La plupart des commandes ont soit un man soit un --help pour apprendre à s'en s
 * Find => cherche un fichier
 * file => determine si c'est un fichier ou non et son tpye (il y a pas toujours l'extension)
 
+. => current directory & .. => parent directory
+
 #### File Manipulation
 
 * cat => Concatenate (Display le contenu d'un fichier)
