@@ -1,0 +1,119 @@
+# General
+
+## File
+
+### telecharger un fichier
+
+Pour télécharger un fichier, il y a des packages managers mais aussi les commandes brutes pour ça. Par défaut, on utilise "wget" qui permet de télécharger des fichiers en HTTP ou HTTPS.
+Il suffit juste de donner l'adresse et le wget (aucun package manager, on DL juste al ressource) ex :
+
+wget https://typicalWebSite/file.txt
+
+### Package manager
+
+### Upload File
+Les machiens Ubunbut ont poar défaut python3, qui a un module HTTPServer (léger et facile à utiliser) qui permet de transformer le PC en un web server pour mettreà  disposition des fichiers qui peuvent etre télécharger par un autre ordi avec des commandes comme wget ou curl.
+
+HTTPServer sert les fichiers dans le dossier où on execute la commande (mais cela peut être changé avec des options cf man). cela se fait avec cette commande:
+
+"python3 -m http.server" pour lancer le module, ça peut être une bonne idée de l'executer en background avec & pour faire autre chose ou continuer à utiliser le terminal.
+
+Pour récupérer le fichier, il suffit de mettre l'adresse IP de l'ordinateur avec le port ouvert qui est indiqué dans le retour de la commande http.server (DNS ou IP : http://10.10.10.80:8000/{filePath}
+
+Chaque requete est log par http.server.
+
+Exemple :
+
+wget http:10.10.10.80:8000/Directory/fileToDelete.txt => permet de télécharger le fichier
+curl http:10.10.10.80:8000/Directory/fileToDelete.txt => permet de vori le fichier (c=> see? )
+
+### Transferer un fichier - SCP - SSH
+
+SCP (Secure Copy) est un moyen de copier les fichiers de manière sécurisé (avec une encryption comme tout échange SSH). Du moment qu'on est en SSH, on peut copy les fichiers/directories dans la machine remote ou notre propre machine
+
+Cela marche de cette manière :
+
+scp {filepath} {username}@{ipadress}:{path} {args}
+
+scp fileToMove tryhackme@10.10.10.10:/home/Document/DirectoryToDrop
+
+Dans ce cas, le fichier sur la machine où est executé la commande va envoyer le fichier FileToMove sur le remote serveur
+
+
+## Process
+
+Les process sont les programes qui sont executes sur la machine, ils sont gerés par le Kernel. Chaque process a un ID (PID) qui est inceremental.
+
+### Voir les process
+
+Pour cela, on utilise la commande ps qui peut donner pas mal d'informatiosn (cf man) Exemple :
+
+* ps (générique)
+* ps aux permet de voir les process utiliser par d'autres users ou systeme (donne beaucoup d'infos : CPU/Memoru/PID etc)
+
+Il y a aussi la commande top qui permet d'avoir les infos en temps réel (intéressant pour CPU & mémmoire)
+
+### Gérer les process
+
+Les process sont gerables avec d'autres commandes :
+
+* kill {pid} pour tuer/terminer le process, il y a plusieurs signaux qu'on peut envoyer pour l'arrêter comme
+** SIGTERM (permet le cleanup avant)
+** SIGKILL (kill on spot pas de cleanup ni avant ni apres)
+** SIGSTOP (stop/suspend un processs)
+
+### Comment les process se lancent
+l'OS est divisé en namespace pour répartir les ressources (CPU/RAM/priority) pour les process. Chaque namespace a acces à une certaine puissance de computing, ce qui les limite mais ce qui est bien pour la sécurité et isoler les process. Seul ceux dans le même namespace peuvent se voir.
+
+Le processs 0 est celui du system boot (system init). C'est le maanger qui va gérer comment les autres process se lance. Ce manager s'appelle systemd (qui est un des premiers process à se lancer, souvent PID 1). Chaque fois qu'un programme est lancé, il va commencer en tant qu'enfant de systemd et il est contrôllé par ce dernier.
+
+#### Lancer un process/service on boot
+
+Des applications comme les webservers / databases, on veut que ces services se lancent automatiquement au boot. Exemple, où on veut lancer apache2 au launch
+
+Commande : systemctl qui permet d'intéragir avec systemd (Daemon)
+Format : systemctrl {options} {service}
+
+Options (il y a un peu plus de statut):
+
+* start (lance le programme)
+* stop (stop le programme)
+* enable (Se lance au boot)
+* disable (Ne se lance plus au boot)
+
+Exemple :
+
+systemctl start apache2
+
+#### Execution d'un programme
+
+Un programme peut avoir 2 states d'executions (Background / foreground). Par exemple, les commandes comme echo run dans le foreground et ne s'execute pas dans le background. On peut forcer un process en background avec Ctrl +Z, ce qui peut arrêter / limiter les programmes (Une loop incontrôlable par exemple, ce qui permet de les kill)
+
+Pour passer un programme dans le foreground, on utilise fg la où il y a l'output du script
+
+
+## Automation
+
+Pour automatiser (Schedule) certaines actions après que le systeme se soit lancé comme faire des backups ou lancés Chrome/spotify, on utilise des CronJobs quis ont utilisés dans le Cron Process. On interagit avec le Cron process par le biais de CronTabs, c'est un process qui est lancé pendant le boot pour faciliter la gestion des cronjobs. C'est l'équivalent de task Scheduler chez Windows.
+
+Un Crontab est un fichier avec un format adapté au process cron qui a besoin de 6 valeurs :
+
+* MIN ==> Minute executé à
+* HOUR ==> Heure executé à
+* DOM ==> Day of Month
+* MoN ==> Month of year
+* DOW ==> Day of the week
+* CMD ==> La commande qui va etre executé
+
+Il y a aussi certains caractères spéciaux comme :
+* *reboot qui signifie qu'à chaque reboot, le cronjob va s'executer
+
+Exemple, on veut back up un fichier pour ça, toutes les 12h. Cela donnerait donc 
+
+0 *12 * * * cp -R {FilePath} /var/backups/
+
+L'asterisque correspont à CHAQUE itération en gros (Tous les jours, tous les mois). Il y a des ressources pour aider à les faire comme des crontab generator ou des sites comme Gron Guru.
+
+Le fichier crontab liste et décrit TOUS les cronjobs du programme. Chaque ligne (comme celle vu précedente) est indiquée et marquée sur le fichier, cela correspond à un CRONJOB. On peut modifier ce fichier pour changer/ajouter/enlever des cronjobs avec un editeur de texte et la commande :
+
+crontab -e
