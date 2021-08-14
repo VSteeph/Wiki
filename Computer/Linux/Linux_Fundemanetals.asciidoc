@@ -22,6 +22,12 @@ La plupart des commandes ont soit un man soit un --help pour apprendre à s'en s
 * cd => change directory
 * pwd => Print working directory (chemin)
 * Find => cherche un fichier
+* touch => Create file
+* mkdir => Create a flder
+* cp => Copy a file/folder
+* mv => Move a file/folder (si le fichier/dossier existe pas, il sera crée (ou renommé) et si le fichier existe déjà, il supprimera l'ancien pour celui qui est copié)
+* rm => remove a file/folder besoin de -R si c'est un dossier (pour recursive)
+file => determine si c'est un fichier ou non et son tpye (il y a pas toujours l'extension)
 
 #### File Manipulation
 
