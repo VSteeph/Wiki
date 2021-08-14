@@ -46,6 +46,10 @@ La plupart des commandes ont soit un man soit un --help pour apprendre à s'en s
 ## Raccourcis
 
 * Ctrl + L => Clear le contenu de la commande
+* To split vertically: ctrl a then |.
+* To split horizontally: ctrl a then S (uppercase 's').
+* To unsplit: ctrl a then Q (uppercase 'q').
+* To switch from one to the other: ctrl a then tab
 
 ## Common Directories
 
