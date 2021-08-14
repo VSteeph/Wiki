@@ -16,7 +16,7 @@ Linux est un OS basé sur Unix (princiapelement basé sur les commandes lines) i
 
 ### File Access
 
-* ls => listing - Liste des éléments dans le dossier - Cela peut être cummulé avec le chemin d'un dossier sans avoir à rentrer dedans
+* ls => listing - Liste des éléments dans le dossier - Cela peut être cummulé avec le chemin d'un dossier sans avoir à rentrer dedans -a pour --all pour tout afficher
 * cd => change directory
 * pwd => Print working directory (chemin)
 * Find => cherche un fichier
