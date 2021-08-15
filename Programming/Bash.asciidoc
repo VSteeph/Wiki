@@ -28,7 +28,8 @@ On peut aussi faire passer des parametres au script depuis son appel :
 
 ./file.sh Jimmy 21 france
 
-cela passe 3 paramètres qu'on apppelle avec $x ($1, $2, $3), ex :
+cela passe 3 paramètres qu'on apppelle avec $x ($1, $2, $3),On recupere le nombre d'arguments avec $# et cela commence à $0 qui est par défaut le nom du script
+ex :
 name=$1
 
 On peut aussi récupérer les inputs de l'utilisateurs avec des commandes comme "read" ex 
