@@ -1,4 +1,16 @@
 # Bash
 
-## Structure
+Bash est un langage de scripting qui marche sur la plupart des distrib Linux et MacOS. Il s'execute à partir du shell et se trouve dans les shell scripts (.sh).
+
+Pour se lancer, il doit pointer vers le shell, c'est à dire toujours avoir cette ligne en entête.
+
+```Bash
+#!/bin/bash
+```
+
+On peut y mettre toutes les commandes de l'OS + celle du langage
+
+## Lancer le fichier
+
+Pour executer le fichier, il faut que cela soit un fichier .sh avec l'entête. Il faut avoir les droits d'execution (chmod +x filename) et lancer le fichier comme ceci ./filename
 
