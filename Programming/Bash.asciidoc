@@ -14,3 +14,29 @@ On peut y mettre toutes les commandes de l'OS + celle du langage
 
 Pour executer le fichier, il faut que cela soit un fichier .sh avec l'entête. Il faut avoir les droits d'execution (chmod +x filename) et lancer le fichier comme ceci ./filename
 
+## Programmation
+
+### Variables
+
+Elles se déclarent sans aucun espace sinon le nom de la variable est assimilée à une commande :
+
+name="Jimmy" et on les appelle avec le signe $ (comme en PHP), exemple echo $name (ou echo "Bonjour $name")
+
+
+
+### Debugging
+
+On peut facilement débugger un script shell avec l'ajout de set -x et set +x autour du bloc qu'on veut debugger. Chaque commande sera mis avant son output pour que le développeur puisse facilement voir qu'est ce qui appelle quoi. Chaque commande aura un signe + (réussite) ou -(erreur) au début sa ligne.
+
+Pour appeler le débuggage, on utilise cette commande :
+
+bash -x ./file.sh
+
+```Bash
+#!/bin/bash
+
+set -x
+name="Jimmy"
+echo $name
+set +x
+```
