@@ -26,10 +26,12 @@ On peut aussi créer des arrays comme ceci:
 
 fruits=('apple' 'banana' 'orange' 'peach') et on peut récupérer un élément spécifique avec ${fruits[2]} ou tous avec ${fruits[@]}
 
-on peut aussi remplacer/enlever des elements:
+on peut aussi ajouter/remplacer/enlever des elements:
 
 unset fruits[1] enleve la valeur 1
 fruits[1]='BigApple' ajoute une valeur
+
+Le tableau n'est pas de taille fixe ET peut avoir des éléments null
 
 ### Parametres
 
@@ -49,6 +51,8 @@ On peut aussi récupérer les inputs de l'utilisateurs avec des commandes comme 
 read name
 echo "Bonjour $name"
 ```
+
+### Conditionals
 
 
 ### Debugging
