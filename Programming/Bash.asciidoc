@@ -22,6 +22,15 @@ Elles se déclarent sans aucun espace sinon le nom de la variable est assimilée
 
 name="Jimmy" et on les appelle avec le signe $ (comme en PHP), exemple echo $name (ou echo "Bonjour $name")
 
+On peut aussi créer des arrays comme ceci:
+
+fruits=('apple' 'banana' 'orange' 'peach') et on peut récupérer un élément spécifique avec ${fruits[2]} ou tous avec ${fruits[@]}
+
+on peut aussi remplacer/enlever des elements:
+
+unset fruits[1] enleve la valeur 1
+fruits[1]='BigApple' ajoute une valeur
+
 ### Parametres
 
 On peut aussi faire passer des parametres au script depuis son appel :
