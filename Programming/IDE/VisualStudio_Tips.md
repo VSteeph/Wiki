@@ -11,6 +11,15 @@
 
 ## KeyBinds
 
+### Navigation
+* Fleche directionnel pour se déplacer (Ctrl pour jump de mot en mot)
+* Ctrl + backspace pour supprimer le mot quand on est à la fin du mot
+* Ctrl + suppr pour supprimer le mot quand on est au début du mot
+* shift + suppr pour supprimer la ligne
+* Debut pour aller au début de la ligne // Ctrl + debut pour le début du fichier
+* Fin pour aller à la fin de la ligne // ctrl + fin pour la fin du fichier
+* Ctrl+shift+fleches pour selectionner des mots entiers
+
 ### Code Management
 
 **Manual Indentation** Tab pour avancer  / Shift Tab pour reculer
