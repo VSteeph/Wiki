@@ -22,3 +22,25 @@ Vim est un text editor beaucoup plus avancé, il y a des avantages comme :
 * Csustomisabilité (Shortcut)
 * Syntax Highlighting (code)
 * VIM marche partout
+
+Il se lance en écrivant VIM. Il peut être installé avec sudo apt install vim (dans le cas où il est pas installé) ou https://www.vim.org/download.php#pc sur windows
+
+Vim a 3 modes possible:
+
+* Commande (default mode pour lancer des commandes)
+* Insert (pour insert des éléments comme du texte dans un fichier)
+* Visual (visuel où on selectionne du texte pour l'executer)
+
+### Résumé
+
+Navigation :
+
+* :q pour quitter
+* :qa! exit vim (sans save)
+* :help pour de l'aide
+
+Commandes :
+* Fleches directionnelles ou Khjl ( KJ : haut bas / hl : Gauche droite)
+* Ctrl + ] pour sauter sur un tag
+* Ctrl + T jump back
+
