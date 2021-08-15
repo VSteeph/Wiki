@@ -44,7 +44,7 @@ ex :
 name=$1
 
 On peut aussi récupérer les inputs de l'utilisateurs avec des commandes comme "read" ex 
-
+ 
 ```Bash
 #!/bin/bash
 
@@ -53,6 +53,15 @@ echo "Bonjour $name"
 ```
 
 ### Conditionals
+
+Cela s'écirt comme ça 
+
+if [ Conditions ] (Toujours une espace avec les crochets)
+then
+  do stuff
+else
+  do stuff
+fi
 
 
 ### Debugging
