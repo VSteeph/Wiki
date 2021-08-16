@@ -35,3 +35,20 @@ Il est important de prendre en  compte que les [ ] sont la pour un caracteres et
 . signifie que cela correspond à tous les caractères sauf le linebreak exemple [a.c] veut dire aac a0c a/c et si on veut mettre un point, il faut mettre un backslach comme [a\.c]
 
 ? permet d'ajouter un caractere optionnel (ex abc? => ab ou abc)
+
+* \d permet de match n'imporet quel digit
+* \D matchs tout SAUF un digit
+* \w match tous les caractéres alphanumériques (a-zA-Z0-9) ==> Prend les _ donc ils ne sont pas dans \W
+* \W match tous les caracteres non-alphanumériques (! # etc)
+* \s match tous les whitespaces (spaces, tabs, line break)
+* \S tout ce qui n'est pas un whitespace
+
+## répétion des caractères
+
+Pour gérer la réption, on met les patterns suivi d'une accolade avec le chifre ou +. Exemple :
+
+* a{12} signifie qu'on repete 12 fois a
+* {1,5} de 1 à 5 fois
+* {2,} 2 ou plus
+* * 0 ou plus
+* + 1 ou plus
