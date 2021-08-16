@@ -1,0 +1,31 @@
+# Regex
+
+Les regex signifient regular expression et permettent de vérifier qu'un texte correspond bien à un pattern. On peut les tester comme ceci:
+
+* https://regexr.com/
+* egrep <pattern> <fil> (commande Linux)
+
+## Charsets
+
+pour définir, les caractères autorisés il ya plusieurs façons de faire mais les caracteres sont entre crochet:
+
+* [abc]signifie qu'on autorise (a,b ou c) pour chaque apparition de c es lettres
+* [a-c] signifie qu'on autourse toutes les lettres de a à c
+
+On peut aussi définir des patterns comme ceci:
+
+* [abc]zz signifie qu'on autorise azz ou bzz ou czz car les crochets correspondent à un correctere
+* [a-c]zz aura le même effet
+
+Les éléments sont aussi combinables:
+* [a-cx-z]zz signifie que la premiere caractere peut etre entre a & c ou x & z suivi de zz, c'est à dire a,b,c,x,y,z
+
+Généralement, on utilise ce pattern : [a-zA-z] pour signifier toutes les lettres de l'alphabet (lower ou uppercase)
+
+cela marche aussiavec les chiffres [1-3]
+
+mais il est aussi possible d'avoir certains tweaking comme ceci :
+* ^permet d'exclure des caraccteres comme [^k]ing qui va matcher ring/sing mais pas king
+** on peut aussi exclure des ranges comme ceci [^a-c]at
+
+Il est important de prendre en  compte que les [ ] sont la pour un caracteres et donc [abc] signifie a,b OU c tandis que abc signifie a suivi de puis c.
