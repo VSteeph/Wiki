@@ -52,3 +52,12 @@ Pour gérer la réption, on met les patterns suivi d'une accolade avec le chifre
 * {2,} 2 ou plus '(exemple cats{2,}
 * * 0 ou plus (exemple cats*)
 * + 1 ou plus (exemple cats+)
+
+## Début & fin
+
+Il y a des caractéres spéciaux pour déterminer le début et la fin d'un patern :
+* ^ signifie le début ==> ^abc signifie que la ligne commence par abc
+* $ signifie la fin ==> abc$ signifie que la ligne finit par xyz
+
+Il est aussi possible de créer dplusieurs patterns avec des paranthèeses qui se couple très bien avec | pour dire "OR" during the (day|night), ou juste pour l'organisation
+(no){5} pour nonononono
