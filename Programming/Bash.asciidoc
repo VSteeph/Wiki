@@ -1,5 +1,10 @@
 # Bash
 
+Exercice :
+
+* https://www.codewars.com/
+* https://www.hackerrank.com/
+
 Bash est un langage de scripting qui marche sur la plupart des distrib Linux et MacOS. Il s'execute à partir du shell et se trouve dans les shell scripts (.sh).
 
 Pour se lancer, il doit pointer vers le shell, c'est à dire toujours avoir cette ligne en entête.
