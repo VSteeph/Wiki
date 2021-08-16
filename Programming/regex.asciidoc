@@ -49,6 +49,6 @@ Pour gérer la réption, on met les patterns suivi d'une accolade avec le chifre
 
 * a{12} signifie qu'on repete 12 fois a
 * {1,5} de 1 à 5 fois
-* {2,} 2 ou plus
-* * 0 ou plus
-* + 1 ou plus
+* {2,} 2 ou plus '(exemple cats{2,}
+* * 0 ou plus (exemple cats*)
+* + 1 ou plus (exemple cats+)
