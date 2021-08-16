@@ -29,3 +29,9 @@ mais il est aussi possible d'avoir certains tweaking comme ceci :
 ** on peut aussi exclure des ranges comme ceci [^a-c]at
 
 Il est important de prendre en  compte que les [ ] sont la pour un caracteres et donc [abc] signifie a,b OU c tandis que abc signifie a suivi de puis c.
+
+## Caractéres spéciaux
+
+. signifie que cela correspond à tous les caractères sauf le linebreak exemple [a.c] veut dire aac a0c a/c et si on veut mettre un point, il faut mettre un backslach comme [a\.c]
+
+? permet d'ajouter un caractere optionnel (ex abc? => ab ou abc)
