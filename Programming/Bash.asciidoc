@@ -54,7 +54,7 @@ echo "Bonjour $name"
 
 ### Conditionals
 
-Cela s'écirt comme ça 
+Cela s'écrit comme ça 
 
 if [ Conditions ] (Toujours une espace avec les crochets)
 then
@@ -62,6 +62,24 @@ then
 else
   do stuff
 fi
+
+La condition == s'écit avec -eq ($variable -eq 5) ou = avec un espace contrairement à l'attribution ($variable = 5). Tous les if finissent par fi et le début du code commence par then
+
+Voici des examples d'opérators :
+
+* -eq =>  equal
+* ne => not equal
+* gt => greater than
+* lt => less then
+* ge => greater or equals
+
+Il y a aussi plein d'opérateurs liés à Linux comme :
+
+* -f pour savoir si c'est un fichier
+* -d pour savoir si c'est un dossier
+* -w pour savoir si on peut écrire dedans
+
+Plein de flag sont disponibles
 
 
 ### Debugging
