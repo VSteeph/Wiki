@@ -27,20 +27,31 @@ Il se lance en écrivant VIM. Il peut être installé avec sudo apt install vim 
 
 Vim a 3 modes possible:
 
-* Commande (default mode pour lancer des commandes)
-* Insert (pour insert des éléments comme du texte dans un fichier)
+* Commande (default mode pour lancer des commandes) ===================> On entre avec échap
+* Insert (pour insert des éléments comme du texte dans un fichier) ====> On entre avec la touche i
 * Visual (visuel où on selectionne du texte pour l'executer)
 
 ### Résumé
 
-Navigation :
+#### Commandes Modes:
 
-* :q pour quitter
+Commandes:
+* :q pour quitter (ça se combine avec w ou a ou juste ! pour forcer ex :qa! :qw :q!
+* :w pour sauvergarder
+* :a pour annuler les changements 
 * :qa! exit vim (sans save)
 * :help pour de l'aide
 
-Commandes :
-* Fleches directionnelles ou Khjl ( KJ : haut bas / hl : Gauche droite)
+Raccourcis:
+* Fleches directionnelles ou Khjl ( KJ : haut bas / hl : Gauche droite) // c'est associable avec un chiffre genre (20j ira 20 lignes en dessous)
+* dd permet de supprimer une ligne
+* Shift + g (G) pour aller en bas du fichier
+* gg pour aller en haut
+* { permet d'aller en haut d'un paragraphe et } en bas d'un paragraphe (ou d'un morceau de code)
+* u correspond à undo
+
+#### Raccouyrcis :
+
 * Ctrl + ] pour sauter sur un tag
 * Ctrl + T jump back
 
