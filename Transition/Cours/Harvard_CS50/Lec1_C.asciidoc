@@ -94,6 +94,7 @@ Il y a plein de type de données en C (bool, int, etc) et chacune de ces types d
 
 * int => 32 bits (donc 4294967295 valurs (/2 pour avoir négatif & positif)
 * long => 64 bits (2^64)-1)
+* char (charactere) => 8 bits (1 byte)
 
 ### Imprécisions
 
