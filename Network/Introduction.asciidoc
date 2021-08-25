@@ -1,0 +1,28 @@
+# Network
+
+## OSI Model
+Le model OSI (Open System Interconnection) est un model standardisé de réseau. De manière général, c'est plus le model TCP/IP qui est utilisé.
+
+Le modele OSI a plusieurs layeurs : 
+
+* 7 - Aplication => Des options réseaux pour le programme (particulierement ceux qui utilisent une interfcae pour transporter les données) 
+* 6 - Presentation => Transformation des données reçues par le programme en données avec le format standard réseau et gere l'encyrption, compression etc (Data manipulation)
+* 5 - Session => Créer la connexion entre les 2 ordinateurs et s'occupent de la maintenir. Cela doit synchroniser les session et maintenir les différents layers pour permettre les requetes avec plusieurs endpoints (comme plusieurs soft/onglet sur google chrome, etc)
+* 4 - Transport => Il a pas mal de fonctions. Il choisit le protocole (TCP: Transmission Control Protocole // UDP: User Datagram Protocol), il divise la transmission en petit packets (bits sized)
+* 3 - Network => Ce layer s'occupe de situer le destinataire de la requête et le meilleur chemin à prendre. On est encore sur les IP adresss (Gestion Logiciel)
+* 2 - Data Link => On passe aux adresses physiques des transmissions. On ajoute donc au paquet qui a l'information et l'adresse IP, l'adresse physique (MAC => Media Access Control) que chaque ordinateur qui peut se connecter à internet dispose pour être identifier. Cela permet aussi de vérifier que les données sont valides à la transmissions et qu'elles n'ont pas été corrompues et que l'information provient bien de la ou elle est supposée venir
+* 1 - Physical => C'est le hardware qui envoie le signal electrique à travers le réseau. C'est son job de transformer le binaire en signal electrique et le reconvertir en binaire.
+
+APSTNDP => Anti Patate Sans Teneur Nutritive, Digestive Point.
+
+### TCP ( Transmission Control Protocole )
+
+TCP est basé sur la connection, ce qui veut dire que la connexion est maintenu pendant toute la durée de la requête. Cela permet d'avoir une connexion fiable et qui s'assure que tous les paquets ont été envoyés et reçus au bon endroit. Chaque élément perdu est re-envoyé.
+
+Le protocole TCP est privilegié quand la précision est privilegié. (Packets en TCP => segments)
+
+### UDP ( User Datagram Protocol )
+
+UDP est l'opposé du TCP. Les paquets sont envoyés au recepteur peu importe si le recepteur peut tenir ou non le rythme (ex : Skype pixelisé). 
+
+Le protocole UDP est favorisé quand la vitesse est privilegié (Vidéo streaming) (Packets en UDP => Datagram)
