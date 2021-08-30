@@ -1,3 +1,15 @@
 # Microservices - https://www.youtube.com/watch?v=j6ow-UemzBc
 
-## Misconception
+## Liens utiles 
+
+* https://en.wikipedia.org/wiki/Lambda_architecture
+* https://app.apibuilder.io/doc/
+* https://www.youtube.com/watch?v=Sr0OE-AzAJU
+
+## API Definition
+
+Cela doit être déclaré de façon neutre, avec une CI integré pour garder de la cohérence.
+
+## Caractérisitques
+
+* Database est privé
