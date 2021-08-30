@@ -6,6 +6,8 @@
 * https://app.apibuilder.io/doc/
 * https://www.youtube.com/watch?v=Sr0OE-AzAJU
 * https://www.youtube.com/watch?v=CZ3wIuvmHeM
+* https://docs.microsoft.com/fr-fr/dotnet/architecture/microservices/multi-container-microservice-net-applications/microservice-application-design
+* https://github.com/dotnet-architecture/eShopOnContainers
 
 ## API Definition
 
