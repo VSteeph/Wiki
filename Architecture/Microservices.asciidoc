@@ -5,6 +5,7 @@
 * https://en.wikipedia.org/wiki/Lambda_architecture
 * https://app.apibuilder.io/doc/
 * https://www.youtube.com/watch?v=Sr0OE-AzAJU
+* https://www.youtube.com/watch?v=CZ3wIuvmHeM
 
 ## API Definition
 
