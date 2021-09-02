@@ -34,3 +34,5 @@ En parcourant les layer, les données vont s'etoffer en ajoutant des détails sp
 
 image::https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg[DataLayer]
 
+les données evoluent en nom. A partir du stage 4, cela devient des segments ou des datagrams selon le protocole puis des packets puis des frames et enfin des bits. Le processus est inversé quand il arrive au destinataire (decapsulation)
+
