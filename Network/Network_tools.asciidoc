@@ -7,8 +7,29 @@ Elle permet de voir si la connection à distance est possible (souvent sur les s
 
 La commande permet aussi de récupérer l'adresse IP d'un site et son avantage est que la plupart des OS et des appareils supportent cette fonctionnalité.
 
-## traceroute
+### traceroute
 
 traceroute permet de cartographier le chemin de la raquete jusqu'à la machine. Internet est fait de beaucoup de serveur et de point d'accès, tous connectés les uns aux autres. Cela veut dire qu'une requete passe par beaucoup de serveur pour arriver à destination. Traceroute permet de voir toutes les étapes intermedaires d'un ping
 
 sur Linux, la commande est Traceroute tandis que sur Windows c'est tracert (les 2 utilisent le même protocole ICMP ou l'équivalent en UDP.
+
+### WHOIOS
+
+Les domaines names sont des noms associés aux adresses IP par des entreprises "Domain Registrars". Il y a aussi une commande pour avoir toutes les informations sur le nom de domaine qui est whois
+
+Ce n'est pas forcement installé de base (sudo apt update && sudo apt-get install whois) et la commande s'utilise avec whois domain.name et il y a toujours le man pour avoir les informations sur les switchs
+
+### Dig Command (dig domain @server-ip)
+
+Les URLs sont convertis en IP adress grâce à un protocole TCP/IP appellé DNS (Domain Name System). Le DNS demande à un serveur spécial (annuaire) de donner l'ip correspondant au nom de domaine puis on va utilisre l'ip adresse.
+
+Les étapes sont un peu plus complets:
+* Requete vers un site
+* Ordinateur check son cash pour voir si l'IP est déjà stockés
+** Si l'IP n'est pas stocké, une requete est envoyé à un serveur DNS recursif.
+
+Les Serveur DNS recursif sont connu par le router, souvent les ISP (Internet Service Providers) ont leur propre serveur recusrif mais des entreprises comme Google ou OpenDNS les contrôle aussi. Si le nom de domaien n'est pas dans le serveur recursift, la requete est passé au root name server. Ils sont appéles les top Levle domain servers. Les TLD (Top-Level domains) sont divisés par extension, c'est à dire que certains gerent les .com et d'autres les .uk. Quand un TLD serveur reçoit une requete, il passe les informations au serveur approprié (Authoritative name Server)
+
+quand on visite un site internet, tout se pase automatiquement mais on peut le faire manujelelemnt avvec la commande dig. Dig est installé de base et on peut faire des requetes recursives manuelles sur un server DNS de son choix.
+
+Les données sont stockées dans les caches mais de manière limitée. Elles sont conservées pendant quelques minutes avant d'etre mise à jour.
