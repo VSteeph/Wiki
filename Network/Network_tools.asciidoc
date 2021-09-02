@@ -1,0 +1,14 @@
+# Network tools
+
+## Baisc tools
+
+### Ping Command
+Elle permet de voir si la connection à distance est possible (souvent sur les sites même si ça peut aussi être sur des ordinateurs privés). Les pings utilisent le ICMP protocole qui est sur le Network Layer du Osi Model, dojnc le Internet Layer du TCP/IP.
+
+La commande permet aussi de récupérer l'adresse IP d'un site et son avantage est que la plupart des OS et des appareils supportent cette fonctionnalité.
+
+## traceroute
+
+traceroute permet de cartographier le chemin de la raquete jusqu'à la machine. Internet est fait de beaucoup de serveur et de point d'accès, tous connectés les uns aux autres. Cela veut dire qu'une requete passe par beaucoup de serveur pour arriver à destination. Traceroute permet de voir toutes les étapes intermedaires d'un ping
+
+sur Linux, la commande est Traceroute tandis que sur Windows c'est tracert (les 2 utilisent le même protocole ICMP ou l'équivalent en UDP.
