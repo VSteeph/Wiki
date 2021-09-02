@@ -26,3 +26,11 @@ Le protocole TCP est privilegié quand la précision est privilegié. (Packets e
 UDP est l'opposé du TCP. Les paquets sont envoyés au recepteur peu importe si le recepteur peut tenir ou non le rythme (ex : Skype pixelisé). 
 
 Le protocole UDP est favorisé quand la vitesse est privilegié (Vidéo streaming) (Packets en UDP => Datagram)
+
+
+## Encacpsulation
+
+En parcourant les layer, les données vont s'etoffer en ajoutant des détails spécifiques à chauqe layer. Par exemple, le layer Network ajoutera l'adresse IP de la source et de la destination. Le layer Data Link ajoute une information à la fin de la transmission pour vérifier que les données n'ont pas été corrompues. Le process entier s'appelle l'encapsulation. Chaque stage ajoute donc un nouveau Layer aux données puis reforme un groupe de donnée entier et c'est le bloc qui est envoyé:
+
+image::https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg[DataLayer]
+
