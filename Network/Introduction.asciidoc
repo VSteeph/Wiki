@@ -36,3 +36,21 @@ image::https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg[DataLa
 
 les données evoluent en nom. A partir du stage 4, cela devient des segments ou des datagrams selon le protocole puis des packets puis des frames et enfin des bits. Le processus est inversé quand il arrive au destinataire (decapsulation)
 
+## TCP/IP Model
+
+Le model TCP/IP est un peu plus vieux mais similaire au modele OSI et il sert de base pour le réseau actuel. Ce mdoel a 4 layers (Applications, Transport, Internet et NEtwork interface). Il couvre les mêmes fonctions que les 7 layers du model OSI:
+
+TCP/IP : 
+
+* Application :
+** Application
+** Presentation
+** Session
+* Transport
+** Transport
+* Internet
+** Network
+* Network Interface
+** Data Link
+** Physical
+
