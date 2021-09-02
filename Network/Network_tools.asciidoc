@@ -24,6 +24,7 @@ Ce n'est pas forcement installé de base (sudo apt update && sudo apt-get instal
 Les URLs sont convertis en IP adress grâce à un protocole TCP/IP appellé DNS (Domain Name System). Le DNS demande à un serveur spécial (annuaire) de donner l'ip correspondant au nom de domaine puis on va utilisre l'ip adresse.
 
 Les étapes sont un peu plus complets:
+
 * Requete vers un site
 * Ordinateur check son cash pour voir si l'IP est déjà stockés
 ** Si l'IP n'est pas stocké, une requete est envoyé à un serveur DNS recursif.
