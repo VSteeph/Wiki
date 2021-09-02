@@ -54,3 +54,12 @@ TCP/IP :
 ** Data Link
 ** Physical
 
+Le sdifferents layers sont des protocles (set de regles) dont les plus importants du TCP/IP sont le TCP (tranmission Control Protocol) qui contrôle le flow de données entre 2 points et l'IP (Internet Protocole) qui contrôle comment les packets sont envoyés.
+
+###TCP
+Le TCp est un protocole de connection. Cela veut dire qu'avant d'envoyer des données, il faut d'abord établir une connection : Three way handshake. Cela se passe donc en 3 etapes, cela commence par une requête qui contient un SYN (Synchronise) au serveur. Le serveur va répondre avec un packet qui contient un bit ACK (Acknowledgement) et enfin le client va renvoyer un packet avec un ACK :
+
+image::https://muirlandoracle.co.uk/wp-content/uploads/2020/03/image-2.png[Etablir_Connexion]
+
+Une fois que la connexion est établi, on peut envoyer des données de façon fiables et toutes les données corrompues ou perdues son tre-envoyés.
+
