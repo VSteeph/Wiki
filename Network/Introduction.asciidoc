@@ -63,3 +63,5 @@ image::https://muirlandoracle.co.uk/wp-content/uploads/2020/03/image-2.png[Etabl
 
 Une fois que la connexion est établi, on peut envoyer des données de façon fiables et toutes les données corrompues ou perdues son tre-envoyés.
 
+
+Le TCP/IP est le model utilisé mais le model OSi a été crée par l'ISO (international Organisation for standardisation) mais c'était plus un guide d'apprentissage que le model utilisé
