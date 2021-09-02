@@ -5,7 +5,7 @@ https://tryhackme.com/room/thefindcommand => Find
 Linux est un OS basé sur Unix (princiapelement basé sur les commandes lines) il ya plusieurs distributions. Il est utilsié à beaucoup d'endroit (android, serveur, etc) et il est aussi en général plus léger que ses équivalents. Linux est un terme général pour l'ensemble des OS utilisant Unix. Certaines distributions sont uniquement en commandes lignes et n'ont pas de desktop (GUI - Graphical User Interface)
 
 ## Commandes :
-La plupart des commandes ont soit un man soit un --help pour apprendre à s'en servir
+La plupart des commandes ont soit un man soit un --help pour apprendre à s'en servir. Cela permet de décrire son fonctionnement et tous les switchs (parametres)
 
 
 ### User
