@@ -63,7 +63,7 @@ Output
 * -oG en Grepable format
 
 
-### Les differents scans
+## Les differents scans
 
 Les scans basiques sont :
 
@@ -77,7 +77,7 @@ et il y aussi d'autres scans un peu moins utilsiés qui sont :
 * -sF pour les TCP Fin Scans
 * -sX pour les TCP Xmas Scans
 
-#### TCP Connect Scans (-sT)
+### TCP Connect Scans (-sT)
 
 Info : https://datatracker.ietf.org/doc/html/rfc793
 
@@ -88,3 +88,24 @@ La derniere option est si le port est ouvert mais filtré par un firewall. Les f
 Il est important de noter qu'on peut configurer les firewall pour répondre en RST au lieu d'ignorer la requete, ce qui limite la précision de la lecture des ports. Il y a une commande sur Linux qui permet de faire ça :
 
 iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
+
+### Syn Scans (-sS)
+
+les Syn Scans sont utilisés pour scan la range des prots TCP mais cela marche un peu différent des conect scans. Les Syn scans sont parfois referenciés en tant que "half-open" scans ou "stealth scans". C'est à dire au lieu de faire une handshake classique (SYN => SYN/ACK=> ACK), on renvoie un  RST (SYN => SYN/ACK => RST) pour faire croire que notre port est fermé
+
+Cela a plusieurs avantages:
+
+* Cela permet de bypass les anciens systemse de detections (Intrustion Detection System IDS) qui cherchent des handshake complet ( même si cela ne marche plus trop avec les IDS modernes)
+* Ces scans sont souvent pas logs par les applications qu iécoutent les ports car on log que lorsque la connection est etabli
+* Les scans n'ont besoin de faire un handshake entier + la deconnnection, donc c'est plus rapide que les TCP connect scan
+
+Il y a aussi plusieurs desavantages:
+
+* Il faut avoir la permission sudo pour l'executer car il ne marche pas correctement sur Linux puisque cela nécessite de faire des packets raw (root user only)
+* Certains services (instables ou mal faits) peuvent crash à cause des SYN Scan ce qui peut être problématique quand on est sur des environneemnts de prod
+
+De manière général, les Syn scans sont utilsiés par défaut sauf si on est pas en sudo et dans ce cas la, les scans tCP connect sont utilisés.
+
+Le processus d'identification est identique par contre (Rst & Dropped)
+
+### UDP Scan (-sU)
