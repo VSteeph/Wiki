@@ -1,0 +1,25 @@
+# NMAP
+
+Pour avoir une idée de l'état de sécurité d'un site (une ou plusieurs IP), il faut commencer à comprendre son environnement. C'est à dire les services qui s'executent sur la cible. Certains peuvent etre un webserveur, d'autres un Controller de domaine d'Active Directory. Le début est donc d'établir une map de ce paysage et c'est le principe de "Port Scanning"
+
+Les ports sont nécessaires pour faire plusieurs requetes réseau ou d'avoir plusieurs services. C'est ce qui permet d'avoir plusieurs onglets par exemple et de diriger le traffic vers le service approprié (donc un service pour un port, car le service va "listen" le port). La connection se fait donc entre un port qui est écouté et un port aléatoire de l'ordinateur emetteur.
+
+image::https://i.imgur.com/3XAfRpI.png[Port_Management]
+
+Tous les ordinateurs ont 65535 ports disponibles ce qui permet d'avoir beaucoup de service, cependant beaucoup de ces prots sont enregistrés en tant que ports standard, parce que exemple, le webservice HTTP est le 80 par défaut, tandis que le HTTPS est le 443. Dans certains cas, il est possible que ces ports soient alterés. C'est pour cela qu'il est improtant de récupérer ces informations lors d'une analyse. Port connus :
+
+* 53 : DNS
+* 80 : HTTP
+* 443 : HTTPS
+* 139 : Windows NETBIOS
+* 445: SMB
+
+Mais aussi par catégorie:
+
+* 0 à 1023 sont pour les protocoles TCP/IP (donc 1024 ports)
+
+## Port Scanning
+
+Pour effectuer un Port Scanning, il y a plusieurs façons de faire. Un outil très connu est Nmap qui permet de faire plusieurs types de port scan. La façon est basique est de se connecter à chaque port du destinataire et determine en fonction de la réponse si le port est ouvet/fermé ou filtré (firewall).
+
+Une fois que les ports sont connus, on peut regarder quels services sont associés à quels ports (manuellement ou avec nmap). Nmap est actuellement le standard dans l'industry car c'est un outil très puissant, très rapide et avec veaucoup de fonctionnalité. Il dispose aussi d'un scripting engine qui permet de scan pour des vulnérabilités et voir même de tester des exploits sur ces vulnérabilités
