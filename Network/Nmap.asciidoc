@@ -39,10 +39,18 @@ Scan:
 * -sU pour un UDP Scan
 * -sV pour scan les services (version + infos des services qui s'executent sur la target)
 
+Parametre de Scan
+
+* -TX (T1 à T5) permet de changer le timing du template (Plus haut = Plus rapide)
+* -p 80 pour ne scan que le port 80
+* -p1000-1500 pour scan une range de port (espace ou non apres le p pas important)
+* -p- permet de scan tous les ports
+* --script pour activer les scripts et on ajoute la catégorie apres => --script=default OU --script=vuln
+
 Extra informations
 
 * -O pour avoir l'OS de la machine
-* -A permet d'activer l'OS detecction, version detection, script scanning et traceroute (All)
+* -A permet d'activer l'OS detecction, version detection, script scanning et traceroute (A => Aggresive donc si besoin d'etre discret nul, mais bien pour audit)
 * -v pour verbose
 * -vv pour encore plus de verboe
 
@@ -51,3 +59,5 @@ Output
 * -oA permet d'enregistrer un scan pour éviter de le refaire et de spam le réseau (et d'etre detecté)
 * -oN output le scan en Normal
 * -oX output le scan en XML
+* -oS en script Kiddie
+* -oG en Grepable format
