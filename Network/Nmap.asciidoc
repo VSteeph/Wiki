@@ -109,3 +109,9 @@ De manière général, les Syn scans sont utilsiés par défaut sauf si on est p
 Le processus d'identification est identique par contre (Rst & Dropped)
 
 ### UDP Scan (-sU)
+
+Les connections UDP sont statelesss, c'ezst à dire qu'il n'y a pas de back-and-forth. Les connections UDP envoient juste des données sans aucune verifications (gain de vitesse au lieu de qualité). Le problème c'est que comm il n'y a pas de réponse du serveur, cela rend les scans UDP plus lent et plus dur.
+
+NMap envoie un paquet à un port, s'il n'y a pas de reponse, le port est Ouvert/filtre. S'il y a une réponse UDP, le port est ouvert (mais c'est tres rare). Quand il n'y a pas de réponse, on envoie un 2eme packet pour confirmer et s'il n'y a toujours pas de réponse, on valide que le port est ouvert/filtre.
+
+Quand un packet est envoyé à un port UDP fermé, la cible doit repondre avec un packet ICMP (ping) avec le message que le port est fermé. 
