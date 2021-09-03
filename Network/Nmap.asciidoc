@@ -127,7 +127,22 @@ Ces scans sont moins coureux que les autres mais ils sont liés entre eux et son
 
 #### Scan NULL (-sN)
 
-Les Nulls Scans sont quand les requetes TCP sont envoyés sans aucun flag.
+Les Nulls Scans sont quand les requetes TCP sont envoyés sans aucun flag.(C'est à dire les SYN/ACK/FIN/RST etc)
+
+image::https://i.imgur.com/gIzKbEk.png[Flag_Exemple]
+
+#### Fin Scans (-sF)
+
+Clea marche quasiment pareil quie les Null scans sauf qu'un flag FIN est utilisé à la fin pour fermer correctement une connexion active.
+
+#### Xmas Scan (-sX)
+
+C'est une autre forme de scan qui oenvoie des packets TCP malformés et qui attendent RST pour les ports fermés. Cela s'appelle Xmas Scan parce que les flags utilisés (PSH, URG, FIN) donnent l'apparance d'un sapin de noel quand on capture le packet (dans wireshark par exemple)
+
+Ces scans fonctionnement de manière très similaire à un Scan UDP. Si le port est ouvert, il n'y aura pas de réponse à un packet malformé. Si le port est protegé par un firewall, il n'y aura pas non plus de réponse. Ces scans peuvent donc seulement identifier les ports en tant que open|Filtered ou closed ou filtered. 
+
+Certains e(Windows & Cisco devices) repondent en RST à tous les packets malformés que cel a soit ouvert, filtré ou non mais le but est d'éviter les firewalls qui sont configurés pour igrnoer les packets TCP qui ont des flags SYN (et donc bloquer les demandes de nouvelles conenexion). En évitant d'avoir les flag SYN, on évite ce comportement même si la plupart des IDS modernes prennent ce genre de scan en compte.
+
 
 ### ICMP Network Scanning (-sn)
 
@@ -138,4 +153,4 @@ Ce n'est pas toujours précis mais cela sert de base. Pour scan un ensemble d'IP
 * nmap -sn 192.168.0.1-254
 * nmap -sn 192.168.0.0/24 (CIDR Notation, cela peut etre /24 poru classe A, /16 pour classe B, etc)
 
-Cela vaa aussi envoyer un TCP SYN packet au 443 (HTTPS) et TCP ACK (ou TCP SYN si non root) au port 80 (HTTP)
+Cela va aussi envoyer un TCP SYN packet au 443 (HTTPS) et TCP ACK (ou TCP SYN si non root) au port 80 (HTTP).
