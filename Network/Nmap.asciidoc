@@ -190,3 +190,23 @@ Les arguments sont séparés par des virgules aussi
 On peut aussi les fonctions helps pour plus d'informations sur les scripts comme :
 
 nmap --script-help <script-name>
+
+### Get Nmap scritps
+
+La premiere soruce est le site en haut de ce document qui a tous les scripts officiels et la 2eme source sont des scripts customs sur sa machine qui sont stockés dans :
+
+/usr/share/nmap/scripts
+
+Il y al e fichier sciprt.db qui a la liste de tous les scripts (format text même si en .db). Nmap utilise ce fichier pour garder la liste et utiliser les scripts. On peut grep ce fichier pour trouver plus facilemetn certains scritps ex :
+
+grep "ftp" /usr/share/nmap/scripts/script.db
+
+Pour installer/ajouter/créer des scripts, il faut ajouter le script au bon endroit (si on prend un site du site officiel, on utilsie cette commande :
+
+sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse
+
+Sinon, on met juste le script dans le bon dossier et apres on update le fichier script.db avec : 
+
+nmap --script-updatedb
+
+## Firewall Evasion
