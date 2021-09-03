@@ -115,3 +115,25 @@ Les connections UDP sont statelesss, c'ezst à dire qu'il n'y a pas de back-and-
 NMap envoie un paquet à un port, s'il n'y a pas de reponse, le port est Ouvert/filtre. S'il y a une réponse UDP, le port est ouvert (mais c'est tres rare). Quand il n'y a pas de réponse, on envoie un 2eme packet pour confirmer et s'il n'y a toujours pas de réponse, on valide que le port est ouvert/filtre.
 
 Quand un packet est envoyé à un port UDP fermé, la cible doit repondre avec un packet ICMP (ping) avec le message que le port est fermé. 
+ 
+ Un Scan UDp est donc beaucoup plus lent (20mn pour scans les 1000 premiers ports avec une bonne connection) c'est pour cela qu'on scan uniquements les tops ports pour avoir des temps plus cours avec ce genre de commande :
+ nmap -sU --top-ports 20 <target> (scan les 20 premiers top ports de la target)
+
+Les packets sont en généralement vides sauf pour les ports qui sont occupés par des services connus pour avoir des réponses plus précises
+
+### Scan NULL/FIn /Xmas
+
+Ces scans sont moins coureux que les autres mais ils sont liés entre eux et sont plus discrets que l'autre contrepartie.
+
+#### Scan NULL (-sN)
+
+### ICMP Network Scanning (-sn)
+
+Pour obtenir une map du réseau, un des premiers trucs à faire est d'obtenir les adresses IP avec des host actifs et ceux non. Pour cela, on utilise un "ping sweep". Nmap va envoyer un ICMP packet à toutes les adresses IP possibles du réseau et en fonction des réponses va catégoriser les  adresses IP (alives ou non).
+
+Ce n'est pas toujours précis mais cela sert de base. Pour scan un ensemble d'IP, on utilise - ou /, ex :
+
+* nmap -sn 192.168.0.1-254
+* nmap -sn 192.168.0.0/24 (CIDR Notation, cela peut etre /24 poru classe A, /16 pour classe B, etc)
+
+Cela vaa aussi envoyer un TCP SYN packet au 443 (HTTPS) et TCP ACK (ou TCP SYN si non root) au port 80 (HTTP)
