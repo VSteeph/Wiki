@@ -116,8 +116,8 @@ NMap envoie un paquet à un port, s'il n'y a pas de reponse, le port est Ouvert/
 
 Quand un packet est envoyé à un port UDP fermé, la cible doit repondre avec un packet ICMP (ping) avec le message que le port est fermé. 
  
- Un Scan UDp est donc beaucoup plus lent (20mn pour scans les 1000 premiers ports avec une bonne connection) c'est pour cela qu'on scan uniquements les tops ports pour avoir des temps plus cours avec ce genre de commande :
- nmap -sU --top-ports 20 <target> (scan les 20 premiers top ports de la target)
+Un Scan UDp est donc beaucoup plus lent (20mn pour scans les 1000 premiers ports avec une bonne connection) c'est pour cela qu'on scan uniquements les tops ports pour avoir des temps plus cours avec ce genre de commande :
+  nmap -sU --top-ports 20 <target> (scan les 20 premiers top ports de la target)
 
 Les packets sont en généralement vides sauf pour les ports qui sont occupés par des services connus pour avoir des réponses plus précises
 
@@ -126,6 +126,8 @@ Les packets sont en généralement vides sauf pour les ports qui sont occupés p
 Ces scans sont moins coureux que les autres mais ils sont liés entre eux et sont plus discrets que l'autre contrepartie.
 
 #### Scan NULL (-sN)
+
+Les Nulls Scans sont quand les requetes TCP sont envoyés sans aucun flag.
 
 ### ICMP Network Scanning (-sn)
 
