@@ -23,3 +23,31 @@ Mais aussi par catégorie:
 Pour effectuer un Port Scanning, il y a plusieurs façons de faire. Un outil très connu est Nmap qui permet de faire plusieurs types de port scan. La façon est basique est de se connecter à chaque port du destinataire et determine en fonction de la réponse si le port est ouvet/fermé ou filtré (firewall).
 
 Une fois que les ports sont connus, on peut regarder quels services sont associés à quels ports (manuellement ou avec nmap). Nmap est actuellement le standard dans l'industry car c'est un outil très puissant, très rapide et avec veaucoup de fonctionnalité. Il dispose aussi d'un scripting engine qui permet de scan pour des vulnérabilités et voir même de tester des exploits sur ces vulnérabilités
+
+## Nmap Switches
+
+Nmap n'est pas installé par défaut (sauf Kali Linux) et on y accède avec "nmap". Voici la liste des switches utiles:
+
+Aide
+
+* -h pour help
+* man nmap
+
+Scan: 
+
+* -sS pour un Syn Scan
+* -sU pour un UDP Scan
+* -sV pour scan les services (version + infos des services qui s'executent sur la target)
+
+Extra informations
+
+* -O pour avoir l'OS de la machine
+* -A permet d'activer l'OS detecction, version detection, script scanning et traceroute (All)
+* -v pour verbose
+* -vv pour encore plus de verboe
+
+Output
+
+* -oA permet d'enregistrer un scan pour éviter de le refaire et de spam le réseau (et d'etre detecté)
+* -oN output le scan en Normal
+* -oX output le scan en XML
