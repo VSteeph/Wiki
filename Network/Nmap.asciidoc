@@ -1,7 +1,7 @@
 # NMAP
 
 Liste script : https://nmap.org/nsedoc/
-
+Firewall Evasion : https://nmap.org/book/man-bypass-firewalls-ids.html
 
 Pour avoir une idée de l'état de sécurité d'un site (une ou plusieurs IP), il faut commencer à comprendre son environnement. C'est à dire les services qui s'executent sur la cible. Certains peuvent etre un webserveur, d'autres un Controller de domaine d'Active Directory. Le début est donc d'établir une map de ce paysage et c'est le principe de "Port Scanning"
 
@@ -210,3 +210,17 @@ Sinon, on met juste le script dans le bon dossier et apres on update le fichier 
 nmap --script-updatedb
 
 ## Firewall Evasion
+
+Les scans comme NULL, Fin et Xmas peuvent aider à bypass des firewall mais il y a une autre technique debase. On a vu que les IDS (Intruion detection system) modernes gerent la plupart des scans comme Windows qui block les packets ICMP ce qui permet un probleme car cela bloque ping en commande manuelle mais aussi nmap qui l'utilise par défaut et donc va ignorer ces host (par défaut).
+
+Une façon de contourner ces configurations est d'utiliser l'option -Pn qui dit à NMap de pas essayer de ping un host avant de scan. Nmap va donc considérer que la target est actif. Cela a un cout, c'est que Nmap va vérifier voir vérifier plusieurs fois chaque port spécifié et donc être beacoup plus lent.
+
+Si on est déjà en réseau local, on peut utiliser les requetes ARP pour détermienr l'activité.
+
+Nmap a aussi des switchs pour aider (https://nmap.org/book/man-bypass-firewalls-ids.html) et voici des exemples : 
+
+* -f qui fragmente les packets pour en faire des plus petits et limite les risques d'etre detecté par un firewall ou IDS
+* --mtu X qui contrôle de façon plus granulaire la taille des packets avec une taille maximum (multiple de 8)
+* --scan-delay <time>ms qui ajoute un délai entre chaque package, ce qui est bien dans le cas de réseau instable mais aussi pour éviter les triggers basé sur le temps
+* --badsum qui genere un checksum invalide pour des packets dans le cas de reponse automatique (Cela peut permettre de vérifier la présence de firewall/IDS)
+
