@@ -61,3 +61,30 @@ Output
 * -oX output le scan en XML
 * -oS en script Kiddie
 * -oG en Grepable format
+
+
+### Les differents scans
+
+Les scans basiques sont :
+
+* -sT pour les TCP connect Scan
+* -sS pour les SYN half opens scan
+* -sU pour les UDP scans
+
+et il y aussi d'autres scans un peu moins utilsiés qui sont :
+
+* -sN pour les TCP Null scans
+* -sF pour les TCP Fin Scans
+* -sX pour les TCP Xmas Scans
+
+#### TCP Connect Scans (-sT)
+
+Info : https://datatracker.ietf.org/doc/html/rfc793
+
+un TCP Connect scan s'effectue en effecutant un three-way handshake avec la cible sur chaque port et en fonction de la réponse, détermine si le port est ouvert. Si le por est fermé, la réponse ne sera pas un SYN/ACK mais un RST (pour Reset).
+
+La derniere option est si le port est ouvert mais filtré par un firewall. Les firewalls sont configurés pour "drop" les packets non acceptés. Si la requete n'envoie rien, c'est que le port est protegé par un firewall.
+
+Il est important de noter qu'on peut configurer les firewall pour répondre en RST au lieu d'ignorer la requete, ce qui limite la précision de la lecture des ports. Il y a une commande sur Linux qui permet de faire ça :
+
+iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
