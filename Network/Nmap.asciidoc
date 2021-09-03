@@ -1,5 +1,8 @@
 # NMAP
 
+Liste script : https://nmap.org/nsedoc/
+
+
 Pour avoir une idée de l'état de sécurité d'un site (une ou plusieurs IP), il faut commencer à comprendre son environnement. C'est à dire les services qui s'executent sur la cible. Certains peuvent etre un webserveur, d'autres un Controller de domaine d'Active Directory. Le début est donc d'établir une map de ce paysage et c'est le principe de "Port Scanning"
 
 Les ports sont nécessaires pour faire plusieurs requetes réseau ou d'avoir plusieurs services. C'est ce qui permet d'avoir plusieurs onglets par exemple et de diriger le traffic vers le service approprié (donc un service pour un port, car le service va "listen" le port). La connection se fait donc entre un port qui est écouté et un port aléatoire de l'ordinateur emetteur.
@@ -154,3 +157,36 @@ Ce n'est pas toujours précis mais cela sert de base. Pour scan un ensemble d'IP
 * nmap -sn 192.168.0.0/24 (CIDR Notation, cela peut etre /24 poru classe A, /16 pour classe B, etc)
 
 Cela va aussi envoyer un TCP SYN packet au 443 (HTTPS) et TCP ACK (ou TCP SYN si non root) au port 80 (HTTP).
+
+## Scripting
+
+NSE (Nmap Scripting Engine) permet d'etendre les fonctionnalités de Namp. Les scripts sont en LUA et cela petu faire enormement de choses comme scanner vulnerabilités et même les exploiter.
+
+Il y a beaucoup de catégories, voici certaines utiles :
+
+* Safe - Innofensif
+* intrusive - Not safe et probable d'affecter la cible (pas en prod)
+* vuln - Scan pour dfes vulnerabilités
+* exploit - essaye d'exploiter une vulnerabilité
+* auth - Essaye de bypass l'authentification pour des services (Log sur un FTP en anonymous)
+* brute - essaye de bruteforce les crednetials
+* discovery - questionne les services pour plus d'informations sur le réseau
+
+### Utiliser des Scripts
+
+On peut voitr dans les switchs, qu'il suffit d'ajotuer --script=[categorie], --script=vuln pour ajouter les vulnerabilités
+
+Pour executer certains scripts spécifiques, on utilise cette syntaxe : --script=script-name ==> --script=http-fileupload-exploiter 
+
+On peut aussi mettre plusieurs scripts avec des virgules ==> --script=smb-enum-users,smb-enum-shares
+
+Pour ajotuer des arguments, on utilise --scripts-args, exemple
+
+nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'
+
+Les arguments sont séparés par des virgules aussi
+
+
+On peut aussi les fonctions helps pour plus d'informations sur les scripts comme :
+
+nmap --script-help <script-name>
