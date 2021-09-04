@@ -2,3 +2,26 @@
 
 Installation : https://www.wireshark.org/download.html
 
+## Overview
+
+En ouvrant Wireshark, on voit la liste des réseaux et on peut appliquer des filtres pour limiter le traffic qu'on souhaite capturer. On choisit aussi si on veut faire une capture en direct ou charger des PCAP (Packet Capture)
+
+Le Ribbon vert permet d'afficher une liste de filter disponible par défaut, ce qui permet de réduire le nombre de packets visible (important si on cherche quelque chosie pcq il peut en avoir beaucoup).
+
+Une fois tout selectionné, on clique sur une interface pour commencer à écouter et récupérer tous les packets. On peut appuyer sur le bouton stop pour arrêter la récupération en direct et analyser le contenu.
+
+## Organisation
+
+Le tableau donne beaucoup d'informations :
+
+* Numéro du packet
+* Temps
+* Source du packet
+* Destination du packet
+* Protocole utilisé
+* Taille
+* Info du packet
+
+Wireshark utilise des codes couleurs pour définir le niveau de danger et trouver les anommalies rapidement (Vue => Coloring Rules)
+
+image::https://i.imgur.com/Mt0eGs8.png[Wireshark_colorCode]
