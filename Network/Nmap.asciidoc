@@ -1,7 +1,10 @@
 # NMAP
 
 Liste script : https://nmap.org/nsedoc/
+
 Firewall Evasion : https://nmap.org/book/man-bypass-firewalls-ids.html
+
+Default Port : https://social.technet.microsoft.com/wiki/contents/articles/1772.windows-ports-protocols-and-system-services.aspx
 
 Pour avoir une idée de l'état de sécurité d'un site (une ou plusieurs IP), il faut commencer à comprendre son environnement. C'est à dire les services qui s'executent sur la cible. Certains peuvent etre un webserveur, d'autres un Controller de domaine d'Active Directory. Le début est donc d'établir une map de ce paysage et c'est le principe de "Port Scanning"
 
