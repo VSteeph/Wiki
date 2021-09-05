@@ -1,6 +1,8 @@
 # Wireshark
 
 Installation : https://www.wireshark.org/download.html
+Filter: https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
+
 
 ## Overview
 
@@ -25,3 +27,50 @@ Le tableau donne beaucoup d'informations :
 Wireshark utilise des codes couleurs pour définir le niveau de danger et trouver les anommalies rapidement (Vue => Coloring Rules)
 
 image::https://i.imgur.com/Mt0eGs8.png[Wireshark_colorCode]
+
+## Collection des Packets
+
+Il y a plusieurs façons de créer un fichier PCAP et on va couvrir plusieurs des méthodes pour récupérer les informations pour collecter et surveiller la capture de packet en direct. Il y a plusieurs criteres de bases :
+
+* Faire une capture de test pour voir que tout fonctionne bien et est bien configuré
+* S'asurer qu'on a assez de puissance informatique pour tenir avec le nombre de packets
+* Assez d'espacce disque pour tout enregistrer
+
+### Networks Taps
+
+Les Network Taps sont un implant physique dans un cable. C'est utilsé fréquement par les équipes DFIR (Digital Forensics and Incident Response) et les red teams pour récupérer les packets
+
+La première façon est de le faire en utilisant un hardwardre pour intercepter le traffic (Vampire tap) ex :
+
+image::https://i.pinimg.com/originals/8e/ab/21/8eab2161bb612c7d1f2423fb881b9575.gif[Vampire_tap]
+
+Une autre option est de mettre un network tap et faire étappe du réseau. Le tap réplique les packets lorsqu'il passe par ce dernier 
+
+image::https://cdn.shopify.com/s/files/1/0068/2142/products/P1090928_600x.jpg[Network_tap]
+
+### Mac Flood
+
+CAM : https://www.easytechjunkie.com/what-is-a-cam-table.htm
+
+Les Mac Flood sont une autre techniques pour "sniff" (aspirer/intercepter) les packets. Mac Flooding est le fait de stressser un switch et de remplir la  CAM TAble ((Content Addressable Memory). Quand la table est rempli, le switch n'accepte plus de nouvelle Mac Adresse and donc pour garder le réseau envie, le switch envoie tous les packets à Tous les ports du switch.
+
+Cela fait une forte pression sur l'équipement et donc est à éviter.
+
+### ARP Poisoning
+
+C'est une autre equipe qui est de rediriger le traffic vers la machione qui surveille le traffic. 
+
+## Filtering
+
+Filtrer les packets est très improtant dans l'analyse surtout quand i ly en a beaucoup. dans Wireshark, il y a les capture filters qui sont disponibles quand on choisit une interface, mais il existe aussi les display filters qui permettent d'afficher eux qu'on va. On peut les utiliser dans l'analyze tab e dans la barre de filtre)
+
+Il y a plusieurs opérateurs pour la syntaxe :
+
+* and operator : and / &&
+* or operator: or / ||
+* equals operator: eq / ==
+* not equal: ne / !=
+* greater than : gt / >
+* less than: lt / <
+<
+
