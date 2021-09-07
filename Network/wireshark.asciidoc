@@ -74,3 +74,35 @@ Il y a plusieurs opérateurs pour la syntaxe :
 * less than: lt / <
 <
 
+Cela permet de mettre des filtres comme ceci :
+
+ip.addr == <IP Address>
+
+On peut aussi filtrer par source ou destination avec: ip.src & ip.ds ou même par port : tcp.port ou même par protocle.
+
+## Analysis
+
+### Packets Dissections
+
+Wireshark utilise le model OSI pour diviser les packets:
+
+image::https://i.imgur.com/r4SjjLc.png[Rappel_Osi]
+
+Pour avoir les détails d'un packet, il suffit de double click dessus et on a une liste d'éléments (Layer 1 à 5)
+
+* Frame (Layer 1: Physical) Cela permet de voir les détails du layer physique (temps d'arrivé, frame number, encapsulation, Interface, etc)
+* Source (Layer 2 : Data Link) Cela permet de savoir les Mac Adresse de la source et de la destination.
+* Internet Protocole (Layer 3: Network) Cela permet de connaitre les adresses IP
+* Protocole (Layer 4: transport) Cela permet de connaitre le protoccole TCP/UDP, le Port, la sequence, longueur, les flags (assez riche)
+** Il peut aussi intégrer le protocole error
+* HyperText Transfer Protocle (Layer 5: Session) Cela permet de voir le protocole utilisé (HTTP/FTP/SMB/...)
+** Application data: Extension du layer 5
+
+### ARP Traffic
+
+l'ARP (Adresse resolution Protocol) est un protocole Layer 2 ( Data Link) qui contient les request et response message. LE header contient un des 2 codes pour identifier ces packets :
+
+* Request (1)
+* Reply (2)
+
+En général, le traffic a une source identifiable (sinon suspect)
