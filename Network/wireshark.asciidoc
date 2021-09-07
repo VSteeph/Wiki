@@ -78,7 +78,7 @@ Cela permet de mettre des filtres comme ceci :
 
 ip.addr == <IP Address>
 
-On peut aussi filtrer par source ou destination avec: ip.src & ip.ds ou même par port : tcp.port ou même par protocle.
+On peut aussi filtrer par source ou destination avec: ip.src & ip.ds ou même par port : tcp.port ou même par protocle (en écrivant juste tcp/udp/adr/xml/...)
 
 ## Analysis
 
@@ -100,9 +100,9 @@ Pour avoir les détails d'un packet, il suffit de double click dessus et on a un
 
 ### ARP Traffic
 
-l'ARP (Adresse resolution Protocol) est un protocole Layer 2 ( Data Link) qui contient les request et response message. LE header contient un des 2 codes pour identifier ces packets :
+l'ARP (Adresse resolution Protocol) est un protocole Layer 2 ( Data Link) qui contient les request et response message. LE header contient un des 2 codes pour identifier ces packets, on trouve ces codes dans l'adresse resolution protoocle qui est à la place de l'internet procole
 
 * Request (1)
 * Reply (2)
 
-En général, le traffic a une source identifiable (sinon suspect)
+En général, le traffic a une source identifiable (sinon suspect) et on peut activier le link dans Vue=> Name Resolutio net cheke ou non
