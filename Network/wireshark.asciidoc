@@ -105,4 +105,8 @@ l'ARP (Adresse resolution Protocol) est un protocole Layer 2 ( Data Link) qui co
 * Request (1)
 * Reply (2)
 
-En général, le traffic a une source identifiable (sinon suspect) et on peut activier le link dans Vue=> Name Resolutio net cheke ou non
+En général, le traffic a une source identifiable (sinon suspect) et on peut activier le link dans Vue=> Name Resolutio net cheke ou non et on peut souvent récupérer les adresses MAc à partir d'un packet ARP :
+
+image::https://i.imgur.com/qnZyTVB.png[Main_Info]
+
+Pour récupérer une valeur, clic droit => Copier => Valeur
