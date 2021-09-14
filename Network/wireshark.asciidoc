@@ -126,3 +126,17 @@ Transmission Control Ptrocole s'occupe de délivrer des packets en prenant en co
 Oh recupere les sequences numbers et l'acknowledgmeent number. Si l'ACK est à 0 c'est que la requete a pas été fini (Port fermé dans un scan NMAP par exemple). Il faut regarder à l'ensemble des packets pour comprendre ce qui se passe et pas à un en détail
 
 ### DNS Traffic
+
+le protocole de Domaine Name Service est utilisé pour associer les noms de domaines auw IP. Il y a 3 éléments :
+
+* Query-Response
+* Dns-servers Only
+* UDP
+
+On prend plusieurs informations:
+* Origine de la requete (UDP =>53 souvent c'est ok, alors que TCP c'est plus louche)
+* On peut aussi regarder à ce qui est query (Est ce que c'est une demande normale? ou en dehors des habitudes)
+
+### HTTP Traffic
+
+Protocoel de transfert hypertexte sur le web (non sécurité car pas encrypté). c'est simple à analyser car ce n'est pas encrypté et on peut recupérer la request URL enteire
