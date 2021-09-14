@@ -117,4 +117,6 @@ Pour récupérer une valeur, clic droit => Copier => Valeur
 L'internet Control Message protocole est utilisé pour analyser les nodes d'un network (surtout pour les pings et les traceroute). Il y a plusieurs trucs à savoir sur les informations:
 
 * Type: 8 = request & 0 = reply
-* timestamp est utile pour voir les comportement suspect aussi
+* timestamp est utile pour voir les comportement suspect aussi (basé sur la timezone du pc)
+
+### TCP Traffic
