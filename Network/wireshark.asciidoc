@@ -110,3 +110,7 @@ En général, le traffic a une source identifiable (sinon suspect) et on peut ac
 image::https://i.imgur.com/qnZyTVB.png[Main_Info]
 
 Pour récupérer une valeur, clic droit => Copier => Valeur
+
+### ICMP Traffic
+
+L'internet Control Message protocole est utilisé pour analyser les nodes d'un network (surtout pour les pings et les traceroute)
