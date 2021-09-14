@@ -1,6 +1,7 @@
 # Wireshark
 
 Installation : https://www.wireshark.org/download.html
+
 Filter: https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html
 
 
@@ -113,4 +114,7 @@ Pour récupérer une valeur, clic droit => Copier => Valeur
 
 ### ICMP Traffic
 
-L'internet Control Message protocole est utilisé pour analyser les nodes d'un network (surtout pour les pings et les traceroute)
+L'internet Control Message protocole est utilisé pour analyser les nodes d'un network (surtout pour les pings et les traceroute). Il y a plusieurs trucs à savoir sur les informations:
+
+* Type: 8 = request & 0 = reply
+* timestamp est utile pour voir les comportement suspect aussi
