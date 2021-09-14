@@ -25,7 +25,7 @@ Le tableau donne beaucoup d'informations :
 * Taille
 * Info du packet
 
-Wireshark utilise des codes couleurs pour définir le niveau de danger et trouver les anommalies rapidement (Vue => Coloring Rules)
+Wireshark utilise des codes couleurs pour définir le niveau de danger et trouver les anommalies rapidement (Vue => Coloring Rules). Par exemple, Rouge signifie que le port est fermé
 
 image::https://i.imgur.com/Mt0eGs8.png[Wireshark_colorCode]
 
@@ -120,3 +120,9 @@ L'internet Control Message protocole est utilisé pour analyser les nodes d'un n
 * timestamp est utile pour voir les comportement suspect aussi (basé sur la timezone du pc)
 
 ### TCP Traffic
+
+Transmission Control Ptrocole s'occupe de délivrer des packets en prenant en compte le sequençage et les erreurs. Une manière de voir les activité suspect est de regarder si le handshake est executé correctement et dans le bon ordre ou si cela inclus d'autres packets (ex RST packet)
+
+Oh recupere les sequences numbers et l'acknowledgmeent number. Si l'ACK est à 0 c'est que la requete a pas été fini (Port fermé dans un scan NMAP par exemple). Il faut regarder à l'ensemble des packets pour comprendre ce qui se passe et pas à un en détail
+
+### DNS Traffic
