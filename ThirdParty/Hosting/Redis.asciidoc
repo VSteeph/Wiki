@@ -1,0 +1,38 @@
+# Redis
+
+Redis est open source qui peut servir de Database/cache system & message broker avec un principe de key/value. Redis supporte enormement de Data Structure et a des built in replications avec un principe de Master/slave qui a une synchronisation asynchrone pour permettre au master de continuer de fonctionner pendant les synchronisations.
+
+Redis est utilisable avec énormement de language (C#, C, C++, Java, PHP, Node.js, Lua, Python, Ruby, GO, perl, Bash,...)
+
+##Présentation
+
+### Redis DataType 
+
+* String
+* List (List des strings)
+* Sets (unorder collection of strings)
+* Sorted Sets (Non repeating collection of strings)
+* Hashes (Key/value)
+* Bitmaps
+* Hyperlogs
+* Geospatial index
+
+### Avantage de Redis
+
+* Tres flexibles
+* No schemas / No columns Names (NoSQL)
+* Very fast (110k Sets/s & 80k gets/s)
+* Rich data Supports
+* Caching & Disk Persistence (Mélange entre mangoDB et menCache)
+
+### Redis Security   
+
+Il y a des fonctionnalités de sécurité mais Redis est fait pour être utilisé uniquement par des clients autorisés:
+
+* Ne permet pas d'accès externe
+* Simple authentification peut être mis en place
+* Restriction à certaines interfaces
+* Data Encyrption pas possible
+
+## Installation
+
