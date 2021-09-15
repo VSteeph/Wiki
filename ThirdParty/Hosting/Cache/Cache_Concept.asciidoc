@@ -1,0 +1,22 @@
+# Cache
+
+## Définition
+
+Un cache permet de sauvegarder des données qui sont souvent demandés dans une base de donnée. Cela peut être utile pour éviter 2 éléments : Les appels réseaux et les opérations lourdes en calcul (ce qui permet de sauvegarder les résultats). Un cache permet aussi d'éviter les charges sur la database. Par exemple, s'il y a beaucoup de serveur qui font des appells en base de donnée, on peut avoir plusieurs caches qui synchronisent sur la database pour répartir les appels.
+
+L'objectif principal est d'accélerer le temps de reponse pour les clients.
+
+## Informations à mettre en cache
+
+On peut pas mettre toutes les données en cache d'une base de donnée car déjà, cela coute plus cher en hardware (Cache => SSD) et plus on met de donnée dans le cache, plus les search time vont augmenter et dans ce cas la, autant utiliser la bdd.
+
+L'objectif est donc que la base de donnée ait toute l'information tandis que le cache n'a que les informations pertinantes. Il faut donc se pose la question: Quand est ce qu'on rentre des informations dans le cache et quand est ce qu'on les sorte :
+
+C'est la Cache Policy.
+
+## Cache Policy
+
+Il y a plusieurs politiques de cache :
+
+* LRU (Last Recently Used est la plus populaire) c'est donc on enleve la derniere entrée pour en ajouter une (Une entrée qui n'a pas été servi depuis longtemps)
+* Slided Windows Policy
