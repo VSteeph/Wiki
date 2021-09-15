@@ -55,3 +55,22 @@ OK
 redis> get foo
 "bar"
 ```
+
+## Redis Commande
+
+* Get/set pour set ou get des variables
+* Incr/decr pour incrémenter/décrementer
+* del pour supprimer
+* exists pour savori si une valeur est renseignée (1 = oui / 0 = non)
+* flushall pour tout reset
+* expire [name] X pour mettre un temps d'expiration en secondes
+* persist pour enlever le temps d'expiration
+* TTL [name] pour le temps restant à vivre (-2 = expiré)
+* Mset key1 val1 key2 val2 pour set up plusieurs values
+* append pour append
+* rename pour rename
+
+On peut faire des set sepécifiques comme server:name & server:port. 
+
+On peut ajouter l'experiation pendant le set avec : Setex test X "hello"
+
