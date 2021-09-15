@@ -74,3 +74,13 @@ On peut faire des set sepécifiques comme server:name & server:port.
 
 On peut ajouter l'experiation pendant le set avec : Setex test X "hello"
 
+Il y a aussi les commandes pour les listes:
+
+* Lpush list value
+* Rpush list value
+* Linsert list Before existingValue ValueToInsert (Insert avant ou apres la value qui existe) // Lisnert list after existingValue ValueToInsert
+* Lrange list indiceS
+* Rrange list indiceS
+* Llen list pour la longueur
+* Lpop list  pour enlever au début
+* Rpop list pour enlever à la fin
