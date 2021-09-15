@@ -2,6 +2,8 @@
 
 Download : https://redis.io/download
 
+Windows : https://www.youtube.com/watch?v=_nFwPTHOMIY
+
 Redis est open source qui peut servir de Database/cache system & message broker avec un principe de key/value. Redis supporte enormement de Data Structure et a des built in replications avec un principe de Master/slave qui a une synchronisation asynchrone pour permettre au master de continuer de fonctionner pendant les synchronisations.
 
 Redis est utilisable avec énormement de language (C#, C, C++, Java, PHP, Node.js, Lua, Python, Ruby, GO, perl, Bash,...)
@@ -44,3 +46,12 @@ Il peut être bien de faire un backup du fichier config avant de faire des modif
 
 Si l'installation se passe bien, redis-cli devrait premettre de taper des commandes Redis
 
+Exemple :
+
+```
+src/redis-cli
+redis> set foo bar
+OK
+redis> get foo
+"bar"
+```
