@@ -9,6 +9,10 @@
 * https://docs.microsoft.com/fr-fr/dotnet/architecture/microservices/multi-container-microservice-net-applications/microservice-application-design
 * https://github.com/dotnet-architecture/eShopOnContainers
 
+## Pros & Cons (Monolith vs Microservices)
+
+image::https://i.imgur.com/y5mNGzq.png[pros]
+
 ## API Definition
 
 Cela doit être déclaré de façon neutre, avec une CI integré pour garder de la cohérence.
@@ -16,3 +20,9 @@ Cela doit être déclaré de façon neutre, avec une CI integré pour garder de 
 ## Caractérisitques
 
 * Database est privé
+
+## Slide Github
+
+image::https://i.imgur.com/0fvB8lr.png[Structure]
+
+image::https://i.imgur.com/XtGZZg7.png[Data_Structure]
