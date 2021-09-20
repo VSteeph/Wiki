@@ -82,4 +82,4 @@ Ce sont des nodes qui peuvent se connecter entre eux, il n'y a pas de lien de pa
 
 ### Stack
 
-Structure FIFO (First In, First Out)
+Structure FILO (First In, Last Out)
