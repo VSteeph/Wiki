@@ -62,6 +62,7 @@ Les cas pour faire un commentaire :
 * Expliquer une intention
 * Clarification d'un code qui est pas forcement clair pour un humain (genre fonctions mathématiques, grosse conditions,etc)
 * Documentation API (mais le but c'est que ça reste lisible dans le code)
+
 ## Test Driven Developpment
 
 Idéalement, on développe toujours en suivant 3 règles :
@@ -75,5 +76,15 @@ Cela permet d'être sur que tout marche à tout moment. Cela permet de penser ch
 Les test ne sont pas un systeme, ils sont tous independents et sont des petits snippets de codes qui montrent comment un élément marche et ne sont pas ambigüs. Cela permet aussi d'avoir une tres tres bonne documentation low level.
 
 Cela permet aussi d'éviter d'avoir du code non-testable et qui rend les test moins importants (ils marchent, mais ce n'est plus fiable) et cela rend les test moins chiant et c'est impossible d'avoir un code qui est dur à tester et donc du code interdependant
+
+Le code est une source de documentation où tout doit être correct. Les comptables ont aussi un travail rigoureux où tout doit être correct. Pour s'assurer que tout soit bon, ils ont une discipline en mettant d'un côté les biens et de l'autre les charges (Assets et liablities). Tout doit être equivalent et doit être égal à 0 (double entry booking). En développement, on utilise le même principe avec les Test Unit.
+
+### Mutation Testing
+
+C'est le principe que les test sont mutés avec des changements (ex && devient || ou == devient >= ), la mutation doit être fail, si elle passe, elle est considérée comme vivante car cela veut dire que des erreurs dans le code peut être incorrect sans que cela soit detecté.
+
+Le problème c'est que c'est cher en puissance de calcul, mais c'est bien à executer de temps en temps. Cela permet de trouver plein de petit points dur à trouver.
+
+
 
 
