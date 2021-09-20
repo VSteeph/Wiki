@@ -117,3 +117,14 @@ Séparation entre Design & Architecture est faite même si c'est tres similaire.
 On est dans une course à faire les choses vites, et ça part du principe qu'on est confiant de pouvoir gérer le bordel que cela crée sauf que ça ne s'arrête jamais et le bordel s'accumule sauf que la meilleur façon d'aller vite est d'avoir un environnement de qualité qui te freinera pas dans le futur, on peut pas vraiment penser plus vite ou juste écrire plus vite, donc penser à une bonne architecture et un environnement de qualité est la meilleur façon. On ira plus vite au fur et à mesure en s'améliorant. C'est comme l'hygiene de travail.
 
 Aller plus vite ne fait pas forcément aller plus vite ou même pas significativement et même à court terme. En général, cela va nous ralentir très peu de temps même à court terme (à une mise en production ou même après un weekend). La discipline est rigoureux et cela paraît plus lent car il y a plusieurs étapes et certaines peuvent être repetitifs mais un bon processus permet d'aller plus vite
+
+Un software 2 valeurs :
+
+* Son fonctionnement
+* Sa capacité à changer
+
+C'est important de se concentrer sur le point 2 plutôt que le premier car c'est toujours possible de le rendre fonctionnel mais une fois qu'il est devenu rigide, cela devient un problème et c'est très dur de le réparer. 
+
+La structure d'un logiciel doit être altérable.
+
+L'architecture est une économie et de la productivité sur le long terme. C'est une erreur de laisser les gens qui ne connaissent pas déterminer la priorité, il faut leur expliquer. L'architecture est décidé par les développeurs.
