@@ -65,12 +65,18 @@ Les cas pour faire un commentaire :
 
 ## Test Driven Developpment
 
-Idéalement, on développe toujours en suivant 3 règles :
+Idéalement, on développe toujours en suivant plusieurs règles :
 
 * Toujours faire le test avant d'écrire du code
 * Ne pas aller plus loin dans un test des qu'il fail à compile
 * Réparer les test des qu'il fail
 * Refactor quand tout marche ( Loop)
+
+Il y a ausi d'autres éléments à prendre en compte:
+
+* Le code de production ne doit pas être plus spécifique que les test (Test & Code sont opposés)
+** Chaque test ajoute des contraintes, rend les test plus spécifiques
+** Chaque ajout au code le rend plus général
 
 Cela permet d'être sur que tout marche à tout moment. Cela permet de penser chaque élément et que tout soit mieux penser même si cela ralentit le processus. Cela permet aussi de limiter fortement le débug car chaque élément a été testé et que tout le code soit tester et confirmer.
 
@@ -90,6 +96,10 @@ Le problème c'est que c'est cher en puissance de calcul, mais c'est bien à exe
 
 Suivre les étapes. Se limiter toujours au nécessaire et refactoriser par la suite pour intégrer les différents cas pour s'occuper des nouvelles problématiques. Il faut aussi limiter les codes en doubles, il faut toujours refactoriser.
 
-Par exemple, pour tester une classe, au lieu de créer une instance à chaque test, c'est mieux de mettre ça dans le set up.
+Par exemple, pour tester une classe, au lieu de créer une instance à chaque test, c'est mieux de mettre ça dans le set up. 
+
+Il faut prendre le temps de tester les éléments, de créer les exceptions.
+
+Le but est d'avancer pas par pas et à chaque fois, on peut refactoriser pour mieux organiser et mieux correspondre à tous les test
 
 
