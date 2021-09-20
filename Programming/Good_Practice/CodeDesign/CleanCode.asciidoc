@@ -110,3 +110,5 @@ Pour pouvoir garder le côté du test spécifique et le code général, il faut 
 
 On test des concepts, pas des classes ou du code spécifiquement.
 
+## Architecture
+
