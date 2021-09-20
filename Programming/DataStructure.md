@@ -78,3 +78,8 @@ Cela fonctionne comme une LinkedList mais avec 3 pointers pour avoir 2 variables
 
 ### Graph Data
 Ce sont des nodes qui peuvent se connecter entre eux, il n'y a pas de lien de parenté.
+
+
+### Stack
+
+Structure FIFO (First In, First Out)
