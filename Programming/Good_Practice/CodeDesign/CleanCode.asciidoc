@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=7EmboKQH8lM
 
+Software craftmanship conference (London)
+
 ## Element de base
 
 ### Structure
@@ -103,4 +105,8 @@ Il faut prendre le temps de tester les éléments, de créer les exceptions.
 Le but est d'avancer pas par pas et à chaque fois, on peut refactoriser pour mieux organiser et mieux correspondre à tous les test. On ne commence pas par le gros du sujet, on commence les test par tout ce qui est extérieur et petit à petit, on va vers le principal. Cela permet de faire toutes les préparations avant de faire le principal et juste d'avoir à re-arranger. Il y a besoin de toutes ces préparations pour faire le principal donc ça permet de pas griller les étapes. Des fois, il faut pas s'embeter et faire passer des test vite fait puis les rechanger par la suite quand on en arrive à ce stade.
 
 Le Test Driven Developpment est un skill à avoir et cela prend un certain temps. Il faut donc se préparer en avance.
+
+Pour pouvoir garder le côté du test spécifique et le code général, il faut à chaque itération refactoriser le code en laissant les test. Cela va permettre de ne pas faire une classe = une classe test et de copier la structure du code (fragilise la valeur des test).
+
+On test des concepts, pas des classes ou du code spécifiquement.
 
