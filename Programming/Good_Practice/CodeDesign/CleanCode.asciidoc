@@ -112,6 +112,7 @@ On test des concepts, pas des classes ou du code spécifiquement.
 
 ## Architecture
 
+### Mise en valeur managériale 
 Séparation entre Design & Architecture est faite même si c'est tres similaire. L'objectif de l'architecture est de minimiser les resources humaines pour créer et maintenir un logiciel. La qualité du design est mesuré en mesurant l'effort qu'il faut pour atteindre les exigences du client (si c'est constant ou si ça diminue, c'est bien sinon c'est mal).
 
 On est dans une course à faire les choses vites, et ça part du principe qu'on est confiant de pouvoir gérer le bordel que cela crée sauf que ça ne s'arrête jamais et le bordel s'accumule sauf que la meilleur façon d'aller vite est d'avoir un environnement de qualité qui te freinera pas dans le futur, on peut pas vraiment penser plus vite ou juste écrire plus vite, donc penser à une bonne architecture et un environnement de qualité est la meilleur façon. On ira plus vite au fur et à mesure en s'améliorant. C'est comme l'hygiene de travail.
@@ -134,4 +135,12 @@ Pour cela, on peut utiliser la matrice d'Eisenhower pour faire comprendre les ch
 Important Urgent   // Important Not Urgent
 Unimportant Urgent // Unimportant not urgent
 
-Dans notre cas, l'architecture est important car elle a une valeur à long terme alors que les requierements sont urgents car ils sont à courts termes.
+Dans notre cas, l'architecture est important car elle a une valeur à long terme alors que les requierements sont urgents car ils sont à courts termes. Le probleme c'est qu'il faut savoir priviligier entre les éléments à court termes et les importants qui ne sont pas urgents comme l'architecture.
+
+### Technique
+
+On veut qu'une architecture ne se préoccupe pas des IO devices, c'est pour cela qu'on a inventé les OS pour qu'on ne s'occupe pas des processeurs, des claviers ou même le web qui est une sorte d'external I/O device, mais du coup, ça pose un problème d'architecture.
+
+Si on prend les plans d'un batiment, on peut deviner ce qu'est le batiment à partir des plans (l'intention) plutôt que du type de matériaux utilisé.
+
+Interactors sont des classes qui incarnent un use case et qui ont des applications specific business rule
