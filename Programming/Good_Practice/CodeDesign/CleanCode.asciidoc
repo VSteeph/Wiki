@@ -1,5 +1,31 @@
 https://www.youtube.com/watch?v=7EmboKQH8lM
 
+## Element de base
+
+### Structure
+Les lignes restent sur un écran (classique) 
+
+Les noms doivent :
+
+* Signifier l'intention
+* Plus la fonction est dans un grand scope, plus le nom doit être précis et long (et inversement, dans un for, on peut se permettre d'avoir un i)
+
+### Review
+
+Idéalement, on fait plus de pairing que de code review car on doit mettre presque autant de temps pour faire du code review que pour créer le code (techniquement) et autant partager le travail.
+
+### Ethics
+
+* Un code qui passe en production est un code qualitatif
+* A chaque fin d'itération, on a un build possible, qu'on décide de le passer ou pas, il marche. (On peut log-off mais on peut log-in, ça marche! Tout le testing marche, la documentation est la)
+* Code qualitatif et on ne prend pas de shortcut pour avoir une productivité en début ou 5 ans apres est similaire.
+* Un code doit être facile à changer/remplacer. Le changement est proportonnel à l'échelle du changement. Il ne doit pas avoir de "restrictions" s'il y a des grosses restrictions pour des petits changements c'est qu'il y a a eu des problemes, si ce n'est pas possible, on est dans du hardware
+* Le code évolue et s'améliore avec le temps. A chaque fois qu'on passe sur un code, on améliore. Si on a peur de casser, on crée les Unit Testing qui auraient du être la. S'ils sont la, on change et une fois que tous les test sont ok, on passe. (Petit à petit)
+* Unit Testing n'est pas censé être remplacé par des QA
+* Les test sont censés être automatisés pour pouvoir les faire quand c'est possible car s'il y a toujours les même test pour s'assurer que tout fonctionne, il faut les automatiser (qualitatif)
+* Estimations sont honnnêtes fourchettes
+
+
 ## Fonctions
 
 ### Mise en page
@@ -23,3 +49,29 @@ https://www.youtube.com/watch?v=7EmboKQH8lM
 * No Side Effect- Un Side Effect est le fait de changer l'état du Systeme. Si une fonction fait que le systeme change d'état, elle a un side effect comme File.Open ou New (car elle attribue de la mémoire pour un élément, le systeme change d'état). C'est pour cela que ces fonctions vont par paire (Open & CLose / New & Free/Delete). C'est pour cela qu'on a crée le Garbage Collector.
 * Une fonction avec un return ne doit pas avoir de side effect, une fonction avec un void en a, donc les return = safe à use et ça permet de savoir ce qu'est.
 * Si une fonction a un try/Catch, c'est la fonction => Try { Do } Catch et potentiellement un finally et c'est la fonction do qui va retourner l'exception, simple et facile, on sort la gestion d'erreur de la logique de la fonction (Fonctionement + Gestion erreur = 2 choses) (Pas de nested try /catch)
+
+## Comments
+
+Les commentaires ne sont pas absolus et vitaux. Les commentaires sont nécessaires mais sont un échecs car cela veut dire que le code n'est pas 100% clair. Il est important de les mettre à jour comme le code car ils peuvent être trompeux. Un commentaire commente le code où il est, pas ailleurs !
+
+Les commentaires ne sont pas là pour compenser un mauvais code, évacuer de la frustration, expliquer l'obvious. Ils sont encore moins là pour un todo (sauf si c'est avant un push pour s'organiser) et si tout est clair, c'est juste une distraction.
+
+Les cas pour faire un commentaire :
+
+* Conditions légales et ressources utilisées
+* Expliquer une intention
+* Clarification d'un code qui est pas forcement clair pour un humain (genre fonctions mathématiques, grosse conditions,etc)
+* Documentation API (mais le but c'est que ça reste lisible dans le code)
+## Test Driven Developpment
+
+Idéalement, on développe toujours en suivant 3 règles :
+
+* Toujours faire le test avant d'écrire du code
+* Ne pas aller plus loin dans un test des qu'il fail à compile
+* Réparer les test des qu'il fail
+
+Cela permet d'être sur que tout marche à tout moment. Cela permet de penser chaque élément et que tout soit mieux penser même si cela ralentit le processus. Cela permet aussi de limiter fortement le débug car chaque élément a été testé.
+
+## Bullets Lists :
+
+
