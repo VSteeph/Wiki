@@ -100,6 +100,7 @@ Par exemple, pour tester une classe, au lieu de créer une instance à chaque te
 
 Il faut prendre le temps de tester les éléments, de créer les exceptions.
 
-Le but est d'avancer pas par pas et à chaque fois, on peut refactoriser pour mieux organiser et mieux correspondre à tous les test
+Le but est d'avancer pas par pas et à chaque fois, on peut refactoriser pour mieux organiser et mieux correspondre à tous les test. On ne commence pas par le gros du sujet, on commence les test par tout ce qui est extérieur et petit à petit, on va vers le principal. Cela permet de faire toutes les préparations avant de faire le principal et juste d'avoir à re-arranger. Il y a besoin de toutes ces préparations pour faire le principal donc ça permet de pas griller les étapes. Des fois, il faut pas s'embeter et faire passer des test vite fait puis les rechanger par la suite quand on en arrive à ce stade.
 
+Le Test Driven Developpment est un skill à avoir et cela prend un certain temps. Il faut donc se préparer en avance.
 
