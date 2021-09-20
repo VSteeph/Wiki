@@ -112,3 +112,8 @@ On test des concepts, pas des classes ou du code spécifiquement.
 
 ## Architecture
 
+Séparation entre Design & Architecture est faite même si c'est tres similaire. L'objectif de l'architecture est de minimiser les resources humaines pour créer et maintenir un logiciel. La qualité du design est mesuré en mesurant l'effort qu'il faut pour atteindre les exigences du client (si c'est constant ou si ça diminue, c'est bien sinon c'est mal).
+
+On est dans une course à faire les choses vites, et ça part du principe qu'on est confiant de pouvoir gérer le bordel que cela crée sauf que ça ne s'arrête jamais et le bordel s'accumule sauf que la meilleur façon d'aller vite est d'avoir un environnement de qualité qui te freinera pas dans le futur, on peut pas vraiment penser plus vite ou juste écrire plus vite, donc penser à une bonne architecture et un environnement de qualité est la meilleur façon. On ira plus vite au fur et à mesure en s'améliorant. C'est comme l'hygiene de travail.
+
+Aller plus vite ne fait pas forcément aller plus vite ou même pas significativement et même à court terme. En général, cela va nous ralentir très peu de temps même à court terme (à une mise en production ou même après un weekend). La discipline est rigoureux et cela paraît plus lent car il y a plusieurs étapes et certaines peuvent être repetitifs mais un bon processus permet d'aller plus vite
