@@ -128,3 +128,10 @@ C'est important de se concentrer sur le point 2 plutôt que le premier car c'est
 La structure d'un logiciel doit être altérable.
 
 L'architecture est une économie et de la productivité sur le long terme. C'est une erreur de laisser les gens qui ne connaissent pas déterminer la priorité, il faut leur expliquer. L'architecture est décidé par les développeurs.
+
+Pour cela, on peut utiliser la matrice d'Eisenhower pour faire comprendre les choses aux gens :
+
+Important Urgent   // Important Not Urgent
+Unimportant Urgent // Unimportant not urgent
+
+Dans notre cas, l'architecture est important car elle a une valeur à long terme alors que les requierements sont urgents car ils sont à courts termes.
