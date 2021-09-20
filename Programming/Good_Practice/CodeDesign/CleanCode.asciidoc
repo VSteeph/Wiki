@@ -70,8 +70,10 @@ Idéalement, on développe toujours en suivant 3 règles :
 * Ne pas aller plus loin dans un test des qu'il fail à compile
 * Réparer les test des qu'il fail
 
-Cela permet d'être sur que tout marche à tout moment. Cela permet de penser chaque élément et que tout soit mieux penser même si cela ralentit le processus. Cela permet aussi de limiter fortement le débug car chaque élément a été testé.
+Cela permet d'être sur que tout marche à tout moment. Cela permet de penser chaque élément et que tout soit mieux penser même si cela ralentit le processus. Cela permet aussi de limiter fortement le débug car chaque élément a été testé et que tout le code soit tester et confirmer.
 
-## Bullets Lists :
+Les test ne sont pas un systeme, ils sont tous independents et sont des petits snippets de codes qui montrent comment un élément marche et ne sont pas ambigüs. Cela permet aussi d'avoir une tres tres bonne documentation low level.
+
+Cela permet aussi d'éviter d'avoir du code non-testable et qui rend les test moins importants (ils marchent, mais ce n'est plus fiable) et cela rend les test moins chiant et c'est impossible d'avoir un code qui est dur à tester et donc du code interdependant
 
 
