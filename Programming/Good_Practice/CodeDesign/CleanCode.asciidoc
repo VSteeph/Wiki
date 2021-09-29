@@ -210,3 +210,18 @@ Un MVC est bien en petit mais à tendance à fail quand ça scale.
 image::/img/cleancode/MVC_Boundaries.png[mvc]
 
 L'ajout de boundaries est important car c'est l'essence d'une architecture. L'ajout d'une boundarie fait que la relation est à sens unique, ça s'appelle la dependancy rule.
+
+Le but du présenter est de re-organiser les données pour les préparer à être afficher. Le response model est une raw data structure mais qui ne sait pas comment être affichés. C'est un Date object, un Currency objet, pas un string. Le presenter s'occupe de gérer les données et le view affiche ses strings. Les décisions sur la vue sont dans le presenter. La vue est censé etre tres limité.
+
+Et de la même maniere on a le côté des controllers.
+
+C'est important de dire que les entités contiennent des business rules et pas forcement des business data.
+
+#### Base de donnée
+
+La base de donnée au centre (Data Assets) est surtout un systeme de Marketing, qui marche très bien mais ça a été vendu dans ce sens la dans un premier temps. Une base de donnée est un I/O device, cela stock de la donnée et la ressort.
+
+Le concept de SQL est pas fou (surtout niveau sécurité), c'est mieux d'avoir un software API. La database est un détail pour stocker l'information et c'est tout, donc si c'est un détail, on veut la db de l'autre côté d'une architecture boundaries. Elle est séparée des business rules. On interagit par une interface (Entity Gateway) qui contient les méthodes pour chaque entité (une gateway par entité). Tout ce qui est lié à la database reste de ce côté la du monde.
+
+Database contient des données, Un object contient un comportement. (Pas une distinction absolue mais une distinction à prendre en compte surtout côté DB)
+
