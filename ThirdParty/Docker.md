@@ -4,4 +4,24 @@ Source : https://www.youtube.com/watch?v=WcQ3-M4-jik
 
 Download: https://www.docker.com/get-started
 
-## PReparation
+## Preparation
+
+Installer Docker et la virtualisation ainsi que le package WSL :
+https://docs.docker.com/desktop/windows/troubleshoot/#virtualization
+https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+I lfaut aussi activer dans le BIOS la virtualisation (dans les option du CPU, SVM par exemple)
+
+C'est préférable de faire fonctionner Docker avec Linux plutôt que Windows même sous windows car il y a plus de container et c'est plus léger sauf s'il y a besoin de Windows en particulier (Exemple: .NET Framework, mais pour .NET Core, Go linux)
+
+## Docker Vs Virtual machine
+
+Une virtual machine ont a une couche OS et par-dessus cette couche, on trouve les applications. Le bloc entier est une virtual machine mais c'est quelque chose de très large avec beaucoup d'éléments.
+
+Docker essaye de limiter ce qui est limitable. Si on part du principe qu'une machine virtuelle s'execute sur une autre machine qui a aussi un OS et une couche applicative (qui contient le software), ce qui est de la duplication et ça dans le code ou pour tout, c'est du nono.
+
+Docker recupere l'OS de l'host donc celui de base et ne veut pas re-installer un nouvel OS entierement, il va ajouter un layer à l'OS de l'host ce qui permet d'avoir une version allégé avec le minimum possible (pas d'UI, pas d'utilities), puis on ajoute des mini layers d'exactement ce dont on a besoin. Chaque layer correspond à des environnements et des depedencies. Cela permet d'avoir la version la plus allégée possible d'une machine virtuelle.
+
+Toutes les informations nécesssaires forment une image. C'est à dire une version super allégée de Linux avec SQL & Apache2 qui marchent et absolument rien d'autres. Docker est donc une série de layer.
+
+C'est à dire que Docker Linux prend la base du Subsysteme de Linux windows et ajoute le minimum de Linux (1er layer).
