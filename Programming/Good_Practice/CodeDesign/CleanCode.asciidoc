@@ -4,6 +4,23 @@ Software craftmanship conference (London)
 
 ## Element de base
 
+Code de qualité : 
+
+* Il fonctionne
+* Facile à lire
+* Testable
+* Facile à changer
+* Simple
+* Efficient
+
+Les attributs:
+
+* Modular
+* Loosely coupled
+* cohesive
+* seperations of concerns
+* informations hiding (Permet de gérer d'autres parties du code sans avoir à s'occuper de ce qui y a en dessos)
+
 ### Structure
 Les lignes restent sur un écran (classique) 
 
