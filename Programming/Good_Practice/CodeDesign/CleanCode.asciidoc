@@ -168,4 +168,42 @@ Si on prend les plans d'un batiment, on peut deviner ce qu'est le batiment à pa
 
 Interactors sont des classes qui incarnent un use case et qui ont des applications specific business rule
 
-###
+### Architecture 1 : Use Case approche
+
+Une use case peut être traduit par un interactor. Chaque element a des business rules (gérés par des entities):
+
+* Application specific business rule (AUtomation)
+* Indendant business rule (always apply même sans ordi)	
+
+Ces éléments sont reliés à l'user par un délivery Mechanisme (souvent le web mais ça peut aussi être l'ordinateur dans le cas d'un software)
+
+image::lien[process]
+Le process est simple : 
+
+Les données de l'user sont reorganisés par le delivery mechanismes avec une nouvelle structure (REquest Model)
+
+L'input boundarie l'envoie dans l'interactor qui l'interprete en fonction des conditions et coordinent les entités pour la manipulation des données
+
+#### Testing
+
+LE testing peut être fait facilement car on n'a pas besoin du web, on peut directement passer par les boundaries. C'est pour ça qu'on veut les boundaries du moment qu'on peut feed des Request Model.  
+Une fois que les entités ont finit leur travail, l'interactor crée une nouvelle structure de modele (Result Model) et l'envoie dans l'ouput boundarie puis le web et sera affiché
+
+
+### Architecture 2 : MVC
+
+L'architecture 1 est un peu relié au MVC mais pas vraiment. Le MVC est un des premiers design pattern. Ce principe est simple (exemple d'une horloge):
+
+* Le model object au milieu comprend les business rules. Le modele sait comment prendre en compte le temps, il ne sait pas l'afficher ni d'où vient le temps.
+* Le controller sait tout sur les inputs. Il collecte les inputs et les restructure en commandes sur le model
+* La vue sait comment présenter/afficher les données. (Observer relationship, cela veut dire qu'il y a des callback. La vue register dans le model et quand le model change, la vue est au courant et donc s'adapte)
+
+L'intention du MVC était limité dans une page et vu comme petit élément pour un bouton, une div, etc. Le MVC a évolué actuellement en un gros web framework avec des controllers qui ont plein de models (qui sont devenus des Business Objects) qui renvoient sur plein de vue (pages).
+
+Il n'y a plus de hard boundaries ce qui a plusieurs problemes. Le controller connait tout sur les business Object, et les BUsiness object ont des fonctions de controllers ou même les controllers ont des fonctions de modeles. Les vues des fois ont même des fonctions de B.O ou même des B.O qui font le formatting.
+
+Un MVC est bien en petit mais à tendance à fail quand ça scale.
+
+#### Variation
+
+L'ajout de boundaries est important car c'est l'essence d'une architecture. L'ajout d'une boundarie fait que la relation est à sens unique, ça s'appelle la dependancy rule.
