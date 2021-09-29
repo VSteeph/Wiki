@@ -16,6 +16,10 @@ I lfaut aussi activer dans le BIOS la virtualisation (dans les option du CPU, SV
 
 C'est préférable de faire fonctionner Docker avec Linux plutôt que Windows même sous windows car il y a plus de container et c'est plus léger sauf s'il y a besoin de Windows en particulier (Exemple: .NET Framework, mais pour .NET Core, Go linux)
 
+On peut arrêter la machine virtuelle pour avoir moin de ram avec :
+
+wsl --shutdown et il suffit de faire wsl pour le relancer (powershell)
+
 ## Docker Vs Virtual machine
 
 Une virtual machine ont a une couche OS et par-dessus cette couche, on trouve les applications. Le bloc entier est une virtual machine mais c'est quelque chose de très large avec beaucoup d'éléments.
@@ -67,3 +71,15 @@ Ex : docker run-d --name first-container -p:8080:80 hello-docker:1.0
 --name est le nom du controller
 
 -p est le port du container (utile pour les webservices) avec le port à l'intérieur du container (exemple : 8080:80 veut dire c'est le port 8080 de la machine host et le port 80 du contrôller
+
+## Manage running Container
+
+docker ps -a permet d'avoir la liste de tous les containers et le statut (Créer, expirer, etc)
+
+en général, on utilise les 3 premiers éléments du containerID pour le referencer et on peut utiliser ce genre commande :
+
+docker stop id ou docker start id
+
+On peut aussi faire docker rm id pour supprimer le container, on peut aussi supprimer une image avec docker rmi id (remove image)
+
+
