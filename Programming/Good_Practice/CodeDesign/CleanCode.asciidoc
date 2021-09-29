@@ -167,3 +167,5 @@ On veut qu'une architecture ne se préoccupe pas des IO devices, c'est pour cela
 Si on prend les plans d'un batiment, on peut deviner ce qu'est le batiment à partir des plans (l'intention) plutôt que du type de matériaux utilisé.
 
 Interactors sont des classes qui incarnent un use case et qui ont des applications specific business rule
+
+###
