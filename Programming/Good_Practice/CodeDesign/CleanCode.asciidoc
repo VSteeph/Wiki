@@ -135,6 +135,10 @@ On test des concepts, pas des classes ou du code spécifiquement.
 
 ## Architecture
 
+Leçon: On pense souvent que l'architecture c'est prendre des décisions tôt mais c'est plutôt prendre des décisions tards, plus on a d'info, plus on a un coeur robuste, plus c'est simple de voir les besoins. Une bonne architecture permet de retarder les informations critiques le plus longtemps possible jusqu'à ce qu'on ait assez d'informations pour les prendre ou ne pas les prendre. Une bonne architecture permet de faire les choses aux derniers moments possibles.
+
+Il y a certaines décisions qu'on est obligé de prendre tôt (comme le language) mais d'autres décisions comme les bases de données sont souvent possible à attendre. Une bonne architecture maximise le nombre de décisions pas faite (lié au fait qu'un bon code est un code auquel on ne peut rien enlever)
+
 ### Mise en valeur managériale 
 Séparation entre Design & Architecture est faite même si c'est tres similaire. L'objectif de l'architecture est de minimiser les resources humaines pour créer et maintenir un logiciel. La qualité du design est mesuré en mesurant l'effort qu'il faut pour atteindre les exigences du client (si c'est constant ou si ça diminue, c'est bien sinon c'est mal).
 
