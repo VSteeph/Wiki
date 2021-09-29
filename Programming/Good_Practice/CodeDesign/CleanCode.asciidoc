@@ -177,7 +177,8 @@ Une use case peut être traduit par un interactor. Chaque element a des business
 
 Ces éléments sont reliés à l'user par un délivery Mechanisme (souvent le web mais ça peut aussi être l'ordinateur dans le cas d'un software)
 
-image::lien[process]
+image::/img/cleancode/UserCaseDrive_process.png[process]
+
 Le process est simple : 
 
 Les données de l'user sont reorganisés par le delivery mechanismes avec une nouvelle structure (REquest Model)
@@ -205,5 +206,7 @@ Il n'y a plus de hard boundaries ce qui a plusieurs problemes. Le controller con
 Un MVC est bien en petit mais à tendance à fail quand ça scale.
 
 #### Variation
+
+image::/img/cleancode/MVC_Boundaries.png[mvc]
 
 L'ajout de boundaries est important car c'est l'essence d'une architecture. L'ajout d'une boundarie fait que la relation est à sens unique, ça s'appelle la dependancy rule.
