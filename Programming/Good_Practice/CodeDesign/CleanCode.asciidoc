@@ -67,6 +67,12 @@ Les cas pour faire un commentaire :
 
 ## Test Driven Developpment
 
+Résumé:
+
+* Exprimer l'intention avec un test (donc fail car pas implémenter, il ne doit pas avoir besoin de feature qui n'existe pas encore et qui doivent être testés)
+* Créer le minimum de code pour pouvoir passer le test jusqu'à ce que le test soit bon
+* Refactoriser le code & retester
+
 Idéalement, on développe toujours en suivant plusieurs règles :
 
 * Toujours faire le test avant d'écrire du code
