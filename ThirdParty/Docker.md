@@ -34,7 +34,9 @@ C'est à dire que Docker Linux prend la base du Subsysteme de Linux windows et a
 
 ### Avantages de Docker
 
-Docker permet d'avoir un systeme donc allégé et de récupérer uniquement les éléments dont on a besoin. C'est donc des layer beaucoup plus léger et en plus, ces layers sont indépendants.
+Docker permet d'avoir un systeme donc allégé et de récupérer uniquement les éléments dont on a besoin. C'est donc des layer beaucoup plus léger et en plus, ces layers sont indépendants. C'est donc plus rapide, plus léger.
+
+En plus des éléments, Docker permet d'avoir une configuration de base et donc un environnement identique peu importe qui l'installe et ou.
 
 Par exemple, un web serveur est un container de 55mb, mais si on prend 2 container qui utilise la même image (même webserver) on a pas 110mb car on copie et reutilise les éléments, cela sera juste les différences entre les 2 (donc souvent juste certains fichiers). On peut donc avoir 10 différents containers de web services pour 60mb
 
@@ -83,3 +85,15 @@ docker stop id ou docker start id
 On peut aussi faire docker rm id pour supprimer le container, on peut aussi supprimer une image avec docker rmi id (remove image)
 
 
+
+## Docker commandes
+
+* docker pull (pour récupérer une image)
+* docker build (pour construire une image)
+* docker run (pour créer un ccontainer)
+* docker start/stop pour lancer/arrêter un container
+* docker ps pour avoir la liste des processus
+* docker logs (docker logs id ou name) pour récupérer les logs du container
+* docker exec -it (pour avoir un terminal interactif qui permet d'ouvrir le bash du terminal comme un SSH en gros) & on quitte avec exit
+
+Il est important de préciser que comme les docker images sont très légeres, il n'y a pas toutes les commandes dans le terminal docker.
