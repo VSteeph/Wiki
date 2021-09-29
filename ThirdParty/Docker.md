@@ -25,3 +25,9 @@ Docker recupere l'OS de l'host donc celui de base et ne veut pas re-installer un
 Toutes les informations nécesssaires forment une image. C'est à dire une version super allégée de Linux avec SQL & Apache2 qui marchent et absolument rien d'autres. Docker est donc une série de layer.
 
 C'est à dire que Docker Linux prend la base du Subsysteme de Linux windows et ajoute le minimum de Linux (1er layer).
+
+### Avantages de Docker
+
+Docker permet d'avoir un systeme donc allégé et de récupérer uniquement les éléments dont on a besoin. C'est donc des layer beaucoup plus léger et en plus, ces layers sont indépendants.
+
+Par exemple, un web serveur est un container de 55mb, mais si on prend 2 container qui utilise la même image (même webserver) on a pas 110mb car on copie et reutilise les éléments, cela sera juste les différences entre les 2 (donc souvent juste certains fichiers). On peut donc avoir 10 différents containers de web services pour 60mb
