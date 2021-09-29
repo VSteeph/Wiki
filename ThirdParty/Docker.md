@@ -95,5 +95,15 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker ps pour avoir la liste des processus
 * docker logs (docker logs id ou name) pour récupérer les logs du container
 * docker exec -it (pour avoir un terminal interactif qui permet d'ouvrir le bash du terminal comme un SSH en gros) & on quitte avec exit
+* docker attach pour attacher le docker au programme 
+* docker inspect
 
 Il est important de préciser que comme les docker images sont très légeres, il n'y a pas toutes les commandes dans le terminal docker.
+
+## environnement variable
+
+On peut ajouter des variables d'environnement avec -e (exemple)
+docker run -e App_Color=blue
+
+on peut aussi changer une variable d'environnement avec
+docker inspect nom (ou id)
