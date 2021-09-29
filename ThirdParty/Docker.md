@@ -38,10 +38,32 @@ Par exemple, un web serveur est un container de 55mb, mais si on prend 2 contain
 
 Une image est un layer supplémentaire. On a le base OS, le web serveur layer et un file layer. Une image est en readonly. Cela permet de créer un point dans le temps qui est stable et toujours identique. On peut donc executer l'image et toujours avoir la même base. Le container peut évoluer mais l'image est toujours le même et on part toujours du même point de départ.
 
-Comment créer une image (il suffit de lire la doc de l'image déjà)
+### Configuration
 
 * Créer un fichier qui permet d'avoir un set up, le fichier s'appelle : dockerfile (sans extension)
 * Avoir une image de base pour pouvoir ajouter les layers. Il faut le premier layer, qui peut être un OS et construire par dessus ou une image déjà construite qu'on peut récupérer sur le site de docker
 * On prend les informations dans le container pour créer le dockerfile, on peut utiliser uen version spécifique avec un tag ou directement le latest
 ** from httpd:2.4 (le 2.4 est le tag, ça peut donc être aussi httpd:latest
 * on choisit aussi les fichiers qu'on recupere avec COPY path destination 
+
+Il y a aussi toutes les informations et configuratiosn dans le dockerfile
+ 
+### Build
+
+Une fois que la configuration est fini, on va build l'image dans la console avec :
+docker build -t name:tag . // exemple : docker build -t hello-docker:1.0.0 . // il ne faut pas oublier le . à la fin pour mettre la fin
+
+## Run un Docker
+
+Il est important de préciser qu'un container prend une image et l'execute mais si on détruit un container, on repart de l'image. ça veut dire que les fichiers sont supprimés des que le container est détruit. Les fichiers enregistrés dans un container sont temporairement et pour l'execution, pas du stockage de donnée.
+
+Pour l'executer, on utilise 
+
+docker run -d --name NomDuContainer -p PortMachineHost:PortDansLeContainer NomDeLimage:TagDeLImage
+Ex : docker run-d --name first-container -p:8080:80 hello-docker:1.0
+
+-d est pour disconnect pour continuer à être executer en background même si on ferme le programme qu'il l'a lancé, sinon le docker est lié au programme.
+
+--name est le nom du controller
+
+-p est le port du container (utile pour les webservices) avec le port à l'intérieur du container (exemple : 8080:80 veut dire c'est le port 8080 de la machine host et le port 80 du contrôller
