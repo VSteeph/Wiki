@@ -4,6 +4,8 @@ Source : https://www.youtube.com/watch?v=WcQ3-M4-jik
 
 Download: https://www.docker.com/get-started
 
+images: https://hub.docker.com/
+
 ## Preparation
 
 Installer Docker et la virtualisation ainsi que le package WSL :
@@ -31,3 +33,15 @@ C'est à dire que Docker Linux prend la base du Subsysteme de Linux windows et a
 Docker permet d'avoir un systeme donc allégé et de récupérer uniquement les éléments dont on a besoin. C'est donc des layer beaucoup plus léger et en plus, ces layers sont indépendants.
 
 Par exemple, un web serveur est un container de 55mb, mais si on prend 2 container qui utilise la même image (même webserver) on a pas 110mb car on copie et reutilise les éléments, cela sera juste les différences entre les 2 (donc souvent juste certains fichiers). On peut donc avoir 10 différents containers de web services pour 60mb
+
+## Créer une image
+
+Une image est un layer supplémentaire. On a le base OS, le web serveur layer et un file layer. Une image est en readonly. Cela permet de créer un point dans le temps qui est stable et toujours identique. On peut donc executer l'image et toujours avoir la même base. Le container peut évoluer mais l'image est toujours le même et on part toujours du même point de départ.
+
+Comment créer une image (il suffit de lire la doc de l'image déjà)
+
+* Créer un fichier qui permet d'avoir un set up, le fichier s'appelle : dockerfile (sans extension)
+* Avoir une image de base pour pouvoir ajouter les layers. Il faut le premier layer, qui peut être un OS et construire par dessus ou une image déjà construite qu'on peut récupérer sur le site de docker
+* On prend les informations dans le container pour créer le dockerfile, on peut utiliser uen version spécifique avec un tag ou directement le latest
+** from httpd:2.4 (le 2.4 est le tag, ça peut donc être aussi httpd:latest
+* on choisit aussi les fichiers qu'on recupere avec COPY path destination 
