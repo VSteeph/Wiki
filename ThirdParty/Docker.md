@@ -101,6 +101,7 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker inspect
 * docket network ls (pour avoir la liste des informations des networks des containers
 * docker network create nom-du-reseau (pour créer un réseau)
+* docker-compose -f pathDuFichier up (il peut ne pas être installer) (le up signifie ce qu'on fait avec ce yaml
 
 Il est important de préciser que comme les docker images sont très légeres, il n'y a pas toutes les commandes dans le terminal docker.
 
@@ -124,7 +125,10 @@ services:
             -8080:80
         environment:
             -Username...
+            -Password...
 ```
+
+Le docker compose s'occupe de créer un common network pour tous les containers du compose et on exeute le fichier avec docker-compose
 
 ## Advanced Config
 
