@@ -25,6 +25,8 @@ Code gen: alt + inser
 
 Clean up: Ctrl + E+C
 
+re-organise : Ctrl + alt + enter
+
 ## Pratique
 Réduire la fenetre bas : Maj-Echap
 
