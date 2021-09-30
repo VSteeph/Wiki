@@ -44,6 +44,8 @@ Par exemple, un web serveur est un container de 55mb, mais si on prend 2 contain
 
 Une image est un layer supplémentaire. On a le base OS, le web serveur layer et un file layer. Une image est en readonly. Cela permet de créer un point dans le temps qui est stable et toujours identique. On peut donc executer l'image et toujours avoir la même base. Le container peut évoluer mais l'image est toujours le même et on part toujours du même point de départ.
 
+L'intérêt des iamges est aussi de les upload sur un repo public ou private pour qu'elle puisse etre facilement récupérable/déployer sur un environnement de test,prod ou local.
+
 ### Configuration
 
 * Créer un fichier qui permet d'avoir un set up, le fichier s'appelle : dockerfile (sans extension)
@@ -108,7 +110,6 @@ docker stop id ou docker start id
 On peut aussi faire docker rm id pour supprimer le container, on peut aussi supprimer une image avec docker rmi id (remove image)
 
 
-
 ## Docker commandes
 
 * docker pull (pour récupérer une image)
@@ -141,12 +142,19 @@ Pour ne pas lancer tous les containers à la main à chaque fois, on peut utilis
 version:'3' (Version de ddocker compose)
 services:
     container-name:
-        image: image-use
+        image: id ou lien du repositori où l'iamge est hebergé sinon il va par défaut sur dockerhub (il faut que l'nevironnement soit logged in sur le repo)
+    second-container-name:
+        image: image-use 
         ports:
             -8080:80
         environment:
             -Username...
             -Password...
+        volumes:
+           -db-data:/var/lib/mysql/data (named volume avec pour nom db-data
+           
+    volumes:
+        db-data
 ```
 
 Le docker compose s'occupe de créer un common network pour tous les containers du compose et on exeute le fichier avec docker-compose
@@ -156,5 +164,29 @@ Le docker compose s'occupe de créer un common network pour tous les containers 
 Docker crée un network isolé sur la machine host, donc quand on déploie plusieurs containers sur le même docker, les containers peuvent échanger des informations sans port, internet et directement avec le protocole de docker et leur id container, tandis que que pour tout ce qui est endehors la machine (appli ou même container) échange les informations avec un protocole classique.
 
 Il est possible de créer des networks sur docker avec la commande: docker network create name
+
+## Data-Persistance
+
+Comme on a vu les données d'un container disparaisse lorsque le container s'arrête, ce qui est bien pour avoir un environnement fresh et toujours identique mais moin bien quand on veut sauvegarder des données, surtout quand le container est une base de donnée.
+
+Pour cela, on a besoin de Docker Volumes. Un container a un virtual File Systeme (/var/lib/mysql/data par exemple) et sur la machine host on a un physical File systeme. Volumes permet de relier le Virtual File systeme à un dossier du physical file systeme, donc quand docker écrit sur son dossier, les données sont repliquées sur le dossier physique et inversement. C'est à dire que s'il y a un changement sur le dossier physique, le dossier virtuel est modifié.
+
+### Mettre en place docker volumes
+
+Il y a plusieurs types de dockers volumes:
+
+Façon 1 (host volume):
+docker run -v HostDirectory:Container directory (ex: docker run -v /home/Container-1/data:/var/lib/mysql/data, cela permet de décider où on veut et de controller ce dossier
+
+Facon 2 (anonyme volume):
+docker run -v VirtualPath et docker s'occupe de tout , c'est un volume anonyme. ex: docker run -v /var/lib/mysql/data
+
+Façon 3 (named volume): 
+Version improve qui permet de créer le dossier du volume anonmye (named volumes))
+docker run -v name:path (ex : docker run -v name:/var/lib/mysql/data
+
+En général, c'est les named volume qui sont utilisé car il y a des avantages à laisser docker gérer les volumes directories directement. On peut évidememnet l'intégrer à Docker Compose.
+
+On peut associer un named volume à plusieurs container.
 
 ## Debugging
