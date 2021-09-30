@@ -53,6 +53,27 @@ Une image est un layer supplémentaire. On a le base OS, le web serveur layer et
 * on choisit aussi les fichiers qu'on recupere avec COPY path destination 
 
 Il y a aussi toutes les informations et configuratiosn dans le dockerfile
+
+On peut aussi ajouter des variables d'environnement lock mais c'est mieux de mettre les variables dans le docker-compose car c'esrt plus simple à override.
+
+On peut ajouter des commandes linux aussi avec run (autant qu'on veut), c'est les commandes qui sont effectués DANS le container, à ne pas confondre avec copy qui est entre l'host et le container
+
+execute specifique commande en fonction du container (cmd dans node executer sever.js par exemple) pour servir d'entry point. On peut avoir plein de RUN mais un seul entry point.
+
+Exemple:
+
+```
+FROM node:tag
+
+ENV username=admin
+    password=password
+    
+RUN mkdir -p /home/app
+
+COPY ./home/app
+
+CMD ["node","server.js"]
+```
  
 ### Build
 
@@ -101,7 +122,7 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker inspect
 * docket network ls (pour avoir la liste des informations des networks des containers
 * docker network create nom-du-reseau (pour créer un réseau)
-* docker-compose -f pathDuFichier up (il peut ne pas être installer) (le up signifie ce qu'on fait avec ce yaml
+* docker-compose -f pathDuFichier up (il peut ne pas être installer) (le up signifie ce qu'on fait avec ce yaml up pour lancer, down pour arrêter)
 
 Il est important de préciser que comme les docker images sont très légeres, il n'y a pas toutes les commandes dans le terminal docker.
 
@@ -130,9 +151,7 @@ services:
 
 Le docker compose s'occupe de créer un common network pour tous les containers du compose et on exeute le fichier avec docker-compose
 
-## Advanced Config
-
-### Interagir entre les containers
+## Interagir entre les containers
 
 Docker crée un network isolé sur la machine host, donc quand on déploie plusieurs containers sur le même docker, les containers peuvent échanger des informations sans port, internet et directement avec le protocole de docker et leur id container, tandis que que pour tout ce qui est endehors la machine (appli ou même container) échange les informations avec un protocole classique.
 
