@@ -95,7 +95,7 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker run (pour créer un ccontainer)
 * docker start/stop pour lancer/arrêter un container
 * docker ps pour avoir la liste des processus
-* docker logs (docker logs id ou name) pour récupérer les logs du container
+* docker logs (docker logs id ou name) pour récupérer les logs du container | tail pour avoir les derniers logs ou -f pour avoir le flux continu
 * docker exec -it (pour avoir un terminal interactif qui permet d'ouvrir le bash du terminal comme un SSH en gros) & on quitte avec exit
 * docker attach pour attacher le docker au programme 
 * docker inspect
@@ -112,9 +112,21 @@ docker run -e App_Color=blue
 on peut aussi changer une variable d'environnement avec
 docker inspect nom (ou id)
 
-## Advanced Config
+## Compose
+Pour ne pas lancer tous les containers à la main à chaque fois, on peut utiliser docker compose qui est un fichier yaml qui est la map des commandes de docker. ça a la structure suivante :
 
-## Interacting
+```yaml
+version:'3' (Version de ddocker compose)
+services:
+    container-name:
+        image: image-use
+        ports:
+            -8080:80
+        environment:
+            -Username...
+```
+
+## Advanced Config
 
 ### Interagir entre les containers
 
