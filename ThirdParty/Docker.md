@@ -68,11 +68,13 @@ Pour l'executer, on utilise
 docker run -d --name NomDuContainer -p PortMachineHost:PortDansLeContainer NomDeLimage:TagDeLImage
 Ex : docker run-d --name first-container -p:8080:80 hello-docker:1.0
 
--d est pour disconnect pour continuer à être executer en background même si on ferme le programme qu'il l'a lancé, sinon le docker est lié au programme.
+-d est pour dettach pour continuer à être executer en background même si on ferme le programme qu'il l'a lancé, sinon le docker est lié au programme.
 
 --name est le nom du controller
 
 -p est le port du container (utile pour les webservices) avec le port à l'intérieur du container (exemple : 8080:80 veut dire c'est le port 8080 de la machine host et le port 80 du contrôller
+
+Selon les images et le dockerfile, il y a différent éléments et parametres optionelles ou non à renseigner lors du run
 
 ## Manage running Container
 
@@ -97,6 +99,8 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker exec -it (pour avoir un terminal interactif qui permet d'ouvrir le bash du terminal comme un SSH en gros) & on quitte avec exit
 * docker attach pour attacher le docker au programme 
 * docker inspect
+* docket network ls (pour avoir la liste des informations des networks des containers
+* docker network create nom-du-reseau (pour créer un réseau)
 
 Il est important de préciser que comme les docker images sont très légeres, il n'y a pas toutes les commandes dans le terminal docker.
 
@@ -107,3 +111,15 @@ docker run -e App_Color=blue
 
 on peut aussi changer une variable d'environnement avec
 docker inspect nom (ou id)
+
+## Advanced Config
+
+## Interacting
+
+### Interagir entre les containers
+
+Docker crée un network isolé sur la machine host, donc quand on déploie plusieurs containers sur le même docker, les containers peuvent échanger des informations sans port, internet et directement avec le protocole de docker et leur id container, tandis que que pour tout ce qui est endehors la machine (appli ou même container) échange les informations avec un protocole classique.
+
+Il est possible de créer des networks sur docker avec la commande: docker network create name
+
+## Debugging
