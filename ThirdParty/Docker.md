@@ -76,6 +76,20 @@ COPY ./home/app
 
 CMD ["node","server.js"]
 ```
+
+Chaque ligne correspond à un layer, on peut ajouter des layers comme étape ou comme fichier avec des apt-get pare xemple.
+
+L'avantage des entryponit est qu'on peut mettre des variables dedans à la place de server.js qu iest l'argument. exemple 
+
+ENTRYPOINT["sleep"] et on peut faire docker run ubuntu-sleeper 10, on peut aussi ajouter une valeur de base 
+
+```
+FROM Ubutuntu
+
+Entrypoint["sleep"]
+CMD["5"]
+```
+
  
 ### Build
 
@@ -120,7 +134,7 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 * docker logs (docker logs id ou name) pour récupérer les logs du container | tail pour avoir les derniers logs ou -f pour avoir le flux continu
 * docker exec -it (pour avoir un terminal interactif qui permet d'ouvrir le bash du terminal comme un SSH en gros) & on quitte avec exit
 * docker attach pour attacher le docker au programme 
-* docker inspect
+* docker inspect poru avoir des informations sur le container
 * docket network ls (pour avoir la liste des informations des networks des containers
 * docker network create nom-du-reseau (pour créer un réseau)
 * docker-compose -f pathDuFichier up (il peut ne pas être installer) (le up signifie ce qu'on fait avec ce yaml up pour lancer, down pour arrêter)
