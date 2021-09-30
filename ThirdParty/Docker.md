@@ -114,7 +114,7 @@ On peut aussi faire docker rm id pour supprimer le container, on peut aussi supp
 
 * docker pull (pour récupérer une image)
 * docker build (pour construire une image)
-* docker run (pour créer un ccontainer)
+* docker run (pour créer un ccontainer) (-i permet de rendre intreactif si on a besoin d'input spécifique, et -it pour interactif + terminal)
 * docker start/stop pour lancer/arrêter un container
 * docker ps pour avoir la liste des processus
 * docker logs (docker logs id ou name) pour récupérer les logs du container | tail pour avoir les derniers logs ou -f pour avoir le flux continu
