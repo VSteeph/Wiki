@@ -1,5 +1,9 @@
 Source: https://www.youtube.com/watch?v=UrQWii_kfIE
 
+Documentation : https://meta.stackexchange.com/questions/69164/does-stack-exchange-use-caching-and-if-so-how/69172#69172
+
+Autres cache : https://docs.microsoft.com/en-us/iis/manage/managing-performance-settings/walkthrough-iis-output-caching
+
 # Redis Implementaiton
 
 ## Préparation
