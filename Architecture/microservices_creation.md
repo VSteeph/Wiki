@@ -22,3 +22,26 @@ Les microservices sont distribués sur le réseau et DONC le réseau peut fail o
 
 
 Il est important que les hybrides avec quelques microservices autour d'un monolithe se fait.
+
+
+## Implementation
+
+### Package utilisé:
+
+* AutoMapper.Extensions.Microsoft.DependencyInjection
+* EntityFrameworkCore
+* EntityFrameworkCore.Design
+* EntityFrameworkCore.InMemory
+* EntityFrameworkCore.Sqlserver
+
+
+### infos en vrac
+
+Contient Donnée:
+
+* Models: données (internal representation de la donnée)
+* Data Transfer Object : Vue externe des representations des données (DTO)
+
+
+
+
