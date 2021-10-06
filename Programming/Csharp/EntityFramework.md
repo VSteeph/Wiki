@@ -17,3 +17,7 @@ L'avantage de Migration.tool permet de build la base de donnée à partir de Mig
 Migration Up permet de monter en version et dwon de descendre. Evidemment, un rollback fait perdre des données si on drop des tables.
 
 Il y a aussi un snapshot disponible
+
+## SQL optimisation
+
+nvarchar(max) bad is pas nécessaire
