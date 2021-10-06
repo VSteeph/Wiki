@@ -29,7 +29,7 @@ Il est important que les hybrides avec quelques microservices autour d'un monoli
 ### Package utilisé:
 
 * AutoMapper.Extensions.Microsoft.DependencyInjection
-* EntityFrameworkCore
+* EntityFrameworkCore (Contient DbContext)
 * EntityFrameworkCore.Design
 * EntityFrameworkCore.InMemory
 * EntityFrameworkCore.Sqlserver
@@ -41,6 +41,9 @@ Contient Donnée:
 
 * Models: données (internal representation de la donnée)
 * Data Transfer Object : Vue externe des representations des données (DTO)
+
+
+DbContext est la pour faire le mirrori entre le code (Model) et les données en base de donnée
 
 
 
