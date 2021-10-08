@@ -21,3 +21,15 @@ Il y a aussi un snapshot disponible
 ## SQL optimisation
 
 nvarchar(max) bad is pas nécessaire
+
+## Attributes
+
+Pour avoir une bonne base de donnée, il est important de catégoriser les champs dans les models avec les attributes (tags), ils se trouvent dans
+using System.ComponentModel.DataAnnotations;
+
+voici des exemples:
+[Required]
+[MaxLenght(x)]
+[Column(TypeName ="varchar(16")] qui est dans System.ComponentModel.DataAnnotations.Schema (Pasi deal d'ajouter du SQL dans un model mais c'est mieux d'opti)
+
+ça parait minime mais ça scale avec plein d'utiilisateurs, donc c'est bien de le faire et ça coute pas grand chose de le faire directement.
