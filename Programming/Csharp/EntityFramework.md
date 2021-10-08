@@ -32,4 +32,7 @@ voici des exemples:
 [MaxLenght(x)]
 [Column(TypeName ="varchar(16")] qui est dans System.ComponentModel.DataAnnotations.Schema (Pasi deal d'ajouter du SQL dans un model mais c'est mieux d'opti)
 
+et aussi l'ignorer avec :
+[NotMapped) dans System.ComponentModel.DataAnnotations.Schema
+
 ça parait minime mais ça scale avec plein d'utiilisateurs, donc c'est bien de le faire et ça coute pas grand chose de le faire directement.
