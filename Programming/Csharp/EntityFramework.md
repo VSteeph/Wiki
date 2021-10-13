@@ -41,4 +41,4 @@ et aussi l'ignorer avec :
 
 EFC utilise des procédures avec des hauts niveaux de privileges, donc cela veut dire que si on ship un produit (principalement un logiciel par exemple), il faut les credentials (log & user) et ces credentials doivent avoir un haut de niveau privilege et même si c'est encrypté, l'utilisateur a une partie de l'information de l'encryption + les credentials donc, c'est vraiment pas fou si c'est quelque chose de distribué, sur un serveur c'est pas un probleme.
 
-Cela veut dire qu'un utilisateur peut utiliser sp_executesql et donc executer n'importe quel SQL (Drop, select, alter, etc)
+Cela veut dire qu'un utilisateur peut utiliser sp_executesql et donc executer n'importe quel SQL (Drop, select, alter, etc) même si l'utilisateur lambda n'aura aucun accès, c'est une possibilité donc c'est un risque.
