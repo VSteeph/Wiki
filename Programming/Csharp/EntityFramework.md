@@ -36,3 +36,7 @@ et aussi l'ignorer avec :
 [NotMapped) dans System.ComponentModel.DataAnnotations.Schema
 
 ça parait minime mais ça scale avec plein d'utiilisateurs, donc c'est bien de le faire et ça coute pas grand chose de le faire directement.
+
+## Danger
+
+EFC utilise des procédures avec des hauts niveaux de privileges, donc cela veut dire que si on ship un produit (principalement un logiciel par exemple), il faut les credentials (log & user) et ces credentials doivent avoir un haut de niveau privilege et même si c'est encrypté, l'utilisateur a une partie de l'information de l'encryption + les credentials donc, c'est vraiment pas fou si c'est quelque chose de distribué, sur un serveur c'est pas un probleme
