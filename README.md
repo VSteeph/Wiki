@@ -38,3 +38,13 @@ Refactoring :
 
 DB:
 https://www.youtube.com/playlist?list=PLLWMQd6PeGY3b89Ni7xsNZddi9wD5Esv2
+
+
+A lire et tester:
+- https://nickcraver.com/blog/2018/11/29/stack-overflow-how-we-do-monitoring/
+- https://nickcraver.com/blog/2019/08/06/stack-overflow-how-we-do-app-caching/
+- https://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/
+- https://nickcraver.com/blog/2016/05/03/stack-overflow-how-we-do-deployment-2016-edition/
+
+Curiosité:
+- https://nickcraver.com/blog/2016/03/29/stack-overflow-the-hardware-2016-edition/
