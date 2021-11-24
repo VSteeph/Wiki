@@ -48,3 +48,14 @@ A lire et tester:
 
 Curiosité:
 - https://nickcraver.com/blog/2016/03/29/stack-overflow-the-hardware-2016-edition/
+
+
+Projet:
+- Below (C#)
+
+Harv:
+- Pythonc & C (django?)
+
+Web (learn/notes):
+- JS, jsdom, react, node mangodb
+- html/css/bootstrap
