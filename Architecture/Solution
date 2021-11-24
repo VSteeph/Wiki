@@ -1,0 +1,7 @@
+Voici des exemples de comment organiser un projet dev (Exemple en .NET sln). Cela depend forcement des situations mais par défaut, la séparation physique aide mais trop séparé peut être contraignant.
+
+Exemple :
+
+* SRC
+* Test
+
