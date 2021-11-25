@@ -22,4 +22,11 @@ Il y a plusieurs étapes dans la compilations
 
 * Assembling: On Transforme l'assembly en Binaire pour qu'il soit executé par le CPU selon les regles données par l'OS/CPU
 
-* Linking : On ajoute les librairies à ce soruce code (qui sont déjà en dll donc en binaire)
+* Linking : On ajoute les librairies à ce soruce code (qui sont déjà en dll donc en binaire) et regroupe tout pour avoir un programme. 
+
+
+## Debug
+
+Il y a l'outil sur cs50 qui est debug50. Il est basé sur GDB (GNU debugger) qui est un outil utilisé et qui permet de plus facilement débugger que juste printf. Cela permet d'avoir un debugger step by step, en gros un debugger (avec BreakPoint, etc)
+
+debug50 ./mario
