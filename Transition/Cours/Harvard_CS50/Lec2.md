@@ -30,3 +30,18 @@ Il y a plusieurs étapes dans la compilations
 Il y a l'outil sur cs50 qui est debug50. Il est basé sur GDB (GNU debugger) qui est un outil utilisé et qui permet de plus facilement débugger que juste printf. Cela permet d'avoir un debugger step by step, en gros un debugger (avec BreakPoint, etc)
 
 debug50 ./mario
+
+## Data
+
+bool 1 byte
+char 1 bite
+Double 8 byte
+Float 4 byte
+int 4 byte
+long 8 bytes
+string ?bytes (varie)
+
+## Mémoire
+Quand on ouvre un fichier, un programme. Il est mis dans la RAM, c'est pour ça qu'on perd les informations quand on coupe le programme. C'est parce que c'est dans la mémorie volatile (mais plsu rapide).
+
+
