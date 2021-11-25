@@ -95,6 +95,7 @@ Le 0 est la pour arrêter le string et éviter de modifier ou de récupére d'au
 
 Le fait que les characteres sont des chiffres permettent de facilement les manipuler. Par exemple, on peut transformer des caracteres de minuscules en majuscules. Si on prend la table ASCII, on voit qu'il y a un décalage de 32 entre la minuscule et la majuscule, ce uqi permet de faire ça :
 
+``` C
 for(int i =0, n =strlen(s); i<n; ++i)
 {
   if(s[i] >='a' && s[i] <= 'z')
@@ -102,6 +103,9 @@ for(int i =0, n =strlen(s); i<n; ++i)
     printf("%c", s[i] - 32);
    )
 }
+```
+
+Cette fonction existe déjà dans <ctype.h> comme : islower pour savoir si le caractere est une minuscule, ainsi que toUpper pour transformer en caractere en Majuscule.
 
 ## For
 
@@ -114,6 +118,18 @@ sachant que la condition va être itéré à chaque itération donc ça sert à 
 On peut donc déclarer la variable strlen avant ou l'utiliser dans le for dans la partie "déclaration" qui est la premiere partie :
 
 for (int i = 0, n = strlen(s); i < n;i++)
+
+## Main
+
+La fonction main peut aussi prendre des inputs qui corresponderont à des arguments dans l'executiion du programe comme
+
+int main(int argc, string argv[]) ou argc est argumentCount donc le nombre d'argument qui vont être renseigné et argv pour la liste des arguments.
+
+argc est renseigné automatiquement par le programe et c'est le nombre de mot dans la commande (Y COMPRIS LE nom du programme) donc
+
+./hello john => cela va donner 2 arguments => argv[0]qui est le nom du programme et argv[1] qui est john
+
+Main retourne aussi un type int qui permet de donner un exit status pour dire comment le programme s'est arrêté ex return 1
 
 ## Cyrptographie
 
