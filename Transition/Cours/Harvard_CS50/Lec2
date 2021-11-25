@@ -13,3 +13,13 @@ clang -o hello hello.c // ce qui permet de compiler dans un fichier hello.c
 clang -o hello -lcs50 hello.c // ce qui inclue la librairie cs50
 
 => -lm pour mac librairie // -lc pour une librairie de crypto
+
+Il y a plusieurs étapes dans la compilations
+
+* Preprocessing : On prend le source code tous les indicateurs de preprocessing (souvent celles qui commencent par #). Exemple #include va prendre le contenu du fichier et le mettre à la place de l'include
+
+* Compiling: On transforme le C code en Assembly qui est le langage des CPU (Chaque CPU a sa propre façon d'implémenter l'assembly, c'est pour ça qu'on passe par l'assembly)
+
+* Assembling: On Transforme l'assembly en Binaire pour qu'il soit executé par le CPU selon les regles données par l'OS/CPU
+
+* Linking : On ajoute les librairies à ce soruce code (qui sont déjà en dll donc en binaire)
