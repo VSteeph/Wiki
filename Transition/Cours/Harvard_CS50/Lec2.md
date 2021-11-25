@@ -81,6 +81,8 @@ Charactere = Single quote ''  et les strings = double quote ""
 
 ## String
 
+Les strings sont dans <string.h>
+
 Il n'y a pas de string en C mais tous les langages ont une façon de représenter des strings. Un string n'est rien d'autre qu'un array de character. Une string est un peu plus développée qu'un array mais c'est le concept.
 
 Les strings ajoutent un autre caractère à la fin d'un string qui est \0 pour dire que c'est la fin d'un string (EOF) et qui a la valeur numérique 0 => 00000000 (byte) donc chaque string prend un byte de plus.
@@ -92,3 +94,9 @@ Le 0 est la pour arrêter le string et éviter de modifier ou de récupére d'au
 La condition est n'importe quel boolean, donc ça veut dire qu'on peut faire
 
 for(i =0; i < 5; ++i) ou à la place du i mettre i ==5 ou i != 5 ou une autre variable genre s[i] == '\0'
+
+sachant que la condition va être itéré à chaque itération donc ça sert à rien de mettre une fonction comme strlen qui va parcourir la string plein de fois et augmenter la compelxité.
+
+On peut donc déclarer la variable strlen avant ou l'utiliser dans le for dans la partie "déclaration" qui est la premiere partie :
+
+for (int i = 0, n = strlen(s); i < n;i++)
