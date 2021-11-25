@@ -60,6 +60,8 @@ float average (int length, int scores[]);
 
 En C, les arrays n'ont pas de fonctionnalités. Ils n'ont pas les points comme Length ou autre comme en C# donc scores.length ne marchera pas, il faut passer la length dans les fonctions et garder la variable.
 
+et évidemment, on peut avoir des arays dans des arrays avec int[][][]
+
 ## Const
 
 Si on va utiliser une variable plusieurs fois sans avoir à la copier ou à l'envoyer et qu'on ne changera pas. On peut la déclarer comme une constance :
@@ -68,7 +70,7 @@ const int total = 5 (par exemple) Cela permet de protéger le code pour éviter 
 
 Par convention, elles sont écrites en Majuscules =>
 
-const int TOTAL = 5;
+const int TOTAL = 5;.
 
 ## Character
 
@@ -89,6 +91,18 @@ Les strings ajoutent un autre caractère à la fin d'un string qui est \0 pour d
 
 Le 0 est la pour arrêter le string et éviter de modifier ou de récupére d'autres éléments dans la RAM qui peut être dangereux, il faut faire attention en C.
 
+## Caractere & String
+
+Le fait que les characteres sont des chiffres permettent de facilement les manipuler. Par exemple, on peut transformer des caracteres de minuscules en majuscules. Si on prend la table ASCII, on voit qu'il y a un décalage de 32 entre la minuscule et la majuscule, ce uqi permet de faire ça :
+
+for(int i =0, n =strlen(s); i<n; ++i)
+{
+  if(s[i] >='a' && s[i] <= 'z')
+  (
+    printf("%c", s[i] - 32);
+   )
+}
+
 ## For
 
 La condition est n'importe quel boolean, donc ça veut dire qu'on peut faire
@@ -100,3 +114,7 @@ sachant que la condition va être itéré à chaque itération donc ça sert à 
 On peut donc déclarer la variable strlen avant ou l'utiliser dans le for dans la partie "déclaration" qui est la premiere partie :
 
 for (int i = 0, n = strlen(s); i < n;i++)
+
+## Cyrptographie
+
+Cela permet de transformer des informations avec une clé en d'autres informations qui sont codés mais plus dur à comprendre
