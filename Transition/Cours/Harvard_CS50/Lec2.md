@@ -123,7 +123,7 @@ for (int i = 0, n = strlen(s); i < n;i++)
 
 La fonction main peut aussi prendre des inputs qui corresponderont à des arguments dans l'executiion du programe comme
 
-int main(int argc, string argv[]) ou argc est argumentCount donc le nombre d'argument qui vont être renseigné et argv pour la liste des arguments.
+int main(int argc, string argv[]) ou argc est argumentCount donc le nombre d'argument qui vont être renseigné et argv pour la liste des arguments. et argv est argument vector
 
 argc est renseigné automatiquement par le programe et c'est le nombre de mot dans la commande (Y COMPRIS LE nom du programme) donc
 
@@ -134,3 +134,7 @@ Main retourne aussi un type int qui permet de donner un exit status pour dire co
 ## Cyrptographie
 
 Cela permet de transformer des informations avec une clé en d'autres informations qui sont codés mais plus dur à comprendre
+
+## Variable
+
+La plupart des variables en C sont en valeur quand elles sont en locales, donc le callee (celui qui reçoit la fonction) ne modifie pas la valeur de la varaible dans le caller
