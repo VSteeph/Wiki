@@ -1,0 +1,15 @@
+# Lecture 1
+
+## Make
+
+Quand on compile un projet avec make dans cs50. On passe par le compiler "Clang". Pour utiliser directement clang, il faut ajouter des paramètres. Par défaut, si on fait juste :
+
+clankg hello.c, on va avoir un a.out (pour assembly out) qui va être le programme compilé. On peut donc ajouter un argument(options, flags) comme :
+
+-o pour output
+clang -o hello hello.c // ce qui permet de compiler dans un fichier hello.c
+
+-l pour linked des librairies
+clang -o hello -lcs50 hello.c // ce qui inclue la librairie cs50
+
+=> -lm pour mac librairie // -lc pour une librairie de crypto
