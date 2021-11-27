@@ -10,6 +10,8 @@ O(n) ou O(log(n)?
 
 On se concentre surtout sur le dominant facteur. Par exemple O(n) ou O(n/2), c'est surtout O(n) qui nous intéresse comme log base 2 ou log base 7, on dira juste log(n)
 
+Enfin, on a un dernier terme quand on a un algo qui a le même upper bound et lower bound qui ont la même compelxité, on peut dire theta(n) (ϴ)
+
 Exemple de big Notation:
 
 * O(n²) => Worst case
@@ -63,10 +65,30 @@ Le probleme de Selection Sort c'est qu'en terme de lower bound pour le running t
 
 On compare le chiffre avec le suivant (s'il existe) et on inverse leur position, s'il sont dans le mauvais ordre. Le plus haut chiffre va toujours arriver à la bonne position, donc on peut diminuer de 1 ausi le nombre de chifre à comparer apres chaque itération.
 
-C'est à dire qu'on fait n => n -1 => n-2 (etc, comme pour le selection sorting)
+C'est à dire qu'on fait n => n -1 => n-2 (etc, comme pour le selection sorting) sauf que le buble sorting marche beaucoup mieux avec le lower bound qui est à Omega(n), ce qui le rend plus efficace.
 
+Pour le upper bound, on al a complexité suivante :
+(n-1) x (n-1)
+(n² - 1n - 1n +1
+ce qu'on peut donc traduire par O(n²) en gros
 
+cela veut dire que dans l'upper bound, Le Selection & Bubble sort sont asymptotiquement (asymptoically) simialrie
 
+### Merge Sort (Recursion)
+
+La capacité pour une fonction de s'appeler elle même. 
+
+Le merge Sort c'est le fait de sort la première moitié et l'autre moitié des données puis de fusionner les 2.
+
+Une fois qu'on arrive à 2 arrays triés, on compare les éléments le plus bas de chaque tableau et on recupère le plus petit, puis on continue jusqu'à avoir un tableau trier.
+
+Comme pour le Binary Search, on divise le nombre d'éléments par 2 jusqu'à avoir un seul élément, à partir de la cet élément est trié puis on refusionne petit à petit en comparant élément par élément comme vu ci-dessus.
+
+6 3 8 5 ==> 6 3 // 8 5 ==> 6 / 3 / 8 /5 ==> 3 6 / 5 8 ==> 3 5 6 8
+                           
+Pour la derniere étape, on compare le 3 avec le 5, c'est le 3 qui est plus petit, puis les 2 éléments les plus petits sont 6 et 5, c'est le 5 qui est le plus petit, puis les 2 éléments les plus petits sont 6 & 8, c'est le 6 le plus petit.
+
+ce qui nous donne un upperbound et un lower bound de la même compléxité qui est O(nlog(n)) mais EN echange, cela a un prix, c'est que cela prend plus de mémoire.
 
 ## Struct
 
