@@ -59,3 +59,12 @@ Harv:
 Web (learn/notes):
 - JS, jsdom, react, node mangodb
 - html/css/bootstrap
+
+
+## Restructuration (au fur et à mesure)
+
+* Langages
+* Algorithme
+* Framework / Technologies
+* Environment
+* Architecture
