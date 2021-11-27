@@ -39,3 +39,18 @@ Si on cherche 4 dans 1 à 10 :
 * Check 3, pas bon, c'est 4
 
 Précision, en C on peut pas comparer des string avec == mais on peut faire strcomp dans string.h qui permet de comparer 2 strings (comparaison un par un des chac je suppose)
+
+## Struct
+
+En C, on peut déterminer une struccture (data structure) qui est une composition de plusieurs values ex :
+
+```C
+typedef struct // type de la structure
+{
+  string name; // valeur
+  string number;
+}
+person; //Nom de la structure
+```
+
+Value type?
