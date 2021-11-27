@@ -51,6 +51,15 @@ typedef struct // type de la structure
   string number;
 }
 person; //Nom de la structure
+
+// cela s'utilies comme ça apres
+
+int main(void)
+{
+  person people[2];
+  people[0].name = "john";
+  people[0].number = "123";
+}
 ```
 
 Value type?
