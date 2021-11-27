@@ -18,5 +18,23 @@ Exemple de big Notation:
 * O(log n)
 * O(1) => Best case
 
+Big O correspond aux temps le plus élévé possible, c'est à dire si c'est le dernier élément qu'on trouve, quelle sera la compelxité; ce qui s'oppose à Omega qui est le plus rapide possible.
+
+On peut aussi analyser par "hertz", les CPU sont en Ghz donc 1 milliards d'opération. (Surtout rappeler que 1ghz c'est 1 milliard)
+
 ## Searching
+
+### Linear Search
+
+Cela correspond à une recherche élément par élément (linéaire) => O(n)
+
+### Binary Search
+
+C'est possible quand les recherches sont triés par ordre chronologique. Un binary search est le fait de prendre la moitié des informations et prendre la moitié inférieur et supérieur en fonction du chiffre.
+
+Si on cherche 4 dans 1 à 10 :
+
+* Milieu = 5, donc on prend de 1 à 4
+* Milieu = 2, donc on prend 3 à 4
+* Check 3, pas bon, c'est 4
 
