@@ -40,6 +40,34 @@ Si on cherche 4 dans 1 à 10 :
 
 Précision, en C on peut pas comparer des string avec == mais on peut faire strcomp dans string.h qui permet de comparer 2 strings (comparaison un par un des chac je suppose)
 
+## Sorting
+
+Le sorting est intéressant quand on commence à arriver des données qui ont une certaine quantité parce que faire du code complexe pour ordonner puis faire une recherche pour faire le meilleur algorithme alors que la différence sera minimale à l'échelle d'un ordinateur.
+
+Le temps humain est plus important TANT que le temps machine n'est pas un blocage. L'optimisation se fait par la suite. Après, si on sait qu'on va process des milliers, des millions des lignes, on sait qu'on aura à l'optimiser des le début.
+
+Le tout est un équilibre entre le temps humain, le temps machine et la mémoire utilisée.
+
+### Selection Sort
+
+On compare l'élement le plus bas puis en le comparant à tous les elements, puis le second le plus bas qu'on compare à n-1, ce qui nous donne uen complexité de 
+O(n(n+1)/2) 
+
+n + n-1 + n-2 +...+1  = n(n+1)/2 = (n²+n)/2 = n²/2 =n/2
+
+donc pour résumer, on peut dire O(n²) si on veut rester dans la grande ordre de choses (et donc pas bien).
+
+Le probleme de Selection Sort c'est qu'en terme de lower bound pour le running time, c'est la même durée que l'upper bouard (omega = Big O)
+
+### Buble Sort
+
+On compare le chiffre avec le suivant (s'il existe) et on inverse leur position, s'il sont dans le mauvais ordre. Le plus haut chiffre va toujours arriver à la bonne position, donc on peut diminuer de 1 ausi le nombre de chifre à comparer apres chaque itération.
+
+C'est à dire qu'on fait n => n -1 => n-2 (etc, comme pour le selection sorting)
+
+
+
+
 ## Struct
 
 En C, on peut déterminer une struccture (data structure) qui est une composition de plusieurs values ex :
