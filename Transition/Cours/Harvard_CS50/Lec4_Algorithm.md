@@ -38,3 +38,4 @@ Si on cherche 4 dans 1 à 10 :
 * Milieu = 2, donc on prend 3 à 4
 * Check 3, pas bon, c'est 4
 
+Précision, en C on peut pas comparer des string avec == mais on peut faire strcomp dans string.h qui permet de comparer 2 strings (comparaison un par un des chac je suppose)
