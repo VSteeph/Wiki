@@ -140,4 +140,49 @@ C'est une nouvelle feature d'ELK qui est geré soit directement dans logstash so
 * Cold: Pas de mise à jour, peu interrogé mais on l'a garde par sécurité, on peut utiliser du stockage lent.
 * Delete: Plus besoin, elle est supprimée
 
-Cela va de paire avec le rolling.
+Cela va de paire avec le rolling qui va changer le nom de l'index exemple :
+* nomIndex_0001
+* nomIndex_0002
+* nomINdex_0003
+
+Cela a pour utilité de créer un lien symbolique et de pouvoir injecter les données dans le derneir index. C'est à dire qu'on va interroger l'alais qui est le dernier index plutôt que les autres.
+
+C'est configurable dans Kibana dans Index Lifecycle Policies (Space Management) et on peut choisir les actions et le temps avant d'effectuer un rollover avant chaque phase. On peut choisir de supprimer le fichier, de freeze les données ou même de réduire le nombre de shards.
+
+Pour que tout marche il faut un Alias et un index template.
+
+On crée donc un Index Template dans Kibana. On y configure le nombre de shards, replicas, nom, alias, la politque à appliquer (ILM) et un mapping:
+
+Settings :
+```JSON
+{
+  "index": {
+    "format": "1",
+    "lifecycle": {
+      "name": "logstah-policy",
+      "rollover_alias": "logstah-policy-2"
+    },
+    "hidden": "true",
+    "number_of_shards": "1",
+    "auto_expand_replicas": "0-1",
+    "number_of_replicas": "0"
+  }
+}
+```
+
+Mappings:
+
+```JSON
+{
+  "properties": {
+    "@timestamp": {
+      "type": "date"
+    },
+    "@version": {
+      "type": "keyword"
+    }
+  }
+}
+```
+
+
