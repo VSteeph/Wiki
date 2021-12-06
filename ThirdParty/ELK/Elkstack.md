@@ -59,4 +59,62 @@ La force d'ElasticSearch vient du fait de son indexation où tous les mots sont 
 
 ## Installation ELK
 
+### Elastic Search
+Suivre le processus du site. On peut paramètrer les 3 fichiers de config pour configurer Elastic:
+* jvm.options pour changer la puissance de la machine
+* elasticsearch.yml pour changer la config de base (nom du cluster, nodes, hôte ou encore emplacement des logs/datas)
+* log4j2.properties pour le logging
+
+Une fois installé, il faut installer le .bat sur windows.
+
+On peut utiliser un Docker volume pour avoir plusieurs nodes simplement ( https://www.youtube.com/watch?v=tdyzluB9PkQ)
+
+### Kibana & ELK
+
+Cela s'installe en suivant les étapes. On lance le fichier .bat sur windows et ils sont chacun un dossier config qu'il faut configurer. Kibana doit être relié à ELK et logstash doit avoir les sources de données renseignés.
+
+
+
+## Configuration Logstash
+
+Logstash marche sur le principe de Input/filter/output. La partie filter contient aussi la partie GROK qui permet de variabiliser une ligne de log. On peut avoir 2 fichiers de configurations dans logstash:
+
+* Dossier pattern qui ont des fichiers avec des patterns (qui sont des regex qui permettent de capturer des éléments pour les sauvegarder dans des variables). Cela permet de les appeler plus simplement
+* FIchier config de logstash
+
+On peut travailler un pattern grâce à un grok debugger comme : https://grokdebug.herokuapp.com/. Cela permet de voir à quel variable peut correspondre les éléments et comment sera diviser dans les logs. Cela permet de donner une meilleur structure au logs.
+
+Il y a aussi des exemples de pattern sur le site pour partir d'une base.
+
+### Fichier Config logstash
+
+On a plusieurs éléments dans la config :
+
+**INput pour réupérer les données:**
+
+input {
+	file {
+		path =>"C:\log\test\log.log" ===> qui donne l'emplacement du fichier
+		start_position => "beginning" ==> A partir de quand on prend les informations
+		sincedb_path => "/dev/null" ====> Si logstash prend un repère pour pas prendre des logs en doublon. Avec dev/null, il reprend depuis le début, il a pas de repère.
+	}
+}
+
+**Filter pour changer les données:**
+
+filter{
+	grok{
+		patterns_dir =>"path" ==> emplacement du pattern
+		match => { "message" => "%{IPORHOST} %{NGUSER:ident} } ==> ce qu'on fait pour match le pattern
+	}
+}
+
+**Output pour envoyer les données:**
+
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"  ==> cela donne un suffixe qui permet d'avoir un index par jour et ce qui fait gagner en performance et facilite le ménage de logs
+  }
+}
 
