@@ -45,15 +45,15 @@ La force de logstash est dans son systeme de transform. Si c'est juste pour de l
 * Dashboard & Visualisation
 
 
-Il peut avoir des variations comme en remplaçant le logstash par des beats comme filebeat (pour récupérer des logs), metricbeats pour des metrics, etc
+	Il peut avoir des variations comme en remplaçant le logstash par des beats comme filebeat (pour récupérer des logs), metricbeats pour des metrics, etc
 
-## Concurrents:
-* ElasticSearch avec comme qualité recherche (surtout plain text) qui est lié à sa capacité d'indexation
-* Cassandra avec comme qualité le gros volume
-* mongodb qui est plus polyvalent
-* Redis in memory donc beaucoup plus rapide
+	## Concurrents:
+	* ElasticSearch avec comme qualité recherche (surtout plain text) qui est lié à sa capacité d'indexation
+	* Cassandra avec comme qualité le gros volume
+	* mongodb qui est plus polyvalent
+	* Redis in memory donc beaucoup plus rapide
 
-La force d'ElasticSearch vient du fait de son indexation où tous les mots sont indexés et la qualité de sa recherche grâce à :
+	La force d'ElasticSearch vient du fait de son indexation où tous les mots sont indexés et la qualité de sa recherche grâce à :
 * TF (Term Frequency): fréquence des mots
 * IDF (Inverse difference Frequency): moins un mot est commun, plus il a du poids
 
@@ -229,4 +229,9 @@ Mappings:
 
 ## ILM via logstash
 
+On précise un template avec toutes les informations : index, shards, replicas, les mappings et on peut suivre un template pour toutes les entrées selon une logique avec des variables
 
+Check Tempalte avant : https://www.youtube.com/watch?v=s5AmHCWlhHQ&list=PLn6POgpklwWrgJXXvbjlFPyHf8Q5a9n2b&index=39
+
+
+https://www.youtube.com/watch?v=1Gcny9RWvZk&list=PLn6POgpklwWrgJXXvbjlFPyHf8Q5a9n2b&index=40
