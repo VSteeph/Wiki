@@ -6,15 +6,15 @@ C'est un stack très complet et qui est très populaire dans l'industrie surtout
 
 ## Definition
 
-Cluster: ensemble des serveurs (noeuds/nodes) qui ont le même id cluster, il communique via un port
+**Cluster:** ensemble des serveurs (noeuds/nodes) qui ont le même id cluster, il communique via un port
 
-Nodes: Un serveur ayant un service Elastic, il y a plusieurs types (master, data, client)
+**Nodes:** Un serveur ayant un service Elastic, il y a plusieurs types (master, data, client)
 
-Index: Une instance de base de donnée qui va être distribué et on peut en avoir plusieurs par serveur et cluster 
+**Index:** Une instance de base de donnée qui va être distribué et on peut en avoir plusieurs par serveur et cluster 
 
-Shards: Découpage logique d'un index (1 à plusieurs shards) qui sont répartis sur plusieurs nodes du cluster qui permet d'avoir des meilleurs performances
+**Shards:** Découpage logique d'un index (1 à plusieurs shards) qui sont répartis sur plusieurs nodes du cluster qui permet d'avoir des meilleurs performances
 
-Réplicas: Clone de shards qui permet d'avoir de la redondance en cas de problème mais aussi de la performance en interrogeant différents shards qui ont les mêmes données
+**Réplicas:** Clone de shards qui permet d'avoir de la redondance en cas de problème mais aussi de la performance en interrogeant différents shards qui ont les mêmes données
 
 ## Stack
 
