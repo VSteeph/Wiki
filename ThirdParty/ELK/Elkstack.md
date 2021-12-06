@@ -121,6 +121,48 @@ output {
   }
 }
 
+on peut mettre autant de file qu'il y a de fichier et on peut faire un mapping et un output unique pour tous les inputs 
+
+Exemple final:
+
+```JSON
+input {
+   file{
+   path => "tmp/log1.log"
+   add_field => { "[@metadata][es_index]' => "front1-%{+YYYY.MM.dd}"}
+   }
+      file{
+   path => "tmp/log2.log"
+   add_field => { "[@metadata][es_index]' => "front2-%{+YYYY.MM.dd}"}
+   }
+      file{
+   path => "tmp/log3.log"
+   add_field => { "[@metadata][es_index]' => "front3-%{+YYYY.MM.dd}"}
+   }
+}
+
+filter {
+   dissect {
+      mapping => {
+         "message" => "%{sourceip} %{date} %{other}"
+        }
+  }
+}
+
+output {
+    elasticserach {
+        hosts => ["127.0.0.1:9200]
+	ilm_rollover_alias => "myilm"
+	ilm_pattern => "00001"
+	ilm_policy => "myilm-policy"
+	manage_template => true
+	template => "/etc/logstash/app.json"
+	template_name => "mytemplate"
+    }
+}
+
+```
+
 ## Configuration Kibana
 
 Pour pouvoir regarder les index, il faut avoir un index pattern dans Management => Stack Management. En écrivant, le début de l'index on peut ajouter des symboles comme * pour dire qu'on recupère tous les index sans prendre en compte la date, exemple :
@@ -147,7 +189,7 @@ Cela va de paire avec le rolling qui va changer le nom de l'index exemple :
 
 Cela a pour utilité de créer un lien symbolique et de pouvoir injecter les données dans le derneir index. C'est à dire qu'on va interroger l'alais qui est le dernier index plutôt que les autres.
 
-C'est configurable dans Kibana dans Index Lifecycle Policies (Space Management) et on peut choisir les actions et le temps avant d'effectuer un rollover avant chaque phase. On peut choisir de supprimer le fichier, de freeze les données ou même de réduire le nombre de shards.
+C'est configurable dans Kibana dans Index Lifecycle Policies (Space Management) et on peut choisir les actions et le temps avant d'effectuer un rollover avant chaque phase. On peut choisir de supprimer le fichier, de freeze les données ou même de réduire le nombre de shards ou même de changer sur un node moins puissant.
 
 Pour que tout marche il faut un Alias et un index template.
 
@@ -184,5 +226,7 @@ Mappings:
   }
 }
 ```
+
+## ILM via logstash
 
 
