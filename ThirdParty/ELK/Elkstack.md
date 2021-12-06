@@ -36,6 +36,8 @@ C'est un stack très complet et qui est très populaire dans l'industrie surtout
 * Plusieurs plugins d'entrées comme Nginx, postgres qui permet de typer les entrés qui arrivent pour les traiter plus facilement
 * Peut faire des filtres et des grok (grok c'est pour parser les données en champ)
 
+La force de logstash est dans son systeme de transform. Si c'est juste pour de l'envoie de log autant utiliser filebeat qui est plus léger.
+
 
 ### Kibana
 * Outil de Visualisation et de Requêtes
@@ -74,6 +76,7 @@ On peut utiliser un Docker volume pour avoir plusieurs nodes simplement ( https:
 Cela s'installe en suivant les étapes. On lance le fichier .bat sur windows et ils sont chacun un dossier config qu'il faut configurer. Kibana doit être relié à ELK et logstash doit avoir les sources de données renseignés.
 
 
+# Configuration
 
 ## Configuration Logstash
 
@@ -118,3 +121,12 @@ output {
   }
 }
 
+## Configuration Kibana
+
+Pour pouvoir regarder les index, il faut avoir un index pattern dans Management => Stack Management. En écrivant, le début de l'index on peut ajouter des symboles comme * pour dire qu'on recupère tous les index sans prendre en compte la date, exemple :
+
+* preprod* va récupérer les index qui ont pour format prepreprod-2021-12-01, preprod-2021-12-02 et etc
+
+En suite, il faut déterminer comment on gère le timestamp (par défaut @timestamp). A partir de la, on aura la liste des champs utilisées par cet index.
+
+Les informations sont visualisables dans le discover. Chaque champ est accessible avec la nomenclature "champ: valeur", ex => response: 404
