@@ -130,3 +130,14 @@ Pour pouvoir regarder les index, il faut avoir un index pattern dans Management 
 En suite, il faut déterminer comment on gère le timestamp (par défaut @timestamp). A partir de la, on aura la liste des champs utilisées par cet index.
 
 Les informations sont visualisables dans le discover. Chaque champ est accessible avec la nomenclature "champ: valeur", ex => response: 404
+
+# Index Lifecycle Management (ILM)
+
+C'est une nouvelle feature d'ELK qui est geré soit directement dans logstash soit dans kibana. L'ILM est la gestion dans le temps des données. Il a plusieurs degrés de la données:
+
+* hot: données qui est récent, toujours alimenté et interrogés regulièrement (Cela correspond à l'archivage du fichier de log)
+* warm: pas de mise à jour mais est toujours interrogé (Fichier de log archivé)
+* Cold: Pas de mise à jour, peu interrogé mais on l'a garde par sécurité, on peut utiliser du stockage lent.
+* Delete: Plus besoin, elle est supprimée
+
+Cela va de paire avec le rolling.
