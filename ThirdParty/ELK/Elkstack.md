@@ -1,3 +1,11 @@
+Autres points à voir :
+* Replica
+* Snapshot
+* Split & Shrink Sharding
+* FileBeat + autres solutions 
+* Filter avancé dans logstash
+* Autres fonctions de kibana (APM, Metricsn Visualisation)
+
 # Introduction ELK
 
 ELK: Elastic Search, Logstash, Kibana. C'est le stack ELK qui permet de collecter des informations et les restituer que ça soit des logs, des métriques ou des SIEM (Sécurity Information and Event Management).
@@ -313,7 +321,18 @@ Mappings:
 
 On précise un template avec toutes les informations : index, shards, replicas, les mappings et on peut suivre un template pour toutes les entrées selon une logique avec des variables
 
-Check Tempalte avant : https://www.youtube.com/watch?v=s5AmHCWlhHQ&list=PLn6POgpklwWrgJXXvbjlFPyHf8Q5a9n2b&index=39
+On ajoute les informations dans l'output du logstash config :
 
-
-https://www.youtube.com/watch?v=1Gcny9RWvZk&list=PLn6POgpklwWrgJXXvbjlFPyHf8Q5a9n2b&index=40
+```JSON
+output {
+   elasticsearch {
+      hosts => ["ip"]
+      ilm_rollver_alias => "rolloverALias"
+      ilm_pattern => "000001"
+      ilm_policy => "ILM_policy_name"
+      manage_tempalte => true
+      template => "/path/of/template"
+      template_name => "mytemplatename"
+   }
+}
+```
