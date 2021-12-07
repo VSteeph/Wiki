@@ -16,6 +16,8 @@ C'est un stack très complet et qui est très populaire dans l'industrie surtout
 
 **Réplicas:** Clone de shards qui permet d'avoir de la redondance en cas de problème mais aussi de la performance en interrogeant différents shards qui ont les mêmes données
 
+**Documents:** éléments le plus petit
+
 ## Stack
 
 ### ElasticSearch
@@ -172,6 +174,85 @@ Pour pouvoir regarder les index, il faut avoir un index pattern dans Management 
 En suite, il faut déterminer comment on gère le timestamp (par défaut @timestamp). A partir de la, on aura la liste des champs utilisées par cet index.
 
 Les informations sont visualisables dans le discover. Chaque champ est accessible avec la nomenclature "champ: valeur", ex => response: 404
+
+# Index Templates
+
+Dans Kbiana, l'index Tempalte se trouve dans l'index management, l'onglet Index template. On peut décider de créer un nouveua template ou d'en modifier un existant. Pour en modifier un, il faut cliquer sur un index puis Manage => Edit.
+
+On y voit plusieurs champs, voici les principaux :
+
+Nom du template
+* La liste des index concernées (Accepte les index patterns)
+* Components : (Mappings & Settings peuvent être bien)
+* En appuyant sur Next, on arrive à un JSON qu'on peut modifier pour rendre le template plus complet en ajoutant un ILM ou un rollback Alias.
+
+Exemple:
+
+```JSON
+{
+  "index": {
+    "format": "1",
+    "lifecycle": {
+      "name": "ilm-history-ilm-policy",
+      "rollover_alias": "ilm-history-2"
+    },
+    "hidden": "true",
+    "number_of_shards": "1",
+    "auto_expand_replicas": "0-1",
+    "number_of_replicas": "0"
+  }
+}
+```
+
+On peut les créer soit dans Kibana soit dans logstash. Par défaut, ElasticSearch et Logstash décident le mapping seul. Si on exploite les données, c'est bien d'avoir un template avec un type de données fixes, sinon on peut être dans un mapping dynamic.
+
+Le dynamic mapping peut être à "true", "false" ou "strict". Si on est à true, on peut ajouter des champs sans poser de problèmes mais on peut pas changer sur ce qui est déjà mappé. Si on est à false, tout ce qui n'est pas dans le mapping est ignoré. Le strict lui refuse et déclenche une erreur si y a d'autres éléments.
+
+Logstash permet de gérer le mapping comme ceci :
+
+```JSON
+output {
+manage_tempalte => true
+template => "/template/template.json"
+template_name => "templateName"
+}
+```
+
+## Construire un Template
+
+Pour associer un fichier template à logstash, il faut le créer. Il a plusieurs paramètres :
+
+```JSON
+{
+    "index_patterns": ["app*"], ==> ce qui est ous les index patterns qui auront ce template
+    "template": "app", => nom du template
+    "version": 1,
+    "settings": {
+        "index.refresh_interval": "5s" ==> pas super improtant
+},
+"mappings": {
+   "dynamic": true, ==> le dynamic mapping
+   "properties": {
+       "@timestamp": {
+          "type": "date"
+	  },
+       "@version": {
+          "type": "text",
+	  "fields": "text",
+	   "keyword": {
+	   	"type": "keyword",
+		"ignore_above":256
+		}
+	  },
+       "date": {
+          "type": "text",
+	  "fields": "text",
+	   "keyword": {
+	   	"type": "keyword",
+		"ignore_above":256
+		}
+   }
+```
 
 # Index Lifecycle Management (ILM)
 
