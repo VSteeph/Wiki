@@ -228,7 +228,7 @@ Pour associer un fichier template à logstash, il faut le créer. Il a plusieurs
     "template": "app", => nom du template
     "version": 1,
     "settings": {
-        "index.refresh_interval": "5s" ==> pas super improtant
+        "index.refresh_interval": "5s" ==> permet de changer le temps de refresh, utile pour le testing, sinon pas besoin à part être lourd en performance
 },
 "mappings": {
    "dynamic": true, ==> le dynamic mapping
@@ -253,6 +253,7 @@ Pour associer un fichier template à logstash, il faut le créer. Il a plusieurs
 		}
    }
 ```
+A noter que s'il y a d'autres champs dans le filter du configue de logstash, ils seront ignorés ou créeront une erreur en fonction du dynamic mapping.
 
 # Index Lifecycle Management (ILM)
 
