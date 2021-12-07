@@ -105,6 +105,7 @@ On a plusieurs éléments dans la config :
 
 **INput pour réupérer les données:**
 
+```
 input {
 	file {
 		path =>"C:\log\test\log.log" ===> qui donne l'emplacement du fichier
@@ -112,30 +113,36 @@ input {
 		sincedb_path => "/dev/null" ====> Si logstash prend un repère pour pas prendre des logs en doublon. Avec dev/null, il reprend depuis le début, il a pas de repère.
 	}
 }
+```
+```
 
 **Filter pour changer les données:**
 
+```
 filter{
 	grok{
 		patterns_dir =>"path" ==> emplacement du pattern
 		match => { "message" => "%{IPORHOST} %{NGUSER:ident} } ==> ce qu'on fait pour match le pattern
 	}
 }
+```
 
 **Output pour envoyer les données:**
 
+```
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
     index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"  ==> cela donne un suffixe qui permet d'avoir un index par jour et ce qui fait gagner en performance et facilite le ménage de logs
   }
 }
+```
 
 on peut mettre autant de file qu'il y a de fichier et on peut faire un mapping et un output unique pour tous les inputs 
 
 Exemple final:
 
-```JSON
+```
 input {
    file{
    path => "tmp/log1.log"
@@ -218,7 +225,7 @@ Le dynamic mapping peut être à "true", "false" ou "strict". Si on est à true,
 
 Logstash permet de gérer le mapping comme ceci :
 
-```JSON
+```
 output {
 manage_tempalte => true
 template => "/template/template.json"
@@ -323,7 +330,7 @@ On précise un template avec toutes les informations : index, shards, replicas, 
 
 On ajoute les informations dans l'output du logstash config :
 
-```JSON
+```
 output {
    elasticsearch {
       hosts => ["ip"]
