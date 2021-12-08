@@ -33,7 +33,7 @@ public class Factory
   
   public static IMessagerSender CreateMessageSender()
   {
-    return new Emailer();
+    return new Emailer(CreateLogger());
   }
   
   public static Ilogger CreateLogger()
@@ -48,5 +48,9 @@ public class main
   person.FirstName = "john";
 }
 ```
+
+## Benefices
+
+C'est facile de changer le code et remplaçant des éléments sans avoir peur de casser ou d'avoir des dependances cassées qui alourdissent le processus de changement.
 
 # Depency Injection
