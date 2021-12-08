@@ -89,3 +89,5 @@ public class BusinessLogic : IBusinessLogic
   }
 }
 ```
+
+A partir de la, on pourrait ajouter une factory pour faire les appels Constructor mais on va voir une autre façon avec `AutoFac` (NuggetPackage) qui est un IOC container
