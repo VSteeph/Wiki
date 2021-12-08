@@ -53,4 +53,14 @@ public class main
 
 C'est facile de changer le code et remplaçant des éléments sans avoir peur de casser ou d'avoir des dependances cassées qui alourdissent le processus de changement.
 
-# Depency Injection
+Cela permet aussi de pas avoir un gros block mais plein de petits éléments qui ont fait un seul élément, sans aucune dépendence, qui font qu'une chose et self contained. On peut donc ajouter/enlever des éléments sans aucun soucis et rendre l'application modulable sans aucun risque.
+
+Cela permet aussi d'utiliser la dépendency injection.
+
+## Depency Injection
+
+La dependency Injection évite le fait d'appeler une Factory et faire un factory. Cela permet d'injecter les dépendances qu'on souhaite utiliser aux bons endroits dans les classes.
+
+DI vient aussi avec IOC (inversion of control) qui est comment appliquer le principe de Dependency Inversion, mais cela permet aussi de changer dynamiquement des dépendances en fonction de ce qu'on donne ou des circonstances.
+
+Pour finir, cela facilite l'unit Testing pour pouvoir tester chaque composant indépendemment.
