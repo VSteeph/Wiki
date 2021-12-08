@@ -90,4 +90,26 @@ public class BusinessLogic : IBusinessLogic
 }
 ```
 
-A partir de la, on pourrait ajouter une factory pour faire les appels Constructor mais on va voir une autre façon avec `AutoFac` (NuggetPackage) qui est un IOC container
+A partir de la, on pourrait ajouter une factory pour faire les appels Constructor mais on va voir une autre façon avec `AutoFac` (NuggetPackage) qui est un IOC container.
+
+```C#
+public static IContainer Configure() 
+{
+  var builder = new ContainerBuilder();
+  builder.RegisterType<BusinessLogic>().As<IBusinessLogic>();
+  return builder.Build()
+}
+```
+
+En gros, ça veut dire que si le programme a besoin d'un IbusinessLogic, AutoFac va retourner un BusinessLogic, mais c'est un peu long si on a beaucoup de classe. Il y a donc des chemins plus rapide, exemple : 
+
+```C#
+public static IContainer Configure() 
+{
+  var builder = new ContainerBuilder();
+  builder.RegisterAssemblyTypes(Assembly.Load(nameof(DemoLibrary)))
+  .where( t=> t.Namespace.Contains("Utilities"))
+  .As (t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
+  return builder.Build()
+}
+```
