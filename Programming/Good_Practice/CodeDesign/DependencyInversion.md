@@ -64,3 +64,28 @@ La dependency Injection évite le fait d'appeler une Factory et faire un factory
 DI vient aussi avec IOC (inversion of control) qui est comment appliquer le principe de Dependency Inversion, mais cela permet aussi de changer dynamiquement des dépendances en fonction de ce qu'on donne ou des circonstances.
 
 Pour finir, cela facilite l'unit Testing pour pouvoir tester chaque composant indépendemment.
+
+### Implementation
+
+Pour implémenter une DI, il faut que toutes les classes implementent une interface, ainsi qu'un constructeur qui leur injecte les dépendences dans un champ private exemple 
+
+```C#
+
+public class BusinessLogic : IBusinessLogic
+{
+  Ilogger _logger;
+  IDataAccess _dataAccess;
+  
+  public BusinessLogic(ILogger logger, IDataAcces dataAccess)
+  {
+    _logger = logger;
+    _dataAccess = dataAccess;
+  }
+  
+  public void ProcessData()
+  {
+    _logger.log("log");
+    _dataAccess.LoadData();
+  }
+}
+```
