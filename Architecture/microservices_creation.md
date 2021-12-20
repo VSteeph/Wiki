@@ -31,7 +31,9 @@ Exemple avec 2 services:
 * Platform service
 * Commandes Service
 
-![archi](C:\Users\HCUBEStephane\Documents\ND\Doc\Micro_services2.png)
+
+![Micro_services2](https://user-images.githubusercontent.com/58773222/146749019-f8f7745d-f67d-483f-bbe7-72428defb6f0.png)
+
 
 
 ### Package utilisé:
