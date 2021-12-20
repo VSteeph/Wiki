@@ -33,6 +33,15 @@ Exemple avec 2 services:
 
 ![Micro_services2](https://user-images.githubusercontent.com/58773222/146749666-d8de84a9-7279-4378-a444-d41f81c77c6e.png)
 
+### Plateforme Service Architecture
+
+Vert = public // BLeu = interne
+
+![Micro_services3](https://user-images.githubusercontent.com/58773222/146750090-595c11c2-7a40-49a3-8791-cd2dbf73057b.png)
+
+L'architecture du commande est similaire.
+
+## AUtres infos :
 
 ### Package utilisé:
 
@@ -49,10 +58,7 @@ Contient Donnée:
 
 * Models: données (internal representation de la donnée)
 * Data Transfer Object : Vue externe des representations des données (DTO)
-
-
-DbContext est la pour faire le mirrori entre le code (Model) et les données en base de donnée
-
+* DbContext est la pour faire le mirroir entre le code (Model) et les données en base de donnée
 
 
 
