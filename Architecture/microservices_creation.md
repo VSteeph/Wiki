@@ -56,8 +56,8 @@ L'architecture du commande est similaire.
 
 Contient Donnée:
 
-* Models: données (internal representation de la donnée)
-* Data Transfer Object : Vue externe des representations des données (DTO)
+* Models: données (internal representation de la donnée) ==> Representation interne
+* Data Transfer Object : Vue externe des representations des données (DTO) ==> Representation Externe
 * DbContext est la pour faire le mirroir entre le code (Model) et les données en base de donnée
 
 
