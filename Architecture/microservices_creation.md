@@ -26,6 +26,14 @@ Il est important que les hybrides avec quelques microservices autour d'un monoli
 
 ## Implementation
 
+Exemple avec 2 services:
+
+* Platform service
+* Commandes Service
+
+![archi](C:\Users\HCUBEStephane\Documents\ND\Doc\Micro_services2.png)
+
+
 ### Package utilisé:
 
 * AutoMapper.Extensions.Microsoft.DependencyInjection
