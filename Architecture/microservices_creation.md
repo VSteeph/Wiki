@@ -31,9 +31,7 @@ Exemple avec 2 services:
 * Platform service
 * Commandes Service
 
-
-![Micro_services2](https://user-images.githubusercontent.com/58773222/146749019-f8f7745d-f67d-483f-bbe7-72428defb6f0.png)
-
+![Micro_services2](https://user-images.githubusercontent.com/58773222/146749666-d8de84a9-7279-4378-a444-d41f81c77c6e.png)
 
 
 ### Package utilisé:
