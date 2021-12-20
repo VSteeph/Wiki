@@ -13,6 +13,8 @@
 
 image::https://i.imgur.com/y5mNGzq.png[pros]
 
+L'avantage du Monolith est quand on ne connait pas non plus le domaine et les règles dont on va avoir besoin. Le monolith est plus simple pour se lancer au début et une fois qu'il y a une meilleur connaissance + une demande plus fort, le switch au microsrvices (si nécessaires)
+
 ## API Definition
 
 Cela doit être déclaré de façon neutre, avec une CI integré pour garder de la cohérence.
