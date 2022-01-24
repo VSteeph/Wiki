@@ -15,3 +15,5 @@ Kubernetes permet de gérer plusieurs containers, il sert de chef d'orchestre (r
 Hardware => OS => (WSL?) => Container Runtime => Kubernetes
 
 Cela peut tourner sur plusieurs Cluster et plusieurs nodes (Ex ELK) mais pas le cas de l'exemple.
+
+![image](https://user-images.githubusercontent.com/58773222/150824520-51294e3c-5eea-4bee-b025-27e4505a64cf.png)
