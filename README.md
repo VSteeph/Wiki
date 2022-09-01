@@ -1,6 +1,17 @@
 # Wiki
 Un ensemble de tout ce que j'ai pu apprendre,  FRANGLAIS
 
+# Nouvelle Structure
+=> Programing Language ==> C# / C++ / C / JS / HTML / CSS / Python / Bash / Generic
+=> Techno ==> Microsoft (.NET) / ELK / Git
+=> Game Engine => Unreal / Unity
+=> Computer => Hardware / Linux / Windows
+=> Network => General / Software
+=> Clean Code => Design Pattern / Architecture 
+=> Implementation
+=> Autres sciences => Math / Physics
+=> Cours Suivi
+=> Exercice 
 
 Markdown:
 https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#links
