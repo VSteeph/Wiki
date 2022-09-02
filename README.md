@@ -1,6 +1,8 @@
 # Wiki
 Un ensemble de tout ce que j'ai pu apprendre,  FRANGLAIS
 
+==> Fusionner wiki Google Doc sur Git
+
 Markdown:
 https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#links
 
@@ -67,3 +69,6 @@ Web (learn/notes):
 * Framework / Technologies
 * Environment
 * Architecture
+
+
+
