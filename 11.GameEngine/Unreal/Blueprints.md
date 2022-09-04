@@ -20,6 +20,7 @@ Lorsqu'on est ingame, Unreal met aussi beaucoup de commandes à disposition pour
 
 ## Créer une variable
 Pour créer une variable, il suffit d'aller dans l'onglet MyBluePrint et de cliquer sur le signe "+" à côté de Variables. Suite à cela, on peut cliquer sur la variable pour modifier ses parametres comme son type, si on veut qu'elle puisse être modifié dans l'editeur ou uniquement par blueprints/code.
+
 ![image](https://user-images.githubusercontent.com/58773222/188307659-4af72a8e-c427-4e97-acd3-0291e03e82d9.png)
 
 
