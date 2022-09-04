@@ -37,14 +37,14 @@ Pour créer une variable, il suffit d'aller dans l'onglet MyBluePrint et de cliq
 
 ## les Différents nodes
 
-### Create Widget
+### UserInterface: Create Widget
 Cela permet de créer une widget de son choix sur l'écran. On choisit le widget avec la class. attention par défaut, c'est caché, il faut donc l'afficher.
 
-### Add To Viewport
+### Viewport: Add To Viewport
 Il faut glisser depuis le Create Widget node sinon cela peut ne pas appara^tire
 
-### Cast
+### Casting: Cast
 Cela permet de spécifier un type d'élément
 
-### Delay
+### FlowControl : Delay
 Permet d'attendre un certain temps
