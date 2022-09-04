@@ -45,3 +45,6 @@ Il faut glisser depuis le Create Widget node sinon cela peut ne pas appara^tire
 
 ### Cast
 Cela permet de spécifier un type d'élément
+
+### Delay
+Permet d'attendre un certain temps
