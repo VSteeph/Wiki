@@ -36,6 +36,8 @@ Mettre son environnement
 => Check Lighting settings (advanced precompute) si Lumen
 => Mettre un Cube et un mannequin pour garder les échellles de grandeur
 
+Potentiellement, mettre l'exposure en manual à 11 et bien coché Infinite extends pour Le PostProcessVolume
+
 
 
 ## Troubleshootings
