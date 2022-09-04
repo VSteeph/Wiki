@@ -25,6 +25,17 @@ En C++ par défaut, cela va créer toute la sln par défaut et aussi un Game Mod
 ## Random Image
 ![image](https://user-images.githubusercontent.com/58773222/152567380-49ab36fe-c791-45fd-86d5-542a1b838783.png)
 
+## Methodologie création environnement
+
+Mettre son environnement 
+=> Directional Light
+=> Sky Light
+=> SkyAtmosphere
+=> ExponentialHeightFog
+=> PostProcessVolumes => Lumen ou non
+=> Check Lighting settings (advanced precompute) si Lumen
+=> Mettre un Cube et un mannequin pour garder les échellles de grandeur
+
 
 
 ## Troubleshootings
