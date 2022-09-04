@@ -4,6 +4,14 @@ Les blueprints sont le visual Code d'Unreal. Ils permettent de développer des f
 
 Pour la navigation, on a plusieurs onglets comme pour le reste d'Unreal si une fenêtre est manquante, on peut l'ajouter avec le Menu > Fenêttre ou alors la trouver dans My Blueprint pour l'event Graph. Enfin, on peut toujours rénitialiser le layout dans le pire des cas.
 
+## Les différents Blueprint
+
+Il y a plusieurs types de blueprint, on peut y accéder dans le menu avec cette icône :
+![image](https://user-images.githubusercontent.com/58773222/188317774-b97485f7-ad58-49f6-bfff-f4d00bce9bc9.png)
+
+On y trouve les blueprints de base, la possibilité de créer des blueprint ,les gamemode mais aussi le BluePrint level qui est général au niveau. Le blueprint Level a pour nom GameMap, cela signifie bien que c'est l'ensemble du niveau.
+
+
 ## Event Graph
 
 C'est un sytème d'event. On crée un event qui va déclencher une chaine de logique. L'event peut être un input, un event appelé par un autre objet ou les ticks qui correspondent au Frame. Chaque box est appelé un node, on peut les rechercher avec clic droit et taper le nom ou alors en draggant une fleche dans le vide.
