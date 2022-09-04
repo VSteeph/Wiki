@@ -13,5 +13,6 @@ C'est un collider pour les sons avec les trigger. Ilso n
 ## User Interface
 
 ### Widget Blueprints
-Ce sont les User Interface. Par défaut, on choisit User Widget pour le créer. Cela permet d'avoir un editeur pour l'UI du joueur. On peut y ajouter plein d'élement comme un canvas etc
+Ce sont les User Interface. Par défaut, on choisit User Widget pour le créer. Cela permet d'avoir un editeur pour l'UI du joueur. On peut y ajouter plein d'élement comme un canvas etc.
+
 
