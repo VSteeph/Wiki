@@ -36,3 +36,9 @@ Pour créer une variable, il suffit d'aller dans l'onglet MyBluePrint et de cliq
 
 
 ## les Différents nodes
+
+### Create Widget
+Cela permet de créer une widget de son choix sur l'écran. On choisit le widget avec la class
+
+### Cast
+Cela permet de spécifier un type d'élément
