@@ -48,3 +48,9 @@ Cela permet de spécifier un type d'élément
 
 ### FlowControl : Delay
 Permet d'attendre un certain temps
+
+### Widget: Remove From Parent
+Permet de désafficher le widget, cela ne le supprime pas, il faut appeler le garbage collector pour cela
+
+### Utilities : Collect Garbage
+Garbage collector
