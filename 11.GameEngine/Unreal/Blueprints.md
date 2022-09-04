@@ -11,6 +11,9 @@ Il y a plusieurs types de blueprint, on peut y accéder dans le menu avec cette 
 
 On y trouve les blueprints de base, la possibilité de créer des blueprint ,les gamemode mais aussi le BluePrint level qui est général au niveau. Le blueprint Level a pour nom GameMap, cela signifie bien que c'est l'ensemble du niveau.
 
+## Blueprint Level
+Il est un peu plus particulier qu'un autre blueprint car il est général au niveau. De ce fait, il propose différents outils en fonction de la sélection lors qu'il est ouvert. Si on veut utiliser un objet dans ce blueprint, il faut le preselectionner. Si la selection n'apparait pas, il faut aller le sélectionner.
+
 
 ## Event Graph
 
