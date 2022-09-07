@@ -10,6 +10,11 @@ Task
 - [ ] Structure pour la roadmap C#
 - [ ] Structure pour le custom Learning
 
+RoadMap :
+- C++ : https://github.com/salmer/CppDeveloperRoadmap
+- C# : https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
+- C# Variation: https://github.com/Elfocrash/.NET-Backend-Developer-Roadmap
+
 
 
 Markdown:
