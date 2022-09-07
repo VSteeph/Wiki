@@ -1,7 +1,16 @@
 # Wiki
 Un ensemble de tout ce que j'ai pu apprendre,  FRANGLAIS
 
-==> Fusionner wiki Google Doc sur Git
+Task
+- [X] Refactoring du Wiki
+- [ ] Reorganisation des informations dans les dossiers
+- [ ] Fusionner Google Doc sur Git
+- [ ] Structure pour Unreal
+- [ ] Structure pour la roadmap C++
+- [ ] Structure pour la roadmap C#
+- [ ] Structure pour le custom Learning
+
+
 
 Markdown:
 https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#links
@@ -50,25 +59,12 @@ A lire et tester:
 Curiosité:
 - https://nickcraver.com/blog/2016/03/29/stack-overflow-the-hardware-2016-edition/
 
-
-Projet:
-- Below (C#)
-
-Harv:
-- Pythonc & C (django?)
-
-Web (learn/notes):
-- JS, jsdom, react, node mangodb
-- html/css/bootstrap
+playlist project:
+- https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=5
 
 
-## Restructuration (au fur et à mesure)
 
-* Langages
-* Algorithme
-* Framework / Technologies
-* Environment
-* Architecture
+
 
 
 
