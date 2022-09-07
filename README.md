@@ -68,6 +68,9 @@ playlist project:
 - https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=5
 
 
+Random Link:
+- https://yunpengn.github.io/blog/2019/05/04/consistent-redis-sql/
+
 
 
 
