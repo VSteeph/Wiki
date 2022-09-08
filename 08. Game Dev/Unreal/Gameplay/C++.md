@@ -11,6 +11,11 @@ Rebuild le projet et le relancer
 
 Rider Link qui pose des problemes de compilations
 
+### Fichiers Intermediate Manquant
+Aller dans le dossier du fichier, clique droit sur le .uproject et faire generate Visual Studio Project Files
+![image](https://user-images.githubusercontent.com/58773222/189185601-573eea13-a388-493d-8bf5-9dd37f602cd5.png)
+
+
 ### Erreur de compilation à cause de fichiers introuvables
 
 Il faut supprimer le dossier binaries et intermediaries puis relancer le projet
@@ -53,6 +58,15 @@ Cela signifie que UCapsuleComponent sera présent dans 4 endroits différents au
 
 ### Forward declaration 
 Forward Declaration permet de declarer un identifier sans que l'objet ait une définition complete. Cela s'utilise quand on n'a pas besoin de l'élément. Par exemple, on veut juste déclarer une varaible ou quand quelque chose est en private. Dès que les autres scripts n'ont pas de raison et ne peuvent pas l'utiliser.
+
+Pour cela, il faut déclarer le Include dans le fichier .cpp et ajouter le keyword "class" à l'élemetn en question par exemple :
+
+.h
+```
+protected:
+	virtual void BeginPlay() override;
+	class UCapsuleComponent* CarCapsule;
+```
 
 ### Basic Function
 
