@@ -45,7 +45,9 @@ BP_NameDuBlueprint
 Ainsi, il peut être dans le monde.
 
 
-## C++ Structure
+## C++ 
+
+### Structure
 
 .h => Prorortpe/ Pseudo Interface de la classe
 .cpp => Implémentation du Code
@@ -67,6 +69,18 @@ protected:
 	virtual void BeginPlay() override;
 	class UCapsuleComponent* CarCapsule;
 ```
+
+### Template Function
+Un template function s'adapte au type choisi donc on peut choisir un type particulier. C'est l'équivalent d'un générique en C#
+
+Exemple dans Unreal
+```
+CreateDefaultSubobject<UCapsuleComponent>(TeXT("NomDeLObjet");
+```
+
+Cette fonction permet de créer un objet de type UCapsuleComponent avec un paramètre spécifiques
+
+## C++ In Unreal
 
 ### Basic Function
 
