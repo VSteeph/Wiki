@@ -101,8 +101,7 @@ Cette fonction permet de créer un objet de type UCapsuleComponent avec un param
 * Tick : qui est appelé à chaque Frame
 * SetpPlayerInputComponent: C'est lié au Input du Player (On utilise actions & accesss map)
 
-
-
+Les fonctions sont déclarer avec le nom de la classe avant car cela sert de Forward declaration  pour les implémentations liées à l'objet Parent
 
 ## Components
 
