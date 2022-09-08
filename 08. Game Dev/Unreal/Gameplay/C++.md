@@ -18,5 +18,5 @@ En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé pa
 
 
 ## Implémenter dans le Monde
-On peut ajouter une classe dans le monde avec un drag
+On peut ajouter une classe dans le monde avec un drag mais cela servir à rien, il faut l'associer à un blueprint
 
