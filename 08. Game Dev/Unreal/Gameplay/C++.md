@@ -34,12 +34,21 @@ BP_NameDuBlueprint
 Ainsi, il peut être dans le monde.
 
 
-## Structure
+## C++ Structure
 
-### C++ Structure
-Comme en C++, il y a le Header qui est le template, une pseudo interface de la classe, et l'implémentation le .cpp
+Comme en C++, il y a le Header qui est le template, une pseudo interface de la classe, et l'implémentation le .cpp. En fonction de l'héritage de la classe, il peut avoir du code ou non présent dans la classe.
 
-### Components
+### Basic Function
+
+* Constructor: default Class
+* Begin Play : C'est appelé quand le jeu est commencé ou que l'objet est Spawn
+* Tick : qui est appelé à chaque Frame
+* SetpPlayerInputComponent
+
+
+
+
+## Components
 
 Unreal fonctionne avec un système de Component, ce sont des objets que les actors peuvent attacher à eux même ou leurs enfants. Ils permettent de faire beaucoup de choses (Trigger, Visual, Vehicle input etc).
 
