@@ -71,4 +71,4 @@ Les components s'ajoutent dans le Constructor de la classe. Pour ajouter un comp
 https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/Components/UCapsuleComponent/
 
 Pour cela, on crée la variable dans le header commme ceci :
-`UCapsuleComponent* capsuleComponent;
+`UCapsuleComponent* capsuleComponent;`
