@@ -129,4 +129,12 @@ Il est important de préciser que même en Public, on ne peut pas modifier les c
 
 #### Utiliser un Component en C++
 
-Pour créer un Component, on utilise la fonction CreateDefaultSubobject<T>() qui marche pour tous les UObjet et apres on peut l'assigner comme on souhaite comme en RootCompomenent par exemple.
+Pour créer un Component, on Utilise la fonction CreateDefaultSubobject<>() qui marche pour tous les UObjet et apres on peut l'assigner comme on souhaite comme en RootCompomenent par exemple.
+
+```
+Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Car Capsule"));
+RootComponent = Capsulse;
+```
+	
+
+
