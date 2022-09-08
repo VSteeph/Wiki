@@ -193,4 +193,16 @@ On crée un Axis et on ajoute des axes avec une valeur. Par exemple:
 ![image](https://user-images.githubusercontent.com/58773222/189237991-dbf002b7-4ee6-4a32-9973-054d48777a44.png)
 
 #### Bind l'Axis en C++
+Il suffit de créer une fonction pour traiter les inputs et la relier aux inputs. Le binding des inputs se fait avec cette fonction : SetupPlayerInputComponent qui est implémenté de base
 
+
+## Autres fonctions Unity
+
+* TEXT permet de générer un FNAME par rapport à une string
+
+## Debugging 
+
+```
+UE_LOG(LogTemp, Warning, TEXT("Non"));
+GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
+```
