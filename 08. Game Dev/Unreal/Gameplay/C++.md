@@ -36,4 +36,15 @@ Ainsi, il peut être dans le monde.
 
 ## Structure
 
+### Components
 
+Unreal fonctionne avec un système de Component, ce sont des objets que les actors peuvent attacher à eux même ou leurs enfants. Ils permettent de faire beaucoup de choses (Trigger, Visual, Vehicle input etc).
+
+Plus d'informations : https://docs.unrealengine.com/5.0/en-US/components-in-unreal-engine/
+
+#### Scene Components
+
+C'est un actor component qui existe dans le monde. La position est défini par une class Transform (FTransform) avec la rotation, position, scale, etc. C'est possible de créer des hiérarchies à partir de la.
+
+Liste de components:
+* Static Mesh : Permet d'ajouter un Mesh à un actor
