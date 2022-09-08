@@ -2,6 +2,12 @@
 
 Documentation Unreal : https://docs.unrealengine.com/5.0/en-US/
 
+## Ereurs Possibles
+Bug quand on ajoute des éléments dans un dossier et ils sont pas pris en compte dans l'Engine. Pour corriger ce bug, on ouvre le content Drawer => Ouvrir dans l'exporeur => Ouvrir la solution => Enlever le nom du dossier dans le #include de la classe.
+
+Rebuild le projet et le relancer
+
+
 ## Créer une nouvelle Classe (assimilée à un Blueprint, ceux d'Unreal)
 
 Les éléments de code sont dans le Dossier C++ Classes sur Unreal dans le Content Drawer et clique droit New class.
