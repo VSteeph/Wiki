@@ -7,6 +7,7 @@ Bug quand on ajoute des éléments dans un dossier et ils sont pas pris en compt
 
 Rebuild le projet et le relancer
 
+Rider Link qui pose des problemes de compilations
 
 ## Créer une nouvelle Classe (assimilée à un Blueprint, ceux d'Unreal)
 
