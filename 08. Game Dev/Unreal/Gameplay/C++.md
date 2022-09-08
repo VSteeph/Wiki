@@ -151,10 +151,10 @@ Il est important de préciser que même en Public, on ne peut pas modifier les c
 Il est donc utile de créer des proprietés (UPROPERTY) pour qu'elles puissent être configurables dans le Blueprint
 
 **UPROPERTY**
-C'est un attribut qui permet de définir comment une variable va se comporter dans l'editeur et si on peut interagir avec en dehors du code. Cela se place comme un attribut en C# (donc avant la variable) comme ceci :
+C'est un attribut qui permet de définir comment une variable va se comporter dans l'editeur et si on peut interagir avec en dehors du code. Cela se place comme un attribut en C# (donc avant la variable), on appelle ça des Metadata specifier. Cela permet de déterminer où est visible et modifiable la proprieété comme ceci :
 
 ```
-UPROPERTY()
+UPROPERTY(VisibleAnywhere)
 int Speed;
 ```
 
