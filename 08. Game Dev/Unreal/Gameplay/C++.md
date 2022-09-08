@@ -38,7 +38,7 @@ Il faut choisir la classe parent (héritage) en suite, voici les principales (il
 
 La hiérarchie est donc AActor => APawn => ACharacter.
 
-En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur ou intéragit et enfin character si y a du déplacement
+En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur ou intéragit et enfin character si y a du déplacement. Il faut savoir qu'on peut piloter un pawn dans l'editeur en faisant clique droit "pilot"
 
 
 ### Implémenter dans le Monde
@@ -85,6 +85,12 @@ CreateDefaultSubobject<UCapsuleComponent>(TEXT("NomDeLObjet");
 ```
 
 Cette fonction permet de créer un objet de type UCapsuleComponent avec un paramètre spécifiques. Cela vient de la classe UObject qui peut être instancié à partir de cette fonction juste en ayant un nom
+
+### Operators
+
+:: pour ce qui est dans un Namespace
+. quand on a un objet instancié ou une reference vers un objet
+-> pour les pointers
 
 ## C++ In Unreal
 
@@ -171,4 +177,6 @@ Voici les différents modes :
 La camera est divisé en plusieurs parties. Il y a d'abord le SpringArm qui permet de manipuler la caméra et enfin la Caméra. Le spring Arm permet de gérer les colisions avec le décor. Cela va rapprocher la caméra lors de collisions et la remettre à sa position lorsqu'il n'y a pas de colission.
 
 https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/GameFramework/USpringArmComponent/
+
+Les changements de position sont sur le Spring Arm avec le Offset Et le Target Arm Length.
 
