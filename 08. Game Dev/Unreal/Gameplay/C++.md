@@ -44,6 +44,8 @@ Ainsi, il peut être dans le monde.
 
 Comme en C++, il y a le Header qui est le template, une pseudo interface de la classe, et l'implémentation le .cpp. En fonction de l'héritage de la classe, il peut avoir du code ou non présent dans la classe.
 
+Le header est copié en haut du fichier C++ lors de la compilation. Cela permet d'avoir les includes, de prototyper les fonctions, etc sans s'embeter
+
 ### Basic Function
 
 * Constructor: default Class
@@ -83,4 +85,4 @@ Pour cela, on crée la variable dans le header commme ceci :
 UCapsuleComponent* capsuleComponent;
 ```
 
-Bien sur, il faut référencer le UCapsule dans le headers si on choisit celui la
+Bien sur, il faut référencer le UCapsule dans le headers si on choisit celui la. Chaque élément doit etre include.
