@@ -74,6 +74,8 @@ protected:
 	class UCapsuleComponent* CarCapsule;
 ```
 
+Cela vient en complément avec #pragma once qui permet de ne pas duppliquer les dépendances dans le header.
+
 ### Template Function
 Un template function s'adapte au type choisi donc on peut choisir un type particulier. C'est l'équivalent d'un générique en C#
 
@@ -135,6 +137,7 @@ Pour créer un Component, on Utilise la fonction CreateDefaultSubobject<>() qui 
 Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Car Capsule"));
 RootComponent = Capsulse;
 ```
-	
+
+Si des Components sont déjà ajoutés via le Blueprint, ils vont etre en enfant du Root Component assigné en C++.
 
 
