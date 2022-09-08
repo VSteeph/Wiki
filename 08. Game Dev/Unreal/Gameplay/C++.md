@@ -17,3 +17,6 @@ La hiérarchie est donc AActor => APawn => ACharacter.
 En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur ou intéragit et enfin character si y a du déplacement
 
 
+## Implémenter dans le Monde
+On peut ajouter une classe dans le monde avec un drag
+
