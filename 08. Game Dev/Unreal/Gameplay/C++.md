@@ -36,6 +36,9 @@ Ainsi, il peut être dans le monde.
 
 ## Structure
 
+### C++ Structure
+Comme en C++, il y a le Header qui est le template, une pseudo interface de la classe, et l'implémentation le .cpp
+
 ### Components
 
 Unreal fonctionne avec un système de Component, ce sont des objets que les actors peuvent attacher à eux même ou leurs enfants. Ils permettent de faire beaucoup de choses (Trigger, Visual, Vehicle input etc).
