@@ -118,11 +118,15 @@ Les components s'ajoutent dans le Constructor de la classe. Pour ajouter un comp
 
 https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/Components/UCapsuleComponent/
 
-Pour cela, on crée la variable dans le header commme ceci :
+Pour cela, on crée la variable dans le header et il faut ajouter la référence en include que ça soit dans le header ou en Forward declaration commme ceci:
 ```
 #include "Components/CapsuleComponent.h"
 
-UCapsuleComponent* capsuleComponent;
+UCapsuleComponent* capsuleComponent; // toujours un pointer car sinon c'est copié par value et pas par reference, on peut aussi utiliser une ref (Check C++)
 ```
 
-Bien sur, il faut référencer le UCapsule dans le headers si on choisit celui la. Chaque élément doit etre include.
+Il est important de préciser que même en Public, on ne peut pas modifier les components en blueprint. 
+
+#### Utiliser un Component en C++
+
+Pour créer un Component, on utilise la fonction CreateDefaultSubobject<T>() qui marche pour tous les UObjet et apres on peut l'assigner comme on souhaite comme en RootCompomenent par exemple.
