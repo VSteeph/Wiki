@@ -127,7 +127,7 @@ Pour cela, on crée la variable dans le header et il faut ajouter la référence
 UCapsuleComponent* capsuleComponent; // toujours un pointer car sinon c'est copié par value et pas par reference, on peut aussi utiliser une ref (Check C++)
 ```
 
-Il est important de préciser que même en Public, on ne peut pas modifier les components en blueprint. 
+Il faut faire attention à la distinction entre l'élément et le Component. Exemple, UStaticMesh et UStaticMeshComponent. L'un est le component qui prend en parametre un Static Mesh.
 
 #### Utiliser un Component en C++
 
@@ -138,6 +138,23 @@ Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Car Capsule"));
 RootComponent = Capsulse;
 ```
 
-Si des Components sont déjà ajoutés via le Blueprint, ils vont etre en enfant du Root Component assigné en C++.
+Si des Components sont déjà ajoutés via le Blueprint, ils vont etre en enfant du Root Component assigné en C++. Par contre, si on crée un élément en C++, il faut l'ajouter au RootComponent
 
+```
+MainMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Main Mesh"));
+MainMesh->SetupAttachment((Capsule));
+```
+
+#### Configurer un Component en C++
+Il est important de préciser que même en Public, on ne peut pas modifier les components en blueprint. Les utilisateurs n'auront donc pas accès à la fenetre Details pour les components.
+
+Il est donc utile de créer des proprietés (UPROPERTY) pour qu'elles puissent être configurables dans le Blueprint
+
+**UPROPERTY**
+C'est un attribut qui permet de définir comment une variable va se comporter dans l'editeur et si on peut interagir avec en dehors du code. Cela se place comme un attribut en C# (donc avant la variable) comme ceci :
+
+```
+UPROPERTY()
+int Speed;
+```
 
