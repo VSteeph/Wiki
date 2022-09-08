@@ -15,6 +15,10 @@ Rider Link qui pose des problemes de compilations
 Aller dans le dossier du fichier, clique droit sur le .uproject et faire generate Visual Studio Project Files
 ![image](https://user-images.githubusercontent.com/58773222/189185601-573eea13-a388-493d-8bf5-9dd37f602cd5.png)
 
+### Blueprints Not Updated
+
+Il suffit d'appuyer sur le boutton compile du blueprint
+
 
 ### Erreur de compilation à cause de fichiers introuvables
 
