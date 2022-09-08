@@ -43,7 +43,7 @@ Comme en C++, il y a le Header qui est le template, une pseudo interface de la c
 * Constructor: default Class
 * Begin Play : C'est appelé quand le jeu est commencé ou que l'objet est Spawn
 * Tick : qui est appelé à chaque Frame
-* SetpPlayerInputComponent
+* SetpPlayerInputComponent: C'est lié au Input du Player (On utilise actions & accesss map)
 
 
 
