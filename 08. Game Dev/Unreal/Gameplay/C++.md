@@ -9,7 +9,9 @@ Rebuild le projet et le relancer
 
 Rider Link qui pose des problemes de compilations
 
-## Créer une nouvelle Classe (assimilée à un Blueprint, ceux d'Unreal)
+## Basic
+
+### Créer une nouvelle Classe (assimilée à un Blueprint, ceux d'Unreal)
 
 Les éléments de code sont dans le Dossier C++ Classes sur Unreal dans le Content Drawer et clique droit New class.
 
@@ -24,6 +26,14 @@ La hiérarchie est donc AActor => APawn => ACharacter.
 En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur ou intéragit et enfin character si y a du déplacement
 
 
-## Implémenter dans le Monde
-On peut ajouter une classe dans le monde avec un drag mais cela servir à rien, il faut l'associer à un blueprint
+### Implémenter dans le Monde
+On peut ajouter une classe dans le monde avec un drag mais cela servir à rien, il faut l'associer à un blueprint. Pour cela, on selectionne la classe et on créer un Bleuprint basé sur cette classe. Les guidelines veulent que les blueprints soient mis dans un autre dossier que les classes C++ et commencent par :
+
+BP_NameDuBlueprint
+
+Ainsi, il peut être dans le monde.
+
+
+## Structure
+
 
