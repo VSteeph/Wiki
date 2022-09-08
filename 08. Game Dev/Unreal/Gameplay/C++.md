@@ -3,11 +3,17 @@
 Documentation Unreal : https://docs.unrealengine.com/5.0/en-US/
 
 ## Ereurs Possibles
+
+### Fichiers non visibles
 Bug quand on ajoute des éléments dans un dossier et ils sont pas pris en compte dans l'Engine. Pour corriger ce bug, on ouvre le content Drawer => Ouvrir dans l'exporeur => Ouvrir la solution => Enlever le nom du dossier dans le #include de la classe.
 
 Rebuild le projet et le relancer
 
 Rider Link qui pose des problemes de compilations
+
+### Erreur de compilation à cause de fichiers introuvables
+
+Il faut supprimer le dossier binaries et intermediaries puis relancer le projet
 
 ## Basic
 
@@ -71,4 +77,4 @@ Les components s'ajoutent dans le Constructor de la classe. Pour ajouter un comp
 https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/Components/UCapsuleComponent/
 
 Pour cela, on crée la variable dans le header commme ceci :
-`UCapsuleComponent* capsuleComponent;`
+```UCapsuleComponent* capsuleComponent;```
