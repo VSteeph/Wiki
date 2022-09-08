@@ -184,4 +184,14 @@ Les changements de position sont sur le Spring Arm avec le Offset Et le Target A
 ## Player
 Par défaut, le joueur va contrôler un élément spécifique qui est configuré par Unreal. On peut changer ce qui est possédé par le joueur que cela soit dans les Settings ou dans les Details d'un Pawn dans l'onglet "Pawn", il y a le champ "Auto Possess Player", si on définit Player 0, le joueur prenant possession de l'objet des le début.
 
+## Input
+Les inputs se trouvent le Project Settings (Accesssible via le boutton settings ou le menu Edit). Dans la catégorie Engine, il y a le champ Input qui permet de créer des bindings et de faire des actions/Axis Mappings. Pas besoin de save dans les settings
+
+Action Mappings c'est pour appui/release alors que l'axis c'est pour les inputs continu avec une range.
+
+### Axis Mapping
+On crée un Axis et on ajoute des axes avec une valeur. Par exemple: 
+![image](https://user-images.githubusercontent.com/58773222/189237991-dbf002b7-4ee6-4a32-9973-054d48777a44.png)
+
+#### Bind l'Axis en C++
 
