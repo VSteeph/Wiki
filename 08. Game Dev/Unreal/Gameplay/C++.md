@@ -167,4 +167,8 @@ Voici les différents modes :
 * EditInstanceOnly: Modifiable dans l'instance
 * EditDefaultsOnly: Modifiable dans Blueprints 
 
+#### Camera
+La camera est divisé en plusieurs parties. Il y a d'abord le SpringArm qui permet de manipuler la caméra et enfin la Caméra. Le spring Arm permet de gérer les colisions avec le décor. Cela va rapprocher la caméra lors de collisions et la remettre à sa position lorsqu'il n'y a pas de colission.
+
+https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/GameFramework/USpringArmComponent/
 
