@@ -10,4 +10,4 @@ Il faut choisir la classe parent (héritage) en suite, voici les principales (il
 * None : Classe classique
 * [Character]()
 * [Pawn]()
-* [Actor]([https://docs.unrealengine.com/5.0/en-US/](https://docs.unrealengine.com/5.0/en-US/unreal-engine-actors/)) : C'est un objet qui peut être placé ou spawn dans le niveau, ils peuvent être crées et détruits
+* [Actor]([https://docs.unrealengine.com/5.0/en-US/](https://docs.unrealengine.com/5.0/en-US/unreal-engine-actors/) : C'est un objet qui peut être placé ou spawn dans le niveau, ils peuvent être crées et détruits
