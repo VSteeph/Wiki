@@ -8,6 +8,8 @@ Les éléments de code sont dans le Dossier C++ Classes sur Unreal dans le Conte
 
 Il faut choisir la classe parent (héritage) en suite, voici les principales (il en existe énormement)
 * None : Classe classique
+* * [Actor](https://docs.unrealengine.com/5.0/en-US/unreal-engine-actors/) : C'est un objet qui peut être placé ou spawn dans le niveau, ils peuvent être crées et détruits
+* * [Pawn](https://docs.unrealengine.com/5.0/en-US/possessing-pawns-in-unreal-engine/): c'est un Actor qui peut être contrôlé et recevoir des inputs comme une voiture
 * [Character]()
-* [Pawn]()
-* [Actor](https://docs.unrealengine.com/5.0/en-US/unreal-engine-actors/) : C'est un objet qui peut être placé ou spawn dans le niveau, ils peuvent être crées et détruits
+
+
