@@ -42,9 +42,17 @@ Ainsi, il peut être dans le monde.
 
 ## C++ Structure
 
-Comme en C++, il y a le Header qui est le template, une pseudo interface de la classe, et l'implémentation le .cpp. En fonction de l'héritage de la classe, il peut avoir du code ou non présent dans la classe.
+.h => Prorortpe/ Pseudo Interface de la classe
+.cpp => Implémentation du Code
 
-Le header est copié en haut du fichier C++ lors de la compilation. Cela permet d'avoir les includes, de prototyper les fonctions, etc sans s'embeter
+Le .h va récupérer tous les includes qui lui ont été ajouté (recursif) puis il va s'ajouter dans le fichier .cpp. Cela veut dire que plus il y a une chaine d'includes (poupée russe), plus la compilation va être longue et les fichiers lourd, Exemple : 
+
+![image](https://user-images.githubusercontent.com/58773222/189181103-db3842d1-dc72-45b0-a6fa-d5be6b944962.png)
+
+Cela signifie que UCapsuleComponent sera présent dans 4 endroits différents au lieu d'un seul qui est le Fichier de base. Pour empêcher cela, il existe le principe de Forward Declaration qui permet de référencer un élément dans le .h mais l'inclusion se fait dans le cpp ce qui permet d'alléger la compilation sans erreurs.
+
+### Forward declaration 
+Forward Declaration permet de declarer un identifier sans que l'objet ait une définition complete. Cela s'utilise quand on n'a pas besoin de l'élément. Par exemple, on veut juste déclarer une varaible ou quand quelque chose est en private. Dès que les autres scripts n'ont pas de raison et ne peuvent pas l'utiliser.
 
 ### Basic Function
 
