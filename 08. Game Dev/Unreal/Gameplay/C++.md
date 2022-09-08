@@ -180,3 +180,8 @@ https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/GameFramework/USpring
 
 Les changements de position sont sur le Spring Arm avec le Offset Et le Target Arm Length.
 
+
+## Player
+Par défaut, le joueur va contrôler un élément spécifique qui est configuré par Unreal. On peut changer ce qui est possédé par le joueur que cela soit dans les Settings ou dans les Details d'un Pawn dans l'onglet "Pawn", il y a le champ "Auto Possess Player", si on définit Player 0, le joueur prenant possession de l'objet des le début.
+
+
