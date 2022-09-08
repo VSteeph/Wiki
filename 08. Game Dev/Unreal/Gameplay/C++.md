@@ -75,10 +75,10 @@ Un template function s'adapte au type choisi donc on peut choisir un type partic
 
 Exemple dans Unreal
 ```
-CreateDefaultSubobject<UCapsuleComponent>(TeXT("NomDeLObjet");
+CreateDefaultSubobject<UCapsuleComponent>(TEXT("NomDeLObjet");
 ```
 
-Cette fonction permet de créer un objet de type UCapsuleComponent avec un paramètre spécifiques
+Cette fonction permet de créer un objet de type UCapsuleComponent avec un paramètre spécifiques. Cela vient de la classe UObject qui peut être instancié à partir de cette fonction juste en ayant un nom
 
 ## C++ In Unreal
 
