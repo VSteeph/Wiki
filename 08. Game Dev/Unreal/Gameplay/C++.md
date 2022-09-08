@@ -216,8 +216,24 @@ Il est important de préciser le nom de la classe pour pouvoir passer le paramet
 
 ```
 UE_LOG(LogTemp, Warning, TEXT("Non"));
+UE_LOG(LogTemp, Warning, TEXT("The float value is: %f"), YourFloat);
+UE_LOG(LogTemp, Warning, TEXT("The integer value is: %d"), YourInteger);
+UE_LOG(LogTemp, Warning, TEXT("The vector value is: %s"), *YourVector.ToString());
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
+GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Some variable values: x = %f, y = %f"), x, y));
 ```
+
+https://unrealcommunity.wiki/logging-lgpidy6i
+
+| Verbosity Level | Printed in Console? | Printed in Editor's Log? |                      Notes                       |
+|-----------------|---------------------|--------------------------|--------------------------------------------------|
+| Fatal           | Yes                 | N/A                      | Crashes the session, even if logging is disabled |
+| Error           | Yes                 | Yes                      | Log text is coloured red                         |
+| Warning         | Yes                 | Yes                      | Log text is coloured yellow                      |
+| Display         | Yes                 | Yes                      | Log text is coloured grey                        |
+| Log             | No                  | Yes                      | Log text is coloured grey                        |
+| Verbose         | No                  | No                       |                                                  |
+| VeryVerbose     | No                  | No                       |                                                  |
 
 ## Optimization
 
