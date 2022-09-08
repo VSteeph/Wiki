@@ -156,5 +156,15 @@ C'est un attribut qui permet de définir comment une variable va se comporter da
 ```
 UPROPERTY(VisibleAnywhere)
 int Speed;
-```
+```	
+
+Voici les différents modes :
+
+* VisibleAnywhere : Read-only, apparait dans les properties d'une instance et de le blueprints
+* VisibleInstanceOnly: Read-only Visible que dans l'instance
+* VisibleDefaultOnly: Read-only Visible que dans l'editeur BluePrint
+* EditAnywhere: Editable dans les proprietés d'une instance et le bluerpint
+* EditInstanceOnly: Modifiable dans l'instance
+* EditDefaultsOnly: Modifiable dans Blueprints 
+
 
