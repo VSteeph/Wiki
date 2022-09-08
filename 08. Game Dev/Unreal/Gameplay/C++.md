@@ -193,8 +193,20 @@ On crée un Axis et on ajoute des axes avec une valeur. Par exemple:
 ![image](https://user-images.githubusercontent.com/58773222/189237991-dbf002b7-4ee6-4a32-9973-054d48777a44.png)
 
 #### Bind l'Axis en C++
-Il suffit de créer une fonction pour traiter les inputs et la relier aux inputs. Le binding des inputs se fait avec cette fonction : SetupPlayerInputComponent qui est implémenté de base
+Il suffit de créer une fonction pour traiter les inputs et la relier aux inputs. Le binding des inputs se fait avec cette fonction : SetupPlayerInputComponent qui est implémenté de base.
+En suite, on y relie une fonction du code au nom de l'input exemple :
 
+```
+PlayerInputComponent->BindAxis(TEXT("Move Forward / Backward"), this, &ACarPawn::MoveCar);
+
+void ACarPawn::MoveCar(float MoveValue)
+{
+	// Do Stuff
+}
+
+```
+
+Il est important de préciser le nom de la classe pour pouvoir passer le parametre par référence (signature de la fonction)
 
 ## Autres fonctions Unity
 
@@ -206,3 +218,7 @@ Il suffit de créer une fonction pour traiter les inputs et la relier aux inputs
 UE_LOG(LogTemp, Warning, TEXT("Non"));
 GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("This is an on screen message!"));
 ```
+
+## Optimization
+
+Les Fnames sont 2 fois plus léger qu'un string, ils sont donc préférables quand on peut s'en servir
