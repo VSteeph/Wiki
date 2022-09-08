@@ -62,7 +62,13 @@ C'est un actor component qui existe dans le monde. La position est défini par u
 
 Liste de components:
 * Static Mesh : Permet d'ajouter un Mesh à un actor
+* UCapsule Component : Collider Capsule
 
 
 #### Ajouter un Component en C++
-Les components s'ajoutent dans le Constructor de la classe.
+Les components s'ajoutent dans le Constructor de la classe. Pour ajouter un component, il faut créer un root Component pour cela on peut se servir d'une capsule component pour les collisons 
+
+https://docs.unrealengine.com/5.0/en-US/API/Runtime/Engine/Components/UCapsuleComponent/
+
+Pour cela, on crée la variable dans le header commme ceci :
+`UCapsuleComponent* capsuleComponent;
