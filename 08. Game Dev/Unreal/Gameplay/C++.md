@@ -217,14 +217,18 @@ Cela prend un FVector en parametre et cela offset le transform de X en espace Lo
 
 Exemple :
 ```
-	FVector currentLocation = FVector::ZeroVector;
-	currentLocation.X += MoveValue * 5.f;
-	AddActorLocalOffset(currentLocation);
+FVector currentLocation = FVector::ZeroVector;
+currentLocation.X += MoveValue * 5.f;
+AddActorLocalOffset(currentLocation);
 ```
 
+Il est important d'utiliser le Delta Time pour éviter les Frame Rate car les Frame rate sont instables selon les ordinateurs et les conditions, on utilise donc le delta time pour avoir une vitesse constante selon les jeux (comme Unity)
 
-
-
+On recupere le Delta time avec cette fonction : UGameplayStatics::GetWorldDeltaSeconds qui prend un parametre UObject* worldcontext, donc on peut emttre this comme reponse :
+```
+currentLocation.X += MoveValue * speed * UGameplayStatics::GetWorldDeltaSeconds(this);
+AddActorLocalOffset(currentLocation);
+```
 
 
 
