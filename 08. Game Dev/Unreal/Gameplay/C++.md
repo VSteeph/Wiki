@@ -208,11 +208,30 @@ void ACarPawn::MoveCar(float MoveValue)
 
 Il est important de préciser le nom de la classe pour pouvoir passer le parametre par référence (signature de la fonction)
 
-## Autres fonctions Unity
+
+## Movement
+On utilise les Vectors pour representer les positions (FVector) et on a plusieurs fonctions en outils
+
+**AddActorLocalOffset**
+Cela prend un FVector en parametre et cela offset le transform de X en espace Local donc relatif. C'est à dire que la position par défaut est VectorZero
+
+
+
+
+
+
+
+
+
+
+
+## Extra
+
+### Autres fonctions Unity
 
 * TEXT permet de générer un FNAME par rapport à une string
 
-## Debugging 
+### Debugging 
 
 ```
 UE_LOG(LogTemp, Warning, TEXT("Non"));
