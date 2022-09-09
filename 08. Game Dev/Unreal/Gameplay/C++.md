@@ -230,8 +230,11 @@ currentLocation.X += MoveValue * speed * UGameplayStatics::GetWorldDeltaSeconds(
 AddActorLocalOffset(currentLocation);
 ```
 
+## Rotation
+Pour la Rotation, on utilise la fonction équivalente que pour la position AddActorLocalRotation qui prend en parametre un FRotator. Cela tourne un acteur par rapport à son référentiel Local (encore une fois, pas par rapport au monde ce qui est bien).
 
-
+Un FRotator est la variable pour la rotation, elle permet d'avoir les rotations en degrée avec Pitch (Y), Yaw (X), Roll(Z) avec un fonctionnement en Quaternion en background (Surement?).
+Valeur de base : FRotator::ZeroRotator
 
 
 
