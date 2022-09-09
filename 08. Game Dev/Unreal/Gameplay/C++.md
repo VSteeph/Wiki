@@ -215,6 +215,12 @@ On utilise les Vectors pour representer les positions (FVector) et on a plusieur
 **AddActorLocalOffset**
 Cela prend un FVector en parametre et cela offset le transform de X en espace Local donc relatif. C'est à dire que la position par défaut est VectorZero
 
+Exemple :
+```
+	FVector currentLocation = FVector::ZeroVector;
+	currentLocation.X += MoveValue * 5.f;
+	AddActorLocalOffset(currentLocation);
+```
 
 
 
