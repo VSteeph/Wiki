@@ -230,6 +230,8 @@ currentLocation.X += MoveValue * speed * UGameplayStatics::GetWorldDeltaSeconds(
 AddActorLocalOffset(currentLocation);
 ```
 
+AddActorLocalOffset prend en parametre un bool bsweep.
+
 ## Rotation
 Pour la Rotation, on utilise la fonction équivalente que pour la position AddActorLocalRotation qui prend en parametre un FRotator. Cela tourne un acteur par rapport à son référentiel Local (encore une fois, pas par rapport au monde ce qui est bien).
 
