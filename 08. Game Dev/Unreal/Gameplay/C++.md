@@ -230,7 +230,9 @@ currentLocation.X += MoveValue * speed * UGameplayStatics::GetWorldDeltaSeconds(
 AddActorLocalOffset(currentLocation);
 ```
 
-AddActorLocalOffset prend en parametre un bool bsweep.
+AddActorLocalOffset prend en parametre un bool bsweep qui permet de check les trigger/collisions si elles sont activées :
+
+"Whether we sweep to the destination location, triggering overlaps along the way and stopping short of the target if blocked by something. Only the root component is swept and checked for blocking collision, child components move without sweeping. If collision is off, this has no effect."
 
 ## Rotation
 Pour la Rotation, on utilise la fonction équivalente que pour la position AddActorLocalRotation qui prend en parametre un FRotator. Cela tourne un acteur par rapport à son référentiel Local (encore une fois, pas par rapport au monde ce qui est bien).
