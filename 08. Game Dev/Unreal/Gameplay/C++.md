@@ -234,6 +234,10 @@ AddActorLocalOffset prend en parametre un bool bsweep qui permet de check les tr
 
 "Whether we sweep to the destination location, triggering overlaps along the way and stopping short of the target if blocked by something. Only the root component is swept and checked for blocking collision, child components move without sweeping. If collision is off, this has no effect."
 
+Pour que cela marchen il faut prendre en effet les collisions, par défaut c'est en mode Overlap. Il faut aussi activer block pour pouvoir avoir les collisions :
+![image](https://user-images.githubusercontent.com/58773222/189485822-5e532517-ac1b-40f9-98f8-802086e73b1e.png)
+
+
 ## Rotation
 Pour la Rotation, on utilise la fonction équivalente que pour la position AddActorLocalRotation qui prend en parametre un FRotator. Cela tourne un acteur par rapport à son référentiel Local (encore une fois, pas par rapport au monde ce qui est bien).
 
