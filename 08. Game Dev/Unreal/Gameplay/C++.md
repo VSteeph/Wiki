@@ -38,7 +38,7 @@ Il faut choisir la classe parent (héritage) en suite, voici les principales (il
 
 La hiérarchie est donc AActor => APawn => ACharacter.
 
-En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur ou intéragit et enfin character si y a du déplacement. Il faut savoir qu'on peut piloter un pawn dans l'editeur en faisant clique droit "pilot"
+En gros, Actor si c'est pour le monde, Pawn si c'est ça peut être possédé par une IA ou le joueur et enfin character si y a du déplacement. Il faut savoir qu'on peut piloter un pawn dans l'editeur en faisant clique droit "pilot"
 
 
 ### Implémenter dans le Monde
