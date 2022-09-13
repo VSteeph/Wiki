@@ -244,6 +244,16 @@ Pour la Rotation, on utilise la fonction équivalente que pour la position AddAc
 Un FRotator est la variable pour la rotation, elle permet d'avoir les rotations en degrée avec Pitch (Y), Yaw (X), Roll(Z) avec un fonctionnement en Quaternion en background (Surement?).
 Valeur de base : FRotator::ZeroRotator
 
+## BakedIn Movement
+
+### AddMovementInput
+C'est une fonction existante dans Unreal, elle a la signature suivante :
+
+AddMovementInput(FVector WorldDirection, float ScaleValue, bool bForce)
+
+WordlDirection est le vector de Direction par rapport au monde contrairement à AddActorLocalOffset
+ScaleValue correspond à la vitesse, à quel point on scale le Vector
+bForce permet de forcer un déplacement.
 
 
 ## Extra
