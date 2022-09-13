@@ -255,6 +255,12 @@ WordlDirection est le vector de Direction par rapport au monde contrairement à 
 ScaleValue correspond à la vitesse, à quel point on scale le Vector
 bForce permet de forcer un déplacement.
 
+Cela se combine bien avec ces fonctions :
+
+* GetActorForwardVector
+* GetActorRightVector
+* IsMoveInputIgnored
+
 
 ## Extra
 
