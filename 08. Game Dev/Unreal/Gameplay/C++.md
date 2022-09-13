@@ -208,6 +208,17 @@ void ACarPawn::MoveCar(float MoveValue)
 
 Il est important de préciser le nom de la classe pour pouvoir passer le parametre par référence (signature de la fonction)
 
+### Action Mapping
+Cela marche de la même manière que l'Axis mapping, on bind un nom sur l'input d'une touche. On peut ajouter ou non des modifiers à une touche (shift,ctrl, etc). C'est update quand on appui eet quand on release. On indique dans BindAction ce qu'on veut utiliser, voici l'enum:
+
+* IE_Pressed (0)
+* IE_Released (1)
+* IE_Repeat (2)
+* IE_DoubleClick (3)
+* IE_Axis (4)
+* IE_Max (5)
+
+Il existe déjà des actions déjà faitdans Acharacter comme Jump
 
 ## Movement
 On utilise les Vectors pour representer les positions (FVector) et on a plusieurs fonctions en outils
