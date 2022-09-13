@@ -257,9 +257,9 @@ bForce permet de forcer un déplacement.
 
 Cela se combine bien avec ces fonctions :
 
-* GetActorForwardVector
-* GetActorRightVector
-* IsMoveInputIgnored
+* GetActorForwardVector Vector Forward
+* GetActorRightVector vector right
+* IsMoveInputIgnored qui permet de savoir si les inputs du joueur sont ignorés
 
 
 ## Extra
