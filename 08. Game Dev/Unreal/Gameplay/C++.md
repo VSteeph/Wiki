@@ -278,6 +278,10 @@ Pour la rotation, on utilise :
 * AddControllerRollInput: Roule en mode Boule qui roule
 * AddControllerYawInput : Horizontal
 
+Ne pas oublier si la caméra est lié au personnage d'autoriser la rotation de la caméra dans le Spring Arm :
+![image](https://user-images.githubusercontent.com/58773222/189968557-16f72c45-967a-416d-958b-512e60b5c78c.png)
+
+
 
 ## Extra
 
