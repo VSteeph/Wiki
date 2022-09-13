@@ -261,6 +261,12 @@ Cela se combine bien avec ces fonctions :
 * GetActorRightVector vector right
 * IsMoveInputIgnored qui permet de savoir si les inputs du joueur sont ignorés
 
+Pour la rotation, on utilise :
+
+* AddControllerPitchInput: Axe Y haut en bas
+* AddControllerRollInput: Roule en mode Boule qui roule
+* AddControllerYawnInput : Horizontal
+
 
 ## Extra
 
