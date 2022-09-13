@@ -265,7 +265,7 @@ Pour la rotation, on utilise :
 
 * AddControllerPitchInput: Axe Y haut en bas
 * AddControllerRollInput: Roule en mode Boule qui roule
-* AddControllerYawnInput : Horizontal
+* AddControllerYawInput : Horizontal
 
 
 ## Extra
