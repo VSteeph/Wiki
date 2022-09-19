@@ -15,7 +15,15 @@ On peut ensuite Drag les animations et les mettre en place. Pour fusionner les a
 Exemple simpliste de state avec des variables:
 ![image](https://user-images.githubusercontent.com/58773222/191118848-99f2ce52-19bd-4eb6-8ac1-d01fd06b2e90.png)
 
+Enfin, il est important de relier l'APB (Animation BluePrint) au Blueprint du personnage (Component Mesh) 
 
+![image](https://user-images.githubusercontent.com/58773222/191119752-6923f7c0-3890-4548-89e2-d3c8d911863d.png)
+
+## Animation Blending Space
+
+Pour mieux gérer le blending entre les animations, on peut créer un Blend Space (Content Drawer => Clic Droit => Animation => Blend Space) (Nomenclature BS_x), il faut le relier au bon mesh.
+
+Cela permet de mélangfer une ou plusieurs animations basé sur des valeurs de plusieurs inputs. On a acces à plusieurs vazlues (Horizontal & Vertical Axis)
 
 ## Convertir une Animation
 
