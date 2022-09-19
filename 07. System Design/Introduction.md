@@ -56,5 +56,7 @@ A partir de cette étape, le système est déjà assez conséquent. Un Système 
 
 ## Mindset
 
-Il y a le High-level design qui est de determiné le type de problème que l'on rencontre et comment on les résoud. C'est à déployement de serveurs, comment les systèmes interagissent. L'opposé est le Low-level Design qui est plutôt comment on va coder ces éléments, les classes, les fonctions. C'est l'implémentation et comment faire une implémentation efficace et clean. C'est convertir des requirements en code. On va souvent utiliser des diagrams (UML, Activity, sequences, class Diagrams). Le point important est que c'est très détaillé et très technique
+Il y a le High-level design qui est de determiné le type de problème que l'on rencontre et comment on les résoud. C'est à déployement de serveurs, comment les systèmes interagissent.
+
+L'opposé est le Low-level Design qui est plutôt comment on va coder ces éléments, les classes, les fonctions. C'est l'implémentation et comment faire une implémentation efficace et clean. C'est convertir des requirements en code. On va souvent utiliser des diagrams (UML, Activity, sequences, class Diagrams). Le point important est que c'est très détaillé et très technique
 
