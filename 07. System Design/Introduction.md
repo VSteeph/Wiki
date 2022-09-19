@@ -9,4 +9,28 @@ Pour éviter les problèmes de machine et d'uptime, c'est mieux de passer par le
 
 ## Business Requirements
 
-Il peut avoir plus requirements pour un Système Design, le premier est la charge qu'il doit pouvoir assurer. A force d'augmenter le nombre
+Il peut avoir plus requirements pour un Système Design, le premier est la charge qu'il doit pouvoir assurer. A force d'augmenter le nombre d'utilisateurs, le serveur peut avoir des ralentissements ou voir être down. Il y a plusieurs façons de compenser ça :
+
+* Acheter une plus grosse Machine => Ordinateur plus puissant => Vertical Scaling
+* Acheter plus de machine => Division des tâches => Horizontal Scaling
+
+Le fait de pouvoir gérer plus de request en adaptant son infrastructure s'appelle la "scalability", c'est en gros, on peut gérer plus de requête avec plus d'argent. Comme pour tout, chaque évolution a des avantages & inconvéniants
+
+
+### Differences entre les Scaling
+
+Un Horizontal Scaling a besoin d'un Load Balancing contrairement à un Vertical Scaling. Cela permet de rediriger le traffic.
+
+Par contre, si une machine échoue en Horizontal scaling, le traffic peut être redirigé alors que dans le Vertical SCaling, on a un "Single Point of Failure", c'est le concept de "Resilience".
+
+La communication entre les ordinateurs se fait par le réseau tandis que cela se fait par le système dans un ordinateur. La communication est donc plus rapide et plus fiable en Inter Process Communication (Vertical) vs Network Calls (Horizontal) RPC (Remote PRocedure Calls).
+
+Enfin, le dernier point est la consistance de donnée (Data consistancy). Imagine qu'on a une transaction entre plusieur ordinateurs, c'est dur de maintenir les données en horizontal contrairement au vertical qui permet de s'assurer que tout est consistant.
+
+Néanmoins, le vertical scaling a une limite qui est celle du hardware alors que l'horizontal peut être scale de manière quasiment infini (linéaire) à moins d'avoir un bottleneck important.
+
+## Solutions
+
+Dans le monde réel, on utilise les 2 en fonctions des besoins avant d'utiliser les qualités que l'on souhaite selon le cas. On utilise le Vertical Scaling pour la consistance des données et la communication fiable et rapide tandis qu'on utilise l'horizontal SCaling pour le scaling et la résiliance.
+
+En gros, c'est pas si hybride. C'est juste un système horizontal avec les plus gros serveurs possibles en terme de budget
