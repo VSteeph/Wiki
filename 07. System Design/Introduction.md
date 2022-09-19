@@ -1,5 +1,5 @@
 # System Design
-Un Systeme Design est le façon de créer un système qui permet de satisfaire plusieurs contraintes.
+Un Systeme Design est le façon de créer un système qui permet de satisfaire plusieurs requirements.
 
 Prenons un cas simple, on a crée un Algorithme qui intéresse plusieurs personnes. On va mettre à disposition l'accès à ce code mais pas le code directement. On expose donc le code par Internet avec une API (Application Programming Interface) pour permettre à des personnes externes d'executer le code et de récupérer l'ouput. Les clients font faire des request et le système va renvoyer une réponse adaptée à la requête.
 
