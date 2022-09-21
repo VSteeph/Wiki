@@ -24,6 +24,9 @@ Chaque niveau se regroupe dans plusieurs vues qui sont les suivantes:
 * Vue de déploiement => Diagram du déploiement hardware (tech)
 
 
+L'architecture peut avoir des contraintes lié au code, à l'hardware mais c'est une couche d'abstraction au-dessus et ce n'est pas l'oeuvre d'une personne, il faut prendre les avis des gens, construire ensemble pour voir  les différnets pitfalls en avance, chacun ses maitrises, et tout n'est pas sur un seul schéma. Il n'y a pas de normes et d'éléments absolus.
+
+
 
 ## Documentation
 On utilise différents languages pour modéliser des systèmes comme :*
