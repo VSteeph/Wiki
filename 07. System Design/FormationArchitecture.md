@@ -92,7 +92,7 @@ Il est important d'y refléchir et de les définir quand cela répond à un beso
 Contraintes à prendre en compte :
 * Environnement Cible (OS, Machine ressource limitée ou non)
 * Portabilité: 
-** Langage de programmation nativement portable comme .NET Core, Java
+    * Langage de programmation nativement portable comme .NET Core, Java
 * Déploieement et mises à jour
 * Sécurité
 
