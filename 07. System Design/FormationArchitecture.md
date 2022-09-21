@@ -15,7 +15,7 @@ Il y a plusieurs niveux d'architecture :
 * Design : Low-Level ?
 * Architecture : High-level
 
-Chaque niveau se regroupe dans plusieurs vues qui sont les suivantes: 
+Chaque niveau se regroupe dans plusieurs vues qui sont les suivantes:(Modele de Kruchten  4 + 1) 
 
 * Vue de réalisation => Diagram des composants et leurs relations (tech)
 * Vue Logique => Interaction des différents objets métiers (métier)
@@ -59,9 +59,9 @@ Ce sont les facteurs qui vont décider et limiter le design car ils sont fondame
 * Sécurité
 * Interaction avec des SI existant/externes
 
-#### Liste Macroscopique de fonctionnalité (Vue Architecturale
+#### Liste Macroscopique de fonctionnalité (Vue Architecturale)
 
-C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc). Cela inclut la motvation du choix des styles et le détai des composants avec leur déploiements
+C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc). Cela inclut la motvation du choix des styles et le détai des composants avec leur déploiements.
 
 #### Metriques de qualités
 
@@ -115,4 +115,26 @@ Il existe 2 types d'approches :
 * Approche predictive (Cycle en V, cascade), prévoir les phases séquentielles avec un engagemenesur un planning précis. L'architecture se fait au moment de la conception Global.
 * Approche agile : Construire un processus itératif et incrémental qui consister à découper le projet en itération. L'architecture est faite au démarrage du projet et est remis en cause à chaque début de sprint voir même review de sprint 
 
+## UML
+![image](https://user-images.githubusercontent.com/58773222/191460878-8279d849-1811-4f0c-955c-dcc7e67c81f0.png)
 
+Exemple de logiciel : Modelio (UML), Draw, Yed
+
+Types de liasons :
+* Généralisation (Extends en dev qui est de l'héritage un peu) et pas forcement extends de l'UML qui est une couche en plus
+* Inclusion c'est forcement inclus
+* Extension c'est une possibilité d'avoir en plus
+
+
+## Les vues
+
+### Vue Utilisations
+Un cas d'utilisation représente une séquence d'interaction des utilisateurs avec le systèmes
+
+### Vue Logiques
+Identification les différents éléments et mécanismes du systèmes à réaliser (Diagram statics, composites, etc) C'est les différents éléments du systèmes.
+
+### Vue de processus
+Décrit les interactions entre les différents processus ou threads/taches. Cela permet d'exprimer la synchronisation et l'allocation. Processus est la logique et les threads sont l'unité physique qui executent les processus.
+
+Le multi threading est du mutli tâches (round-robin techniquement)
