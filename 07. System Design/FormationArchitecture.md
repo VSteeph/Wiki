@@ -104,9 +104,11 @@ Contraintes à prendre en compte :
     * mécanisme d'authentification
     * Chiffrement de la communication
     * Chiffrement / hashashe des données sensibles (Chaine de connexion, etc) 
+    * Sécurisation du code source (Obfuscation du livrable) et s'il y a du code vraiment super secret,c'est pas à mettre sur la machine
 
 
-Définitions :
+##### Définitions :
+
 **Chiffrement symétriques** : 1 clé secrète unique pour crypter et decrypter (Encryptage : AES, DES, RC4/RC5, Misty1)
 
 Bob (Crypte message avec cléSecrete) ==> Alice (Decrypte avec cléSecrete)
@@ -120,7 +122,22 @@ Bob (Decrypte message avec cléprivBob) <=== Alice (Crypte message avec CléPubB
 
 Exemple : mot de passe
 
+### Composant Web
+Une application client léger deployé sur un serveur. En gros, c'est une application côté serveur qui va récupérer et formatter un résultat et fourni cette réponse sous un format spécifique (html/css/js) qui est compatible avec l'application Client (Browser).
 
+Il y a aussi des technologies côté client comme Angular. Au premier appel, tout le code va etre téléchargé côté client qui permet de requeter directement des services web qui vont fournir des données brutes et le formattage se fera côté client, ce qui permet d'alléger le traffic réseau et la charge du serveur et cela permet de créer de l'interactivité mais selon le type de machine, cela peut ralentir pour certains clients et tout le code est téléchargée côté client (en clair) donc Aucune donnée sensible
+
+Contraintes:
+
+* Navigateur doit pouvoir supporter les fonctionnalités ou utiliser des librairies (polyfills) pour combler le manque
+* Portabilité : uniquement si on utilise une technologie non-portable (Ex : Framework => Windows / IIS)
+* Déploiement : remplacement de l'application sur le serveur (Besoin d'uptime ou non)
+    * facilité le déploiement de l'application en intégrant dans un contenur l'application et son environnement d'execution
+* Gestion des sessions
+
+#### définition :
+
+**session HTTP**: Espace mémoire pour chaque visiteur (PHP non automatique), elle peut être stockée côté serveur ou côté application client (LocalStorage / SessionStorage)
 
 ### Autres 
 * Serveur Web
