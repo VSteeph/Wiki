@@ -107,14 +107,20 @@ Contraintes à prendre en compte :
 
 
 Définitions :
-Chiffrement symétriques : 1 clé secrète unique pour crypter et decrypter (Encryptage : AES, DES, RC4/RC5, Misty1)
+**Chiffrement symétriques** : 1 clé secrète unique pour crypter et decrypter (Encryptage : AES, DES, RC4/RC5, Misty1)
 
 Bob (Crypte message avec cléSecrete) ==> Alice (Decrypte avec cléSecrete)
 
-Chiffrement Asymétriques: Chaque acteur génère 2 clés (Privée/public). Les clés publiqus sont communiquées mais elles ne permettent que d'encrypter mais pas de decrypter un message. Encryptage : RSA
+**Chiffrement Asymétriques**: Chaque acteur génère 2 clés (Privée/public). Les clés publiqus sont communiquées mais elles ne permettent que d'encrypter mais pas de decrypter un message. Encryptage : RSA
 
 Bob (crypte message avec cléPubAlice) ====> Alice (Decrypte avec cléPrivAlice)
 Bob (Decrypte message avec cléprivBob) <=== Alice (Crypte message avec CléPubBob)
+
+**Hash** : Transforme une donnée initiale en une empreinte non-déchiffrable. Encryptage : MD5 (Trop vieux), SHA-256, SHA-512, Bcrypt
+
+Exemple : mot de passe
+
+
 
 ### Autres 
 * Serveur Web
