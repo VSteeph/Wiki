@@ -105,6 +105,3 @@ L'idée c'est de montrer les points d'extensions du système. C'est plutôt du f
 
 Cela représente le système et son environnement, les contraintes geographiques, réseaux, tolérancex aux fautes/pannes et le type de livrable (.rar, .exe, etc). On peut y inclure les protocoles de communications et les cardinalités (qui appellent quoi avec la redondance)
 ![image](https://user-images.githubusercontent.com/58773222/191467879-b5d09b57-8340-41ac-9fd7-6e52de553da8.png)
-
-
-## Développer un modèle architecturale
