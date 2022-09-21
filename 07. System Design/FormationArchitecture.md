@@ -73,12 +73,13 @@ Ce sont les métriques qu'on utilise pour déterminer les métriques pour mesure
 Cela revient un peu avec les métriques de qualités mais il est important de définir un système de Monitoring et comment on récupère les logs, est ce que cela colle par rapport à nos besoins (Ecrire dans un fichier, export dans un service externe, batch les fichiers logstash), qu'est ce qu'on a besoin de monitorer.
 
 #### Liste des composants
-Un tableau Excel des différents éléments
+Un tableau Excel des différents éléments. Ce
 
 ### Mecanismes de sécurités
 
-#### Fluc échanges et protocoles utilisées
 
+#### Flux échanges et protocoles utilisées
+Il est important d'y refléchir et de les définir quand cela répond à un besoin ou une particularité. Exemple, Whatsapp qui communique en websocket car il y a besoin de réponse pour savoir si un message est livré ou lu.
 
 
 ## exemple de composants
