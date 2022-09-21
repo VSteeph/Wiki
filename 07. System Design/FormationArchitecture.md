@@ -133,11 +133,32 @@ Contraintes:
 * Portabilité : uniquement si on utilise une technologie non-portable (Ex : Framework => Windows / IIS)
 * Déploiement : remplacement de l'application sur le serveur (Besoin d'uptime ou non)
     * facilité le déploiement de l'application en intégrant dans un contenur l'application et son environnement d'execution
-* Gestion des sessions
+* Gestion des sessions: Est ce que les données sont utiles côté serveur ou non ? ou est ce qu'on le store (Client, Base de donnée, Cache centralisée, etc)
+    * Le volume des données impacte où on stock les données (10mb max en général côté serveur)
+    * Finalité des données (Traitement métier ou non), est ce qu-elle est nécessaire côté serveur ? (peut-on la perdre?)
+    * Persistance des données (besoin de garder/conserver les données sur la durée)
+    * Cout (cela donne des couts en plus niveau hardware)
+    * Où stocker les données : Serveur ou Client ? ==> Cache distribuée (voire bdd mais plus rare)
+* Sécurité
+    * Crypter les échanges (HTTPS) - utilisation de certificats SSL (Secure socket Layer, port TCP protégé). Les émetteurs est forcement un tier de confiance et pas le site. Les communications sont encryptés avec une clé publique. Premiere
+    * Crypter les données stockées
+    * Authentification
 
 #### définition :
 
-**session HTTP**: Espace mémoire pour chaque visiteur (PHP non automatique), elle peut être stockée côté serveur ou côté application client (LocalStorage / SessionStorage)
+**session HTTP**: Espace mémoire pour chaque visiteur (PHP non automatique), elle peut être stockée côté serveur ou côté application client (LocalStorage / SessionStorage). Le suivi des sessions 'effectue grâce à un ID unique vehiculé dans un cookie ou URL. cela peut être aussi garder avec une affinité de session dans le Load Balancing, comment créer de la redondance et de la persistance de donnée (Distributed Cache System, Base de donnée, RAM serveur Web)
+
+**Communication HTTPS (Modele OSI):**
+![image](https://user-images.githubusercontent.com/58773222/191521517-15b51bf2-1bba-438c-92c7-d9833b7d7882.png)
+
+Plus on monte en couche, plus c'est rapide mais moins maniable
+
+**Certificat SSL** : Premiere requete estnon chiffrée et le serveur fournit le certificat. Le browser va verifier s'il est correct et va récupérer la clé publique dans le certificat. Il pourra ainsi envoyer de requetes privées aux serveurs, cependant si c'est asymétrique le client ne pourra voir l'information, donc il envoie aussi une clé symétrique crypté avec la clé publique au serveur.
+
+Les échanges suivant auront lieu avec la clé symétrique, donc le premier échange se fait en asymétrie puis le chiffremeent est symétrique.
+
+
+navigateur 
 
 ### Autres 
 * Serveur Web
