@@ -93,7 +93,13 @@ Contraintes à prendre en compte :
 * Environnement Cible (OS, Machine ressource limitée ou non)
 * Portabilité: 
     * Langage de programmation nativement portable comme .NET Core, Java
-* Déploieement et mises à jour
+    * Recompiler selon les OS avec un livrable adaptée
+    * Plusieurs versions par OS
+* Déploiement et mises à jour
+    * Déploiement depuis site distant (Interroge Service externes pour vérifier les versions et on télécharge et installe les nouveaux fichiers aux démaragge de l'appli)
+    * Système de Notification lors d'une montée de version (Donc c'est pas l'appli qui vérifie, c'est le service qui envoie un message à l'appli)
+    * Forcer le déploiement/maj depuis le réseau (Solution réseau)
+    * Systeme de gestions de plugins (déploiement à chaud/froid)
 * Sécurité
 
 ### Autres 
