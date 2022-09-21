@@ -54,7 +54,12 @@ C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cu
 Ce sont les métriques qu'on utilise pour déterminer les métriques pour mesurer la qualité d'un système, quelles variables on utilise pour mesurer nos objectifs. Il y a un exemple de thème avec les normes ISO 25010
 ![image](https://user-images.githubusercontent.com/58773222/191449262-7891f6fe-e614-4a31-86d3-5015a92b551c.png)
 
+#### Monitoring & Metrics
 
+Cela revient un peu avec les métriques de qualités mais il est important de définir un système de Monitoring et comment on récupère les logs, est ce que cela colle par rapport à nos besoins (Ecrire dans un fichier, export dans un service externe, batch les fichiers logstash), qu'est ce qu'on a besoin de monitorer.
+
+#### Liste des composants
+Un tableau Excel des différents éléments
 
 ## exemple de composants
 * Serveur Web
@@ -82,3 +87,9 @@ C'est une architecture qui est moins utilisé à l'heure actuelle avec une base 
 
 ### Flot de donnée
 C'est beaucoup utilisé dans des batch processing, c'est quand on a des données qui va traverser une série de composants pour arriver à l'output final
+
+## Gestion de projet
+
+Il existe 2 types d'approches :
+* Approche predictive (Cycle en V, cascade), prévoir les phases séquentielles avec un engagemenesur un planning précis. L'architecture se fait au moment de la conception Global.
+* Approche agile : Construire un processus itératif et incrémental qui consister à découper le projet en itération. L'architecture est faite au démarrage du projet et est remis en cause à chaque début de sprint voir même review de sprint
