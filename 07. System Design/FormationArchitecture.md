@@ -41,7 +41,9 @@ Une architecture doit dont être documenté (DAT => dossier d'architecture techn
 Le DAT doit avoir :
 
 #### Vision du produit
-Una page max. C'est un résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc. Il est là pour donner une rapide overview
+Una page max. C'est un résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc. Il est là pour donner une rapide overview. Il prend en compte un Lean canva :
+![image](https://user-images.githubusercontent.com/58773222/191470125-4ca6fbe8-d87e-49da-92a6-706309fc1aef.png)
+
 
 #### Facteurs déterminants
 Ce sont les facteurs qui vont décider et limiter le design car ils sont fondamentaux comme le fait que ça soit un système embarqué, un système militaire, les besoins en sécurité, le nombre d'utilisateurs. Liste non exhaustive :
