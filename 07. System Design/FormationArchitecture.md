@@ -5,25 +5,36 @@
 * Style d'architecture plus utilisée avec pros & cons et personalisation
 * Savoir choisir une architecture
 
-## Séparations des définitions 
+## Définitions 
 
+Il y a plusieurs niveux d'architecture :
 * Coding: Low-Level (implementation)
 * Design : Low-Level ?
-* Architecture : High-level
-
-Plusieurs vues :
+* Architecture : High-level (Focus ici)
 
 Architecture Général:
-* Vue de réalisation (Composants et leur relations)
-* Vue Logique => Fonctionnelle
-* Vue des cas utilisations => fonctionnelle
-* Vue des processus (tech)
-* Vue de déploiement (hardware)
-
-Tout cela rentre dans le dossier d'architecture technique
-
+* Vue de réalisation => Diagram des composants et leurs relations (tech)
+* Vue Logique => Interaction des différents objets métiers (métier)
+* Vue des cas utilisations => Diagram des cas d'utlisations (métiers)
+* Vue des processus => Processus & thread, etat(transitions (technique)
+* Vue de déploiement => Diagram du déploiement hardware (tech)
 
 L'architecture logicielle est l'assemblement de différents composants/fonctionnalités d'un système pour répondre à différents critères (résilliance, Scaling, etc). L'architecture doit référencer beaucoup d'éléments, elle n'est pas bas niveau. Par exemple, elle doit connaître les différentes éléments hardware mais pas besoin de connaître l'implémentation comme la configuration, ça c'est le low-level design.
+
+## Documentation
+On utilise différents languages pour modéliser des systèmes comme :*
+* UML (Standard même dans les cas particuliers)
+* SysML (systeme Machine)
+* AADL (Beaucoup orienté calcul)
+
+Une architecture doit dont être documenté (DAT => dossier d'architecture technique). Il peut aussi avoir un Guide de Design des composants pour ajouter des objectifs, des particularités sur chaque composants ce qui permet d'avoir des guidelines pour l'implementation low-level
+
+### DAT
+Le DAT doit avoir :
+
+* 1 page: Vision du Produit (Résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc)
+* Facteurs déterminants / Contraintes d'architecture (Exemple: embarqué, militaire, distribué, pérénité, sécurité, Nombre d'utilisateurs, etc)
+* Liste Macroscopique de fonctionnalités (Ex : Cuisine, Service, Livraison, Approvisoinement)
 
 ## exemple de composants
 * Serveur Web
