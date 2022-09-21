@@ -194,6 +194,22 @@ APplication deployée chaque terminal mobile donc tres proche de l'application l
 * Fonctionnalités supportées par le device (NFC, BLuetooth)
 * Type d'usage (connecté, non connecté)
 * Mode de développement (natif, web mobile donc responsive, hybride qui permet d'avoir une grosse base tronc commun et adapter le reste pour générer du natif) comme Cordova, Xamarin, MAUI
+    * Hybride suffit dans la majeure partie des cas mais il peut être limité en performance (accéder à l'équipement du telephone)
+
+### Web Service
+
+Application Web sans IHM deployée sur un serveur web qui expose un ensemble de méthodes
+
+
+Définitions :
+
+**SOAP** Simple Object Access Protocol, c'est un protocol de communication basée sur du XML (req formalisée avec entête, corps et potentiellement pièce jointe). C'est assez lourd. Le Web Service doit avoir un STub Utilitaire conv qui est un .wsdl pour pouvoir importer les définitions. Cette importation va créer un stub (contrat d'interface) dans le client. Si un jour, le service client à changer, il faut prévenir tous les clients que le contrat à changer pour le mettre à jour sinon cela ne marchera pas donc ce n'est plus utilisée car c'est compliqué pour les applications distribuées à beaucoup de clients
+
+**REST**(Representational State Transfer) Architecture basée sur le protocole HTTP. Le format de donnée est pas imposée, pas d'enveloppe spécifique, on utilise les concepts de base HTTP (entête et corps), on peut avoir du XML ou avoir un format plus léger comme du JSON ou même juste du texte/binaire.
+Avantages : pAs de contrat d'interfaces formel côté client ce qui permet de changer sans à avoir à informer tous les clients
+
+**GRAPHQL**: Alternative à REST qui permet de créer des requêtes pour extraire des données de plusieurs sources en un seule appel (Tres lourd donc peu utilisée) mais c'est un bon choix quand il y a un vrai besoin.
+
 
 ### Autres 
 * Serveur Web
