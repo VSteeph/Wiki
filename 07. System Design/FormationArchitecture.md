@@ -129,13 +129,18 @@ Types de liasons :
 ## Les vues
 
 ### Vue Utilisations
-Un cas d'utilisation représente une séquence d'interaction des utilisateurs avec le systèmes
+Un cas d'utilisation représente une séquence d'interaction des utilisateurs avec le systèmes. Diagram UML
 
 ### Vue Logiques
-Identification les différents éléments et mécanismes du systèmes à réaliser (Diagram statics, composites, etc) C'est les différents éléments du systèmes.
+Identification les différents éléments et mécanismes du systèmes à réaliser (Diagram statics, composites, etc) C'est les différents éléments du systèmes. Elle est representée par des diagrames statiques d'objets enrichis de descriptions dynamiques (composite, activité)
 
 ### Vue de processus
-Décrit les interactions entre les différents processus ou threads/taches. Cela permet d'exprimer la synchronisation et l'allocation. Processus est la logique et les threads sont l'unité physique qui executent les processus, donc multithreading ou pas.
+Décrit les interactions entre les différents processus ou threads/taches. Cela permet d'exprimer la synchronisation et l'allocation. Processus est la logique et les threads sont l'unité physique qui executent les processus, donc multithreading ou pas. L'idée est donc de mettre en avant et les relations entre les éléments, ce qui est dépendant de quel processsus, etc
+Cela permet de vérifier le respect de contraintes, la fiabilité, efficacité et performance.
+
+Les diagrams utilisés sont dynamiques (activité, séquence, communication, etc)
+
+#### Vocabulaire 
 
 Le multi threading est du mutli tâches (round-robin techniquement) ce qui est pas forcement synonyme de performance. L'objectif est de libérer le thread principal pour executer une tache de fond. Cela peut poser des problèmes avec le context switching et c'est aux développeurs de créer et synchroniser les threads. C'est utile quand le processeur a du downtime pa exemple.
 
@@ -143,3 +148,11 @@ Le parallélisme utilise le multi threading mais délègue la gestion des thread
 
 Threading => Libérer un thread et d'effectuer une autre tache spécifique
 Parallélisme => Performance
+Asynchronisme => pas de communication bloquante, c'est à dire qu'on a pas besoin d'attendre la réponse d'un autre élément et on utilise des callback pour effectuer les actions à ce moment la
+
+
+### Vue de réalisation
+
+Ce sont l'organisation des composants dans l'environnemenet et cela permet de gérer la configuration. Les diagrams suivent une certaine rigueur, exemple :
+![image](https://user-images.githubusercontent.com/58773222/191467109-05632b29-11cc-4c23-9604-24a08fd6ba4b.png)
+
