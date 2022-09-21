@@ -43,4 +43,11 @@ Exemple d'utilités:
 ### Appels & Retours
 Cela concerne la plupart des architectures orientés services ou composants distribuées. On peut avoir de l'orienté objet ou de l'orienté composants (DDD => Domain Driven Design qui est le fait de séparer (decouple) les éléments)
 
-###
+### Architecture en couche
+C'est les architectures qui sont divisées en plusieurs tiers.
+
+### Architecture centrée sur les données
+C'est une architecture qui est moins utilisé à l'heure actuelle avec une base de donnée centrée sur les données avec plein d'éléments autour.
+
+### Flot de donnée
+C'est beaucoup utilisé dans des batch processing, c'est quand on a des données qui va traverser une série de composants pour arriver à l'output final
