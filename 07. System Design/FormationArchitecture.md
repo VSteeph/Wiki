@@ -157,8 +157,43 @@ Plus on monte en couche, plus c'est rapide mais moins maniable
 
 Les échanges suivant auront lieu avec la clé symétrique, donc le premier échange se fait en asymétrie puis le chiffremeent est symétrique.
 
+**Authentification**
+Les users peuvent etre dans une base de donnée ou dans un Annuaire LDAP (Lightweight Directory Access Protocol) avec Users, Groupes (openLdap, Active Directory)
 
-navigateur 
+Appli qui veut se connecter avec plusieurs éléments. Cela peut directement aller chercher dans la BDD ou l'annuaire.
+
+
+### Load Balanceur
+
+Réparitteur de charge sur plusieurs serveurs
+
+Contraintes:
+* Types : Materiel vs Logiciel
+    * Material : Redirige des requte HTTP/TCP mais plus rapide
+    * Logiciel : plus customisable 
+    * Souvent c'est décidé par l'architecte systeme mais on peut se mettre d'accord en fonction dfes besoins
+    * Considératiosn de conceptions : failover, reprise avec incident, affinité de session, etc
+
+
+### Bibliotheque
+
+Ensemble d'entités et fonctions métiers packagées dans une archive (Dll/so, jar) ou repertoire
+
+Contraintes:
+* Comptabilités de version / dependances
+* Chargement Static ou Dynamique ==> Consommation de ressourcs vs réactivité
+    * Static: au déméragge 
+    * Dynamique : au besoin 
+* Interopérabilité entre langages. Posible ou alors créer une interface (SOAP/REST ou tout autre protocole pour communiquer et fournir les données) qui permet de passer par un code normalement inutilisable 
+
+
+### Application mobile
+APplication deployée chaque terminal mobile donc tres proche de l'application lourd (tpe desktop) mais il y a des contraitnes en plus
+
+**Contraintes supplémentaires**
+* Fonctionnalités supportées par le device (NFC, BLuetooth)
+* Type d'usage (connecté, non connecté)
+* Mode de développement (natif, web mobile donc responsive, hybride qui permet d'avoir une grosse base tronc commun et adapter le reste pour générer du natif) comme Cordova, Xamarin, MAUI
 
 ### Autres 
 * Serveur Web
