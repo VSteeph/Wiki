@@ -24,8 +24,9 @@ Chaque niveau se regroupe dans plusieurs vues qui sont les suivantes:
 * Vue de déploiement => Diagram du déploiement hardware (tech)
 
 
-L'architecture peut avoir des contraintes lié au code, à l'hardware mais c'est une couche d'abstraction au-dessus et ce n'est pas l'oeuvre d'une personne, il faut prendre les avis des gens, construire ensemble pour voir  les différnets pitfalls en avance, chacun ses maitrises, et tout n'est pas sur un seul schéma. Il n'y a pas de normes et d'éléments absolus.
+L'architecture peut avoir des contraintes lié au code, à l'hardware mais c'est une couche d'abstraction au-dessus et ce n'est pas l'oeuvre d'une personne, il faut prendre les avis des gens, construire ensemble pour voir  les différnets pitfalls en avance, chacun ses maitrises, et tout n'est pas sur un seul schéma. C'est important de comprendre les besoins et les gens. Il n'y a pas de normes et d'éléments absolus.
 
+Il faut pas se perdre dans les documents et faire plein de spécifications détailles et de se figer dans un système absolu.
 
 
 ## Documentation
@@ -43,11 +44,24 @@ Le DAT doit avoir :
 Una page max. C'est un résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc. Il est là pour donner une rapide overview
 
 #### Facteurs déterminants
-Ce sont les facteurs qui vont décider et limiter le design car ils sont fondamentaux comme le fait que ça soit un système embarqué, un système militaire, les besoins en sécurité, le nombre d'utilisateurs
+Ce sont les facteurs qui vont décider et limiter le design car ils sont fondamentaux comme le fait que ça soit un système embarqué, un système militaire, les besoins en sécurité, le nombre d'utilisateurs. Liste non exhaustive :
 
-#### Liste Macroscopique de fonctionnalité
+* Environnement Cible
+* Typologie d'application
+* Expérience Utilisateurs 
+* BNombre utilisateurs
+* Disponibilité
+* Performance
+* Durée de vie
+* Sécurité
+* ROI
+* Compétence
+* Sécurité
+* Interaction avec des SI existant/externes
 
-C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc)
+#### Liste Macroscopique de fonctionnalité (Vue Architecturale
+
+C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc). Cela inclut la motvation du choix des styles et le détai des composants avec leur déploiements
 
 #### Metriques de qualités
 
@@ -60,6 +74,12 @@ Cela revient un peu avec les métriques de qualités mais il est important de d�
 
 #### Liste des composants
 Un tableau Excel des différents éléments
+
+### Mecanismes de sécurités
+
+#### Fluc échanges et protocoles utilisées
+
+
 
 ## exemple de composants
 * Serveur Web
@@ -74,7 +94,7 @@ Exemple d'utilités:
 * Mesage Broker
 * ESB (Entreprise Service Bus)
 
-## différents styles
+## Différents styles
 
 ### Appels & Retours
 Cela concerne la plupart des architectures orientés services ou composants distribuées. On peut avoir de l'orienté objet ou de l'orienté composants (DDD => Domain Driven Design qui est le fait de séparer (decouple) les éléments)
@@ -92,4 +112,6 @@ C'est beaucoup utilisé dans des batch processing, c'est quand on a des données
 
 Il existe 2 types d'approches :
 * Approche predictive (Cycle en V, cascade), prévoir les phases séquentielles avec un engagemenesur un planning précis. L'architecture se fait au moment de la conception Global.
-* Approche agile : Construire un processus itératif et incrémental qui consister à découper le projet en itération. L'architecture est faite au démarrage du projet et est remis en cause à chaque début de sprint voir même review de sprint
+* Approche agile : Construire un processus itératif et incrémental qui consister à découper le projet en itération. L'architecture est faite au démarrage du projet et est remis en cause à chaque début de sprint voir même review de sprint 
+
+
