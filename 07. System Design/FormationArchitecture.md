@@ -84,7 +84,19 @@ Un tableau Excel des différents éléments. Ce
 Il est important d'y refléchir et de les définir quand cela répond à un besoin ou une particularité. Exemple, Whatsapp qui communique en websocket car il y a besoin de réponse pour savoir si un message est livré ou lu.
 
 
-## exemple de composants
+## Composants principaux 
+
+### Application Client Lourd (Composant Desktop)
+ça peut être une grosse application ou juste un bash sans aucune interaction. Il peut aussi avoir un potentiel traitement métier (elle peut aussi être extraite). Cela centralise l'IHM (Interface Homme Machine)
+
+Contraintes à prendre en compte :
+* Environnement Cible (OS, Machine ressource limitée ou non)
+* Portabilité: 
+** Langage de programmation nativement portable comme .NET Core, Java
+* Déploieement et mises à jour
+* Sécurité
+
+### Autres 
 * Serveur Web
 * Database
 * Load Balancer
