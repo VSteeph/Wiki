@@ -156,3 +156,12 @@ Asynchronisme => pas de communication bloquante, c'est à dire qu'on a pas besoi
 Ce sont l'organisation des composants dans l'environnemenet et cela permet de gérer la configuration. Les diagrams suivent une certaine rigueur, exemple :
 ![image](https://user-images.githubusercontent.com/58773222/191467109-05632b29-11cc-4c23-9604-24a08fd6ba4b.png)
 
+L'idée c'est de montrer les points d'extensions du système. C'est plutôt du fonctionnel et comment on va implémenter
+
+### Vue de déploiement
+
+Cela représente le système et son environnement, les contraintes geographiques, réseaux, tolérancex aux fautes/pannes et le type de livrable (.rar, .exe, etc). On peut y inclure les protocoles de communications et les cardinalités (qui appellent quoi avec la redondance)
+![image](https://user-images.githubusercontent.com/58773222/191467879-b5d09b57-8340-41ac-9fd7-6e52de553da8.png)
+
+
+## Développer un modèle architecturale
