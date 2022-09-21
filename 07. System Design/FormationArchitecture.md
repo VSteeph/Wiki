@@ -139,4 +139,7 @@ Décrit les interactions entre les différents processus ou threads/taches. Cela
 
 Le multi threading est du mutli tâches (round-robin techniquement) ce qui est pas forcement synonyme de performance. L'objectif est de libérer le thread principal pour executer une tache de fond. Cela peut poser des problèmes avec le context switching et c'est aux développeurs de créer et synchroniser les threads. C'est utile quand le processeur a du downtime pa exemple.
 
-Le parallélisme utilise le multi threading mais délègue la gestion des threads à l'OS. Gestion des classe manuelle (C# => Thread ou alors Parallel pour gérer l'OS). Par contre, en parallélisme on perd le contrôle de la séquence, donc même uen boucle for ne s'éxecute pas forcement dans le bon ordre car l'ordinateur répartit la charge sur plusieurs threads donc une énumération ne sera plus dans l'ordre dans le parallélisme
+Le parallélisme utilise le multi threading mais délègue la gestion des threads à l'OS. Gestion des classe manuelle (C# => Thread ou alors Parallel pour gérer l'OS). Par contre, en parallélisme on perd le contrôle de la séquence, donc même uen boucle for ne s'éxecute pas forcement dans le bon ordre car l'ordinateur répartit la charge sur plusieurs threads donc une énumération ne sera plus dans l'ordre dans le parallélisme.
+
+Threading => Libérer un thread et d'effectuer une autre tache spécifique
+Parallélisme => Performance
