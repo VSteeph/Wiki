@@ -7,19 +7,23 @@
 
 ## Définitions 
 
-Il y a plusieurs niveux d'architecture :
-* Coding: Low-Level (implementation)
-* Design : Low-Level ?
-* Architecture : High-level (Focus ici)
+L'architecture logicielle est l'assemblement de différents composants/fonctionnalités d'un système pour répondre à différents critères (résilliance, Scaling, etc). L'architecture doit référencer beaucoup d'éléments, elle n'est pas bas niveau. Par exemple, elle doit connaître les différentes éléments hardware mais pas besoin de connaître l'implémentation comme la configuration, ça c'est le low-level design.
 
-Architecture Général:
+Il y a plusieurs niveux d'architecture :
+
+* Coding: Low-Level
+* Design : Low-Level ?
+* Architecture : High-level
+
+Chaque niveau se regroupe dans plusieurs vues qui sont les suivantes: 
+
 * Vue de réalisation => Diagram des composants et leurs relations (tech)
 * Vue Logique => Interaction des différents objets métiers (métier)
 * Vue des cas utilisations => Diagram des cas d'utlisations (métiers)
 * Vue des processus => Processus & thread, etat(transitions (technique)
 * Vue de déploiement => Diagram du déploiement hardware (tech)
 
-L'architecture logicielle est l'assemblement de différents composants/fonctionnalités d'un système pour répondre à différents critères (résilliance, Scaling, etc). L'architecture doit référencer beaucoup d'éléments, elle n'est pas bas niveau. Par exemple, elle doit connaître les différentes éléments hardware mais pas besoin de connaître l'implémentation comme la configuration, ça c'est le low-level design.
+
 
 ## Documentation
 On utilise différents languages pour modéliser des systèmes comme :*
@@ -32,9 +36,22 @@ Une architecture doit dont être documenté (DAT => dossier d'architecture techn
 ### DAT
 Le DAT doit avoir :
 
-* 1 page: Vision du Produit (Résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc)
-* Facteurs déterminants / Contraintes d'architecture (Exemple: embarqué, militaire, distribué, pérénité, sécurité, Nombre d'utilisateurs, etc)
-* Liste Macroscopique de fonctionnalités (Ex : Cuisine, Service, Livraison, Approvisoinement)
+#### Vision du produit
+Una page max. C'est un résumé du projet rapide pour pouvoir comprendre de quoi parle le sujet, quels sont les cibles, les objectifs, les métrics, les couts, etc. Il est là pour donner une rapide overview
+
+#### Facteurs déterminants
+Ce sont les facteurs qui vont décider et limiter le design car ils sont fondamentaux comme le fait que ça soit un système embarqué, un système militaire, les besoins en sécurité, le nombre d'utilisateurs
+
+#### Liste Macroscopique de fonctionnalité
+
+C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc)
+
+#### Metriques de qualités
+
+Ce sont les métriques qu'on utilise pour déterminer les métriques pour mesurer la qualité d'un système, quelles variables on utilise pour mesurer nos objectifs. Il y a un exemple de thème avec les normes ISO 25010
+![image](https://user-images.githubusercontent.com/58773222/191449262-7891f6fe-e614-4a31-86d3-5015a92b551c.png)
+
+
 
 ## exemple de composants
 * Serveur Web
