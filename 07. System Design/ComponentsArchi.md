@@ -209,7 +209,11 @@ Avantages :
 * Performances améliorée en cas de gros volume de données (1to par jour au moins)
 
 Inconvenients:
-* 
+
+
+Favoriser : PostGres SQL ou MariaDB plutôt qu'Oracle & MySQL qui sont chers en SQL car cela reste 
+
+Si Data fixe => SQL sinon noSQL
 
 **Stockage d'image** :
 
