@@ -114,6 +114,10 @@ APplication deployée chaque terminal mobile donc tres proche de l'application l
 
 Application Web sans IHM deployée sur un serveur web qui expose un ensemble de méthodes
 
+Contraintes:
+* Même contraintes que pour une application Web
+* Granularité : Micro-services (périmetres limité et indépendant donnée wise)
+
 
 Définitions :
 
@@ -124,6 +128,7 @@ Avantages : pAs de contrat d'interfaces formel côté client ce qui permet de ch
 
 **GRAPHQL**: Alternative à REST qui permet de créer des requêtes pour extraire des données de plusieurs sources en un seule appel (Tres lourd donc peu utilisée) mais c'est un bon choix quand il y a un vrai besoin.
 
+**Requetes** : Service web avec systeme d'authentification, génération Token qui permet de rester identifier pendant un certain temps. JWT => En clair, Jeton signé et protoocle en HTTPS pour que cela soit crypté et pas recupéré
 
 ## Autres 
 * Serveur Web
