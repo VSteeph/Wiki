@@ -172,3 +172,21 @@ Contraintes:
 * Gestion de persisance
 * Choix du protocole: AMQP, MQTT, HTTP, STOMP, JMPS
 * Gestion de l'ordre des messages
+
+
+## Entreprise Service Bus
+
+Le bus est la pour interconnecter plusieurs applications multi-protocolaires avec un fort besoin d'agilité. Il est en général en asynchrone. Il est constitué d'un Message Broker avec des services pour rerouter et transformer les messages.
+
+## Composant de stockage
+
+* Serveur de fichier
+* Base de donnée (Relationnelle ou NosQL)
+* Cache
+
+SQL vs NoSQL :
+
+Contraintes :
+* Volume des données
+* Structure de stockage
+
