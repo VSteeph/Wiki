@@ -184,16 +184,34 @@ Le bus est la pour interconnecter plusieurs applications multi-protocolaires ave
 * Base de donnée (Relationnelle ou NosQL)
 * Cache (Volatile donc pas persistant)
 
-SQL vs NoSQL :
+
 
 Contraintes :
 * Volume des données
 * Structure de stockage
 
 
-**Extra**
+**SQL vs NoSQL :**
 
-Stockage d'image :
+Le SQL a pas de standard donc chaque version a un sandard.
+
+Le noSQL a 4 types de stockages :
+
+* Clé-valeur => Redis
+* graph => Neo4J 
+* Colonne => Cassandra (nom, valeur, timestamp)
+* Document => MongoDB => valeur de type JSON ou XML stocké en binaire (BSON ou BXMl)
+
+Avantages :
+
+* Scalable horizontal accrue
+* Conception simplifiée
+* Performances améliorée en cas de gros volume de données (1to par jour au moins)
+
+Inconvenients:
+* 
+
+**Stockage d'image** :
 
 * Colonne TEXT pour Base64 Encode un fichier en text-binaire avec 64 caracteres ce qui permet de récupérer le fichier selon le type
 * Colonne de type blob qui stock le binaire du logo
@@ -211,3 +229,4 @@ Protocoles pour parler à un serveur:
 * CFT  (peu utilisé)
 * HTTP / WebDav en mettant un serveur et laisser les serveurs exposer (Webdav extensions du HTTP Web-Based Distributed Authoring and Versioning, cela permet aux users d'editer en simultannée et versionner)
 
+En général, c'est bien d'avoir son service de fichiers (gateway) qui peut récupérer les images en sFTP. Cela permet d'avoir un service qui est responsable de récupérer les fichiers. Cela permet de plus facilement s'etendre si on ajoute des applications
