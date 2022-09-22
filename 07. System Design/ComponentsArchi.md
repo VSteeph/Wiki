@@ -182,11 +182,32 @@ Le bus est la pour interconnecter plusieurs applications multi-protocolaires ave
 
 * Serveur de fichier
 * Base de donnée (Relationnelle ou NosQL)
-* Cache
+* Cache (Volatile donc pas persistant)
 
 SQL vs NoSQL :
 
 Contraintes :
 * Volume des données
 * Structure de stockage
+
+
+**Extra**
+
+Stockage d'image :
+
+* Colonne TEXT pour Base64 Encode un fichier en text-binaire avec 64 caracteres ce qui permet de récupérer le fichier selon le type
+* Colonne de type blob qui stock le binaire du logo
+* Colonne de type varchar qui contient le stock le chemin vers le fichier physique stocké sur un serveur de fichiers
+
+1ere & 2eme solution : l'information est disponible immédiate mais dans la 1ere base c'est dur de restaurer les BDD quand on a des restauration. La 2eme prend du temps dans sa conversation.
+
+La 3eme solution permet de séparer le contenu de l'emplacement mais cela demande de gérer 2 choses (avec stratégie de sauvegarde et restauration). Le fichier est déjà prêt
+
+Protocoles pour parler à un serveur:
+
+* FTP ou FTPs (sécurisé mais bon
+* SFTP => FTP en tunnel SSH Secure Shell)
+* SMB /INTFS (acces réseau local)
+* CFT  (peu utilisé)
+* HTTP / WebDav en mettant un serveur et laisser les serveurs exposer (Webdav extensions du HTTP Web-Based Distributed Authoring and Versioning, cela permet aux users d'editer en simultannée et versionner)
 
