@@ -23,24 +23,31 @@ Ce sont les facteurs qui vont décider et limiter le design car ils sont fondame
 * Sécurité
 * Interaction avec des SI existant/externes
 
-## Liste Macroscopique de fonctionnalité (Vue Architecturale)
+## Liste Macroscopique de fonctionnalité
 
-C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc). Cela inclut la motvation du choix des styles et le détai des composants avec leur déploiements.
+C'est le fait de décrire les différentes fonctionnalités du système (Ex : Cuisine, Service, Livraison, Approvisionnement, Payement, resevation, etc).
+
+## Vues Architecturales
+Le détail des composants, leur déploiement et leur relations etnre eux (Fonctionnelles, techniques, motivation des choix)
+
+## Flux échanges / Protocoles utilisées
+Il est important d'y refléchir et de les définir quand cela répond à un besoin ou une particularité. Exemple, Whatsapp qui communique en websocket car il y a besoin de réponse pour savoir si un message est livré ou lu.
+
+## Mecanismes de sécurités
+
+## Monitoring & Metrics
+
+Cela revient un peu avec les métriques de qualités mais il est important de définir un système de Monitoring et comment on récupère les logs, est ce que cela colle par rapport à nos besoins (Ecrire dans un fichier, export dans un service externe, batch les fichiers logstash), qu'est ce qu'on a besoin de monitorer.
 
 ## Metriques de qualités
 
 Ce sont les métriques qu'on utilise pour déterminer les métriques pour mesurer la qualité d'un système, quelles variables on utilise pour mesurer nos objectifs. Il y a un exemple de thème avec les normes ISO 25010
 ![image](https://user-images.githubusercontent.com/58773222/191449262-7891f6fe-e614-4a31-86d3-5015a92b551c.png)
 
-## Monitoring & Metrics
 
-Cela revient un peu avec les métriques de qualités mais il est important de définir un système de Monitoring et comment on récupère les logs, est ce que cela colle par rapport à nos besoins (Ecrire dans un fichier, export dans un service externe, batch les fichiers logstash), qu'est ce qu'on a besoin de monitorer.
 
 ## Liste des composants
 Un tableau Excel des différents éléments. Ce
 
-## Mecanismes de sécurités
 
-
-## Flux échanges et protocoles utilisées
-Il est important d'y refléchir et de les définir quand cela répond à un besoin ou une particularité. Exemple, Whatsapp qui communique en websocket car il y a besoin de réponse pour savoir si un message est livré ou lu.
+## Stratégie de sauvegarde et de restauration
