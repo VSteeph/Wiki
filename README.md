@@ -1,5 +1,8 @@
+# ==>> Abandon, Dossier privé sur Google Drive
 # Wiki
 Un ensemble de tout ce que j'ai pu apprendre,  FRANGLAIS
+
+
 
 Task
 - [X] Refactoring du Wiki
