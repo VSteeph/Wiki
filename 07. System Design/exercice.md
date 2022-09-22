@@ -32,3 +32,7 @@ Le fait de passer par l'API Gateway au lieu de directement l'Offer services pré
 * Facilement redondable, on peut avoir plusieurs gateway facilement contrairement au service
 * On peut passer par un messages services si on a besoin d'asynchrone
 * Point central pour les metrics et les logs
+
+Version avec MessageBroker :
+![image](https://user-images.githubusercontent.com/58773222/191709616-15a93cf7-94c1-445d-8990-423116fbb6d0.png)
+
