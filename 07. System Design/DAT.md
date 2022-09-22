@@ -36,8 +36,32 @@ Il est important d'y refléchir et de les définir quand cela répond à un beso
 ## Mecanismes de sécurités
 
 ## Monitoring & Metrics
-
 Cela revient un peu avec les métriques de qualités mais il est important de définir un système de Monitoring et comment on récupère les logs, est ce que cela colle par rapport à nos besoins (Ecrire dans un fichier, export dans un service externe, batch les fichiers logstash), qu'est ce qu'on a besoin de monitorer.
+
+Comment stocker les logs :
+
+Fichiers:
+* Plus rapide
+* Format libre
+* Prévoir la rotation de log
+* Attention aux entrées/sorties ==> Ressources importants
+* Gestion des acces concurrents
+
+Base de donnée :
+* Structure imposée ou non
+* Recherche Rapide
+* Question de Purge des données
+
+Solution Externe type ELK
+* Accessible au travers de multiples protocoles (HTTPs ou autre)
+* Agrégation de logs depuis plusieurs applications 
+* indexaiton automatique des logs
+* outils associés
+* Plus couteux
+
+Si on stock que des éléments liées à l'application elle-même, un simple fichier est suffisant
+
+Si on stock
 
 ## Metriques de qualités
 
