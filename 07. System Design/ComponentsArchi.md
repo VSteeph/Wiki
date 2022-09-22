@@ -130,6 +130,10 @@ Avantages : pAs de contrat d'interfaces formel côté client ce qui permet de ch
 
 **Requetes** : Service web avec systeme d'authentification, génération Token qui permet de rester identifier pendant un certain temps. JWT => En clair, Jeton signé et protoocle en HTTPS pour que cela soit crypté et pas recupéré
 
+JWT vs OAuth2 : JWT (Json Web Token) qui est un standard pour définir un Jeton qui va être vehiculé mais il y a aucun protocole indiqué alors que OAuth2 est un protocole qui permet de gérer l'identification entierement et peut utiliser des JWT. OAuth2 impose d'avoir un serveur à part pour l'authentification alors qu'avec un serveur custom, on peut décider de l'endroit où un mec l'authentification. On peut aussi créer notre propre Token
+
+OpenIdConnect (basé sur Oauth2)
+
 ## Autres 
 * Serveur Web
 * Database
@@ -142,3 +146,29 @@ Exemple d'utilités:
 * Web socket (Gateway)
 * Mesage Broker
 * ESB (Entreprise Service Bus)
+
+## API Gateway
+C'estune passerlle API qui sert de point dentrée unique pour les APIs
+
+Contraintes :
+* Performances
+* Fonctionnalités offertes
+
+
+## Web Socket
+Protocole d'échange full duplex qui maintient une connexion TCP unique entre dfeux noeud, ce qui permet d'avoir du temps réel dans les deux sens. Mode Asynchrone, on réagit à un message reçu donc on peut avori des events, il est tres lourd comme il maintient une connexion ouverte (Aka whatsapp)
+
+Problème du protocole HTTP:
+* One way Protocole (on peut utilise l'Ajax  mais c'est surtout client => Serveur)
+* Tres verbeux, beaucoup d'informations
+
+
+## Middleware Orienté Messages
+
+Systeme de communication asynchrone à base de message avec une file d'attente, ce qui permet de séparer l'émetteur et le consommateurs du messages.
+
+Contraintes:
+* Type de file d'attente
+* Gestion de persisance
+* Choix du protocole: AMQP, MQTT, HTTP, STOMP, JMPS
+* Gestion de l'ordre des messages
